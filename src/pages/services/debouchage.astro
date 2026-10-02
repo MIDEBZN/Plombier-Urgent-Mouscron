@@ -7,6 +7,11 @@ import Layout from '../../layouts/Layout.astro';
   description="Debouchage express de WC, eviers, egouts et canalisations a Mouscron. Curage haute pression et vidange de fosses septiques. Intervention d'urgence en 30 minutes."
   canonicalPath="/services/debouchage"
   preloadImage="/images/service-debouchage.webp"
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Debouchage Canalisations", url: "/services/debouchage" }
+  ]}
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">

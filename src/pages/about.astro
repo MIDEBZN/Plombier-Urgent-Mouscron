@@ -6,6 +6,10 @@ import Layout from '../layouts/Layout.astro';
   title="A Propos | Plombier Urgent Mouscron : Artisans de Confiance"
   description="Decouvrez l'equipe de Plombier Urgent Mouscron. Artisans plombiers locaux agrees en Belgique. Transparence tarifaire, TVA 6% et agrement assurances."
   canonicalPath="/about"
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: "A Propos", url: "/about" }
+  ]}
 >
   <!-- Hero Section -->
   <section class="bg-brand-navy text-white py-14 lg:py-18 relative overflow-hidden" aria-labelledby="about-hero-heading">

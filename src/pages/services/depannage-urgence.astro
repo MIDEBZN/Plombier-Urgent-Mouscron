@@ -7,6 +7,11 @@ import Layout from '../../layouts/Layout.astro';
   description="Depannage de plomberie d'urgence a Mouscron disponible 24h/24 et 7j/7. Intervention en 30 minutes pour fuite majeure, inondation, tuyau eclate ou vanne bloquee. Devis gratuit."
   canonicalPath="/services/depannage-urgence"
   preloadImage="/images/service-urgence.webp"
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Depannage d'Urgence", url: "/services/depannage-urgence" }
+  ]}
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">

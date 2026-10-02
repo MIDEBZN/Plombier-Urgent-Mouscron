@@ -13,6 +13,7 @@ interface Props {
   schemaType?: string;
   hideGlobalContact?: boolean;
   preloadImage?: string;
+  breadcrumbs?: Array<{ name: string; url: string }>;
 }
 
 const { 
@@ -21,30 +22,45 @@ const {
   canonicalPath = '',
   schemaType = 'Plumber',
   hideGlobalContact = false,
-  preloadImage
+  preloadImage,
+  breadcrumbs
 } = Astro.props;
 
 const siteUrl = 'https://www.plombierurgentmouscron.be';
 const canonicalURL = new URL(canonicalPath || Astro.url.pathname, siteUrl).toString();
 
+// ── Main Organization / Plumber schema ──────────────────────────────
 const schemaData = {
   "@context": "https://schema.org",
   "@type": schemaType,
+  "@id": `${siteUrl}/#organization`,
   "name": "Plombier Urgent Mouscron",
-  "url": canonicalURL,
+  "alternateName": "Vensol Plombier Urgent Mouscron",
+  "url": siteUrl,
+  "logo": `${siteUrl}/images/logo-square.webp`,
   "telephone": "+32490067245",
   "email": "contact@plombierurgentmouscron.be",
-  "priceRange": "EUR",
-  "image": "https://www.plombierurgentmouscron.be/og-image.webp",
-  "description": description,
+  "priceRange": "€€",
+  "image": `${siteUrl}/og-image.webp`,
+  "description": "Plombier professionnel a Mouscron disponible 24h/24 et 7j/7. Intervention d'urgence en 30 minutes pour fuites, debouchage, chauffage et installations sanitaires.",
   "foundingDate": "2011",
+  "currenciesAccepted": "EUR",
+  "paymentAccepted": "Cash, Carte bancaire, Virement",
   "hasCredential": [
     "Habilitation Gaz G1 et G2 Region Wallonne Cerga",
     "Certification Diagnostic Periodique PEB et Chauffage",
     "Certification Securite sur Chantier VCA",
     "Affiliation Buildwise CSTC Centre Scientifique et Technique de la Construction"
   ],
-  "award": "Plus de 15 ans d'experience continue a Mouscron",
+  "knowsAbout": [
+    "Plomberie",
+    "Debouchage canalisation",
+    "Detection de fuite",
+    "Chauffage et chaudieres",
+    "Installations sanitaires",
+    "Traitement de l'eau",
+    "Depannage urgence plomberie"
+  ],
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Rue de la Royenne 45",
@@ -76,8 +92,120 @@ const schemaData = {
     { "@type": "City", "name": "Tourcoing", "postalCode": "59200" },
     { "@type": "City", "name": "Comines-Warneton", "postalCode": "7780" }
   ],
+  // ── Service Catalog ──────────────────────────────────────────────
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services de Plomberie a Mouscron",
+    "itemListElement": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Depannage d'Urgence",
+        "description": "Intervention d'urgence plomberie 24/7 en 30 minutes : fuite majeure, inondation, tuyau eclate, vanne bloquee",
+        "url": `${siteUrl}/services/depannage-urgence`,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparation fuite d'eau urgente" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intervention inondation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparation tuyau eclate" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement vanne bloquee" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Debouchage Canalisations",
+        "description": "Debouchage professionnel de canalisations, WC, evier, egouts et colonnes d'evacuation",
+        "url": `${siteUrl}/services/debouchage`,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Debouchage WC" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Debouchage evier et lavabo" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Debouchage egout" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inspection camera canalisation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curage haute pression" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Detection de Fuites",
+        "description": "Detection de fuite d'eau non destructive par camera thermique, gaz traceur et acoustique",
+        "url": `${siteUrl}/services/detection-fuites`,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detection camera thermique" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detection gaz traceur" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detection acoustique" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recherche fuite encastree" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Chauffage et Chaudieres",
+        "description": "Installation, entretien et reparation de chaudieres, boilers et systemes de chauffage",
+        "url": `${siteUrl}/services/chauffage-chaudieres`,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation chaudiere gaz" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien annuel chaudiere" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement boiler" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Depannage chauffage central" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Installations Sanitaires",
+        "description": "Installation et renovation de salles de bain, douches, WC, robinetterie et tuyauterie",
+        "url": `${siteUrl}/services/installations-sanitaires`,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovation salle de bain complete" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation douche italienne" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement robinetterie" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation WC suspendu" } }
+        ]
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Traitement de l'Eau",
+        "description": "Installation d'adoucisseurs, filtres anti-calcaire et systemes de traitement de l'eau",
+        "url": `${siteUrl}/services/traitement-eau`,
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation adoucisseur d'eau" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Filtre anti-calcaire" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analyse qualite de l'eau" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien adoucisseur" } }
+        ]
+      }
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "sameAs": []
 };
+
+// ── WebSite schema (for sitelinks search box) ───────────────────────
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Plombier Urgent Mouscron",
+  "url": siteUrl,
+  "inLanguage": "fr-BE",
+  "publisher": {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`
+  }
+};
+
+// ── BreadcrumbList schema ───────────────────────────────────────────
+const breadcrumbSchema = breadcrumbs ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": crumb.name,
+    "item": crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url}`
+  }))
+} : null;
 ---
 
 <!DOCTYPE html>
@@ -190,6 +318,10 @@ const schemaData = {
   </style>
 
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  {breadcrumbSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  )}
 </head>
 <body class="bg-white text-brand-darkText antialiased flex flex-col min-h-screen">
   <!-- Top Announcement Bar -->

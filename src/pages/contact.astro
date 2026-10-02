@@ -8,6 +8,10 @@ import Layout from '../layouts/Layout.astro';
   canonicalPath="/contact"
   schemaType="ContactPage"
   hideGlobalContact={true}
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: "Contact & Devis", url: "/contact" }
+  ]}
 >
   <!-- Hero Section -->
   <section class="bg-brand-navy text-white py-14 lg:py-18 relative overflow-hidden" aria-labelledby="contact-hero-heading">

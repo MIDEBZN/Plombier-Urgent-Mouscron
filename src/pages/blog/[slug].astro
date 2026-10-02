@@ -37,6 +37,11 @@ const faqSchema = {
   title={article.seoTitle}
   description={article.metaDescription}
   canonicalPath={`/blog/${article.slug}`}
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: "Blog & Guides Conseils", url: "/blog" },
+    { name: article.title, url: `/blog/${article.slug}` }
+  ]}
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface py-3 border-b border-brand-border" aria-label="Fil d'Ariane">

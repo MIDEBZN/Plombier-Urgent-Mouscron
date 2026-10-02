@@ -7,6 +7,11 @@ import Layout from '../../layouts/Layout.astro';
   description="Recherche et detection de fuite d'eau a Mouscron sans rien casser. Camera thermique, ecoute acoustique et gaz traceur. Agree assurances belges et SWDE."
   canonicalPath="/services/detection-fuites"
   preloadImage="/images/service-detection.webp"
+  breadcrumbs={[
+    { name: "Accueil", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Detection de Fuites", url: "/services/detection-fuites" }
+  ]}
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">
