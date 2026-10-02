@@ -4,6 +4,7 @@ import TrustGuarantees from '../components/TrustGuarantees.astro';
 import GlobalContactSection from '../components/GlobalContactSection.astro';
 import StickyCallButton from '../components/StickyCallButton.astro';
 import WhatsAppLiveChat from '../components/WhatsAppLiveChat.astro';
+import GoogleMapEmbed from '../components/GoogleMapEmbed.astro';
 
 interface Props {
   title: string;
@@ -287,6 +288,9 @@ const schemaData = {
 
   <!-- Global Contact Form (Every Page) using Formsubmit.co with recipient: midebzn@gmail.com -->
   {!hideGlobalContact && <GlobalContactSection />}
+
+  <!-- Global Google Maps Location & Territory (Every Page) -->
+  <GoogleMapEmbed />
 
   <!-- Global Trust Pillars (Every Page): Insurance, 15+ Yrs Experience, Certifications, Guarantees, Response Times -->
   <TrustGuarantees />
