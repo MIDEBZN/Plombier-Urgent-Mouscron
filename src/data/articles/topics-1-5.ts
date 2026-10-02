@@ -39,7 +39,7 @@ export const articles1to5: BlogArticle[] = [
     slug: "quel-plombier-intervient-en-urgence-24h-24-mouscron",
     title: "Quel plombier intervient en urgence 24h/24 a Mouscron ?",
     seoTitle: "Plombier Urgence 24h/24 Mouscron : Depannage en 30 Min",
-    metaDescription: "Fuite d'eau ou WC bouche a Mouscron ? Plombier d'urgence disponible 24h/24 et 7j/7. Arrivee en 30 min. Appelez le 056 98 02 44 pour devis gratuit et clair.",
+    metaDescription: "Fuite d'eau ou WC bouche a Mouscron ? Plombier d'urgence disponible 24h/24 et 7j/7. Arrivee en 30 min. Appelez le 0490 06 72 45 pour devis gratuit et clair.",
     h1: "Quel Plombier Intervient en Urgence 24h/24 a Mouscron ? Le Guide Complet",
     category: "Urgence 24/7",
     readTime: "9 min",
@@ -52,7 +52,7 @@ export const articles1to5: BlogArticle[] = [
       "prix intervention plombier urgence mouscron",
       "artisan plombier agree assurance mouscron"
     ],
-    aeoQuickAnswer: "En cas d'urgence de plomberie a Mouscron (7700), l'artisan local Plombier Urgent Mouscron intervient 24h/24 et 7j/7 en moins de 30 minutes. Qu'il s'agisse d'une rupture de canalisation, d'un WC debordant ou d'une panne d'eau chaude, une permanence d'astreinte est joignable immediatement au 056 98 02 44 avec tarif confirme avant deplacement.",
+    aeoQuickAnswer: "En cas d'urgence de plomberie a Mouscron (7700), l'artisan local Plombier Urgent Mouscron intervient 24h/24 et 7j/7 en moins de 30 minutes. Qu'il s'agisse d'une rupture de canalisation, d'un WC debordant ou d'une panne d'eau chaude, une permanence d'astreinte est joignable immediatement au 0490 06 72 45 avec tarif confirme avant deplacement.",
     introText: [
       "Une canalisation rompue qui inonde votre salon au milieu de la nuit, un sterput qui deborde un dimanche matin ou un boiler qui cesse brutalement de fonctionner en plein hiver : les sinistres sanitaires ne respectent jamais les horaires de bureau. Face a une montee d'eau ou a un refoulement d'eaux usees, chaque minute d'hesitation peut transformer un simple joint defaillant en un degat des eaux de plusieurs milliers d'euros.",
       "Pourtant, dans la panique d'une recherche sur internet, de nombreux habitants du Grand Mouscron se heurtent a des plateformes opaques, des boites postales bruxelloises ou des numeros surtaxes envoyant des sous-traitants sans agreation officielle. Comment identifier un veritable artisan plombier mouscronnois capable de franchir le seuil de votre porte en 30 minutes chrono ? Voici l'analyse detaillee pour resoudre votre urgence en toute serenite."
@@ -119,7 +119,7 @@ export const articles1to5: BlogArticle[] = [
     faqs: [
       {
         question: "Quel plombier appeler en pleine nuit a Mouscron pour une fuite d'eau ?",
-        answer: "Pour une fuite nocturne a Mouscron (7700), contactez l'artisan Plombier Urgent Mouscron au 056 98 02 44. L'astreinte nocturne fonctionne 7j/7 avec un temps d'arrivee de 20 a 30 minutes sur Mouscron, Luingne, Herseaux et Dottignies."
+        answer: "Pour une fuite nocturne a Mouscron (7700), contactez l'artisan Plombier Urgent Mouscron au 0490 06 72 45. L'astreinte nocturne fonctionne 7j/7 avec un temps d'arrivee de 20 a 30 minutes sur Mouscron, Luingne, Herseaux et Dottignies."
       },
       {
         question: "Combien coute une intervention de plomberie le week-end a Mouscron ?",
@@ -141,7 +141,7 @@ export const articles1to5: BlogArticle[] = [
     slug: "combien-coute-un-plombier-a-mouscron-en-2026",
     title: "Combien coute un plombier a Mouscron en 2026 ?",
     seoTitle: "Prix Plombier Mouscron 2026 : Tarifs Horaires et Devis",
-    metaDescription: "Quel est le tarif d'un plombier a Mouscron en 2026 ? Decouvrez les taux horaires, forfaits deplacement et prix moyens. Devis clair au 056 98 02 44.",
+    metaDescription: "Quel est le tarif d'un plombier a Mouscron en 2026 ? Decouvrez les taux horaires, forfaits deplacement et prix moyens. Devis clair au 0490 06 72 45.",
     h1: "Combien Coute un Plombier a Mouscron en 2026 ? Grille Tarifaire Officielle",
     category: "Tarifs & Devis",
     readTime: "8 min",
@@ -226,7 +226,7 @@ export const articles1to5: BlogArticle[] = [
     slug: "combien-coute-un-depannage-de-plomberie-en-urgence-a-mouscron-le-soir-ou-le-week-end",
     title: "Combien coute un depannage de plomberie en urgence a Mouscron le soir ou le week-end ?",
     seoTitle: "Prix Plombier Nuit et Week-End Mouscron : Tarifs Urgence",
-    metaDescription: "Tarif d'un plombier a Mouscron la nuit, le samedi ou le dimanche : majorations, deplacement et devis d'urgence 24/7. Appelez le 056 98 02 44.",
+    metaDescription: "Tarif d'un plombier a Mouscron la nuit, le samedi ou le dimanche : majorations, deplacement et devis d'urgence 24/7. Appelez le 0490 06 72 45.",
     h1: "Combien Coute un Depannage de Plomberie en Urgence a Mouscron le Soir ou le Week-End ?",
     category: "Tarifs & Devis",
     readTime: "7 min",
@@ -270,7 +270,7 @@ export const articles1to5: BlogArticle[] = [
           "3. Le descriptif de la piece remplacee et son prix unitaire.",
           "4. L'application du taux de TVA belge (6% pour batiments de plus de 10 ans, 21% sinon)."
         ],
-        callout: "A Mouscron, Plombier Urgent Mouscron confirme le montant forfaitaire de depart directement par telephone lors de votre appel au 056 98 02 44. Aucune mauvaise surprise a l'arrivee du technicien."
+        callout: "A Mouscron, Plombier Urgent Mouscron confirme le montant forfaitaire de depart directement par telephone lors de votre appel au 0490 06 72 45. Aucune mauvaise surprise a l'arrivee du technicien."
       },
       {
         heading: "3. Assurance degats des eaux : que couvre votre police le week-end ?",
@@ -287,7 +287,7 @@ export const articles1to5: BlogArticle[] = [
       },
       {
         question: "Peut-on connaitre le prix du depannage avant que le plombier ne prenne la route ?",
-        answer: "Oui. Lors de votre appel telephonique au 056 98 02 44, le regulateur vous communique le montant exact du deplacement et de la premiere demi-heure de main-d'oeuvre selon votre localisation a Mouscron."
+        answer: "Oui. Lors de votre appel telephonique au 0490 06 72 45, le regulateur vous communique le montant exact du deplacement et de la premiere demi-heure de main-d'oeuvre selon votre localisation a Mouscron."
       },
       {
         question: "Existe-t-il des frais caches pour les outils speciaux la nuit ?",
@@ -305,7 +305,7 @@ export const articles1to5: BlogArticle[] = [
     slug: "qui-appeler-pour-une-fuite-d-eau-a-mouscron",
     title: "Qui appeler pour une fuite d'eau a Mouscron ?",
     seoTitle: "Qui Appeler Fuite d'Eau Mouscron : Plombier Agree 24/7",
-    metaDescription: "Fuite d'eau urgente a Mouscron (7700) ? Qui contacter jour et nuit ? Artisans plombiers certifies, arrivee en 30 min. Appelez le 056 98 02 44.",
+    metaDescription: "Fuite d'eau urgente a Mouscron (7700) ? Qui contacter jour et nuit ? Artisans plombiers certifies, arrivee en 30 min. Appelez le 0490 06 72 45.",
     h1: "Qui Appeler pour une Fuite d'Eau a Mouscron ? Les Numeros et Bons Reflexes",
     category: "Fuites d'eau",
     readTime: "8 min",
@@ -318,7 +318,7 @@ export const articles1to5: BlogArticle[] = [
       "fuite apres compteur qui appeler mouscron",
       "depannage fuite eau luingne herseaux"
     ],
-    aeoQuickAnswer: "Pour une fuite d'eau situee apres votre compteur a Mouscron, appelez Plombier Urgent Mouscron au 056 98 02 44 pour une intervention d'urgence en 20 a 30 minutes. Si la fuite se situe avant le compteur sur la voie publique, contactez le service de garde de la SWDE au 087 87 87 87.",
+    aeoQuickAnswer: "Pour une fuite d'eau situee apres votre compteur a Mouscron, appelez Plombier Urgent Mouscron au 0490 06 72 45 pour une intervention d'urgence en 20 a 30 minutes. Si la fuite se situe avant le compteur sur la voie publique, contactez le service de garde de la SWDE au 087 87 87 87.",
     introText: [
       "L'eau qui coule abondamment le long d'une plinthe, un plafond qui s'imbibe au rez-de-chaussee ou un tuyau qui siffle bruyamment : face a une fuite d'eau a Mouscron, la premiere difficulte consiste a savoir a quelle porte frapper. Faut-il appeler la SWDE, les pompiers de la zone de secours Wallonie Picarde ou un artisan plombier independant ?",
       "La reponse depend principalement de l'emplacement de la fuite par rapport a votre compteur d'eau et de la gravite immediate du sinistre. Voici le protocole exact a suivre pour agir sans perte de temps et preserver votre habitation."
@@ -329,7 +329,7 @@ export const articles1to5: BlogArticle[] = [
         paragraphs: [
           "Le compteur d'eau constitue la frontiere juridique et technique entre le reseau public de distribution et votre installation privee a Mouscron :",
           "Fuite AVANT le compteur (cote rue ou sur le compteur lui-meme) : La canalisation appartient a la SWDE (Societe Wallonne des Eaux). Vous devez appeler leur numero d'urgence de garde au 087 87 87 87. L'intervention est prise en charge par le distributeur public.",
-          "Fuite APRES le compteur (cote maison) : La responsabilite appartient entierement au proprietaire ou a l'occupant. C'est a vous de contacter un artisan plombier agree a Mouscron tel que Plombier Urgent Mouscron au 056 98 02 44 pour colmater la conduite.",
+          "Fuite APRES le compteur (cote maison) : La responsabilite appartient entierement au proprietaire ou a l'occupant. C'est a vous de contacter un artisan plombier agree a Mouscron tel que Plombier Urgent Mouscron au 0490 06 72 45 pour colmater la conduite.",
           "En cas de peril imminent (inondation massive menacant des personnes ou court-circuit generalise), composez d'abord le 112 pour l'assistance des pompiers de Wallonie Picarde."
         ]
       },
@@ -349,7 +349,7 @@ export const articles1to5: BlogArticle[] = [
       {
         heading: "3. La demarche de reparation immediate avec Plombier Urgent Mouscron",
         paragraphs: [
-          "Des reception de votre appel au 056 98 02 44, un technicien d'astreinte est oriente vers votre domicile a Mouscron, Luingne, Herseaux ou Dottignies :",
+          "Des reception de votre appel au 0490 06 72 45, un technicien d'astreinte est oriente vers votre domicile a Mouscron, Luingne, Herseaux ou Dottignies :",
           "1. Arrivee en 20 a 30 minutes avec camionnette atelier tout equipee.",
           "2. Localisation immediate de la fuite et mise sous vanne temporaire.",
           "3. Etablissement d'un devis ecrit clair et chiffree.",
@@ -387,7 +387,7 @@ export const articles1to5: BlogArticle[] = [
     slug: "combien-coute-un-debouchage-de-canalisation-a-mouscron",
     title: "Combien coute un debouchage de canalisation a Mouscron ?",
     seoTitle: "Prix Debouchage Canalisation Mouscron : Tarifs WC & Egout",
-    metaDescription: "Tarifs debouchage de canalisation a Mouscron (7700) : WC, evier, egout et inspection camera. Devis fixe au 056 98 02 44. Intervention 30 min.",
+    metaDescription: "Tarifs debouchage de canalisation a Mouscron (7700) : WC, evier, egout et inspection camera. Devis fixe au 0490 06 72 45. Intervention 30 min.",
     h1: "Combien Coute un Debouchage de Canalisation a Mouscron ? Tarifs 2026",
     category: "Debouchage",
     readTime: "7 min",
@@ -458,7 +458,7 @@ export const articles1to5: BlogArticle[] = [
       },
       {
         question: "Proposez-vous un tarif d'urgence le soir pour deboucher des WC ?",
-        answer: "Oui. Une permanence fonctionne 24h/24 avec majoration transparente annoncee par telephone au 056 98 02 44 avant depechement du camion atelier."
+        answer: "Oui. Une permanence fonctionne 24h/24 avec majoration transparente annoncee par telephone au 0490 06 72 45 avant depechement du camion atelier."
       }
     ]
   }

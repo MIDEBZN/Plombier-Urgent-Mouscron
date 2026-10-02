@@ -6,7 +6,7 @@ export const articles6to10: BlogArticle[] = [
     slug: "qui-appeler-pour-un-wc-bouche-a-mouscron",
     title: "Qui appeler pour un WC bouche a Mouscron ?",
     seoTitle: "Qui Appeler WC Bouche Mouscron : Debouchage Urgent 24/7",
-    metaDescription: "Toilettes bouchees qui debordent a Mouscron ? Contactez Plombier Urgent Mouscron au 056 98 02 44. Arrivee en 30 min, furet pro et devis clair.",
+    metaDescription: "Toilettes bouchees qui debordent a Mouscron ? Contactez Plombier Urgent Mouscron au 0490 06 72 45. Arrivee en 30 min, furet pro et devis clair.",
     h1: "Qui Appeler pour un WC Bouche a Mouscron ? Solutions d'Urgence",
     category: "Debouchage",
     readTime: "6 min",
@@ -19,7 +19,7 @@ export const articles6to10: BlogArticle[] = [
       "prix debouchage wc urgence mouscron",
       "artisan deboucheur wc dottignies"
     ],
-    aeoQuickAnswer: "Pour un WC bouche qui deborde a Mouscron (7700), appelez en priorite l'artisan local Plombier Urgent Mouscron au 056 98 02 44. Une camionnette d'astreinte equipee de furets mecaniques et pompes a haute pression intervient chez vous en moins de 30 minutes 24h/24 et 7j/7.",
+    aeoQuickAnswer: "Pour un WC bouche qui deborde a Mouscron (7700), appelez en priorite l'artisan local Plombier Urgent Mouscron au 0490 06 72 45. Une camionnette d'astreinte equipee de furets mecaniques et pompes a haute pression intervient chez vous en moins de 30 minutes 24h/24 et 7j/7.",
     introText: [
       "Lorsque le niveau de l'eau monte dangereusement dans la cuvette apres avoir tire la chasse d'eau ou qu'un refoulement se produit au pied des toilettes, la panique s'installe vite. Avoir un WC inutilisable ou debordant constitue une urgence sanitaire absolue dans un logement, en particulier s'il s'agit du seul point d'eau de l'habitation.",
       "Qui devez-vous appeler en priorite a Mouscron pour un debouchage rapide, propre et sans degradation de la cuvette ? Quelles methodes fonctionnent et que faut-il eviter absolument ? Voici le guide d'action immediate."
@@ -48,7 +48,7 @@ export const articles6to10: BlogArticle[] = [
         heading: "3. Tarifs et delais pour un debouchage de toilettes a Mouscron",
         paragraphs: [
           "Le cout d'un debouchage de WC a Mouscron se situe entre 110 EUR et 170 EUR HTVA selon la duree et l'outil utilise, avec TVA reduite a 6% pour les batiments de plus de 10 ans.",
-          "Notre camionnette de garde est mobilisable a toute heure au 056 98 02 44 avec une arrivee sous 20 a 30 minutes garantie."
+          "Notre camionnette de garde est mobilisable a toute heure au 0490 06 72 45 avec une arrivee sous 20 a 30 minutes garantie."
         ],
         links: [
           { text: "Decouvrez notre service complet de debouchage", url: "/services/debouchage" },
@@ -81,7 +81,7 @@ export const articles6to10: BlogArticle[] = [
     slug: "combien-coute-une-recherche-de-fuite-non-destructive-a-mouscron",
     title: "Combien coute une recherche de fuite non destructive a Mouscron ?",
     seoTitle: "Prix Recherche de Fuite Mouscron : Tarifs Camera & Gaz",
-    metaDescription: "Tarif d'une recherche de fuite d'eau sans casser a Mouscron (7700). Prise en charge assurance a 100%. Devis clair et rapport technique au 056 98 02 44.",
+    metaDescription: "Tarif d'une recherche de fuite d'eau sans casser a Mouscron (7700). Prise en charge assurance a 100%. Devis clair et rapport technique au 0490 06 72 45.",
     h1: "Combien Coute une Recherche de Fuite Non Destructive a Mouscron ?",
     category: "Detection de fuites",
     readTime: "8 min",
@@ -158,7 +158,7 @@ export const articles6to10: BlogArticle[] = [
     slug: "comment-trouver-une-fuite-d-eau-cachee-sans-casser-les-murs-a-mouscron",
     title: "Comment trouver une fuite d'eau cachee sans casser les murs a Mouscron ?",
     seoTitle: "Trouver Fuite d'Eau sans Casser Mouscron : Guide Pratique",
-    metaDescription: "Comment localiser une fuite d'eau cachee sans casser cloisons et carrelages a Mouscron ? Methodes acoustiques et thermiques au 056 98 02 44.",
+    metaDescription: "Comment localiser une fuite d'eau cachee sans casser cloisons et carrelages a Mouscron ? Methodes acoustiques et thermiques au 0490 06 72 45.",
     h1: "Comment Trouver une Fuite d'Eau Cachee sans Casser les Murs a Mouscron ?",
     category: "Detection de fuites",
     readTime: "8 min",
@@ -234,7 +234,7 @@ export const articles6to10: BlogArticle[] = [
     slug: "que-faire-immediatement-en-cas-de-fuite-d-eau-avant-l-arrivee-d-un-plombier-a-mouscron",
     title: "Que faire immediatement en cas de fuite d'eau avant l'arrivee d'un plombier a Mouscron ?",
     seoTitle: "Que Faire Fuite d'Eau Urgence Mouscron : 4 Gestes Cles",
-    metaDescription: "Fuite d'eau active chez vous a Mouscron ? Les 4 reflexes indispensables pour securiser votre logement avant l'arrivee du plombier. SOS 056 98 02 44.",
+    metaDescription: "Fuite d'eau active chez vous a Mouscron ? Les 4 reflexes indispensables pour securiser votre logement avant l'arrivee du plombier. SOS 0490 06 72 45.",
     h1: "Que Faire Immediatement en Cas de Fuite d'Eau avant l'Arrivee d'un Plombier a Mouscron ?",
     category: "Reflexes Urgence",
     readTime: "6 min",
@@ -280,7 +280,7 @@ export const articles6to10: BlogArticle[] = [
           "Prenez plusieurs photographies et videos montrant la fuite d'eau active, la hauteur d'eau et les biens endommages avant tout deblaiement. Ces preuves sont indispensables pour l'indemnisation par votre compagnie d'assurance habitation."
         ],
         links: [
-          { text: "Appelez un technicien en urgence 24/7 au 056 98 02 44", url: "tel:+3256980244" },
+          { text: "Appelez un technicien en urgence 24/7 au 0490 06 72 45", url: "tel:+32490067245" },
           { text: "Services d'urgence plomberie a Mouscron", url: "/services/depannage-urgence" }
         ]
       }
@@ -310,7 +310,7 @@ export const articles6to10: BlogArticle[] = [
     slug: "mon-boiler-ne-chauffe-plus-a-mouscron-faut-il-le-reparer-ou-le-remplacer",
     title: "Mon boiler ne chauffe plus a Mouscron : faut-il le reparer ou le remplacer ?",
     seoTitle: "Boiler en Panne Mouscron : Reparer ou Remplacer ? Guide",
-    metaDescription: "Eau froide a Mouscron ? Votre boiler ne chauffe plus : panne de resistance, thermostat ou calcaire ? Conseils experts et devis clair au 056 98 02 44.",
+    metaDescription: "Eau froide a Mouscron ? Votre boiler ne chauffe plus : panne de resistance, thermostat ou calcaire ? Conseils experts et devis clair au 0490 06 72 45.",
     h1: "Mon Boiler ne Chauffe Plus a Mouscron : Faut-il le Reparer ou le Remplacer ?",
     category: "Boiler & Chauffe-eau",
     readTime: "9 min",
