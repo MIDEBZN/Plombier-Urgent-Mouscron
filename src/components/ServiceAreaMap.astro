@@ -1,0 +1,240 @@
+---
+// Component: ServiceAreaMap.astro
+// Interactive vector territory map, postal code checker, and commune nodes for Grand Mouscron
+// Zero emojis and zero em dashes
+---
+
+<section class="py-16 bg-brand-surface border-t border-brand-border" aria-labelledby="map-section-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">
+        Cartographie d'Intervention
+      </span>
+      <h2 id="map-section-heading" class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+        Carte de Notre Zone de Garde Plomberie
+      </h2>
+      <p class="text-sm sm:text-base text-brand-muted mt-3 leading-relaxed">
+        Visualisez notre perimetre d'action a Mouscron, ses entites communales et les communes limitrophes. Nos 4 camionnettes d'astreinte patrouillent en continu pour une presence reelle en 20 a 35 minutes.
+      </p>
+    </div>
+
+    <!-- Postal Code Quick Checker -->
+    <div class="max-w-xl mx-auto mb-10 bg-white p-4 sm:p-5 rounded-2xl border border-brand-border shadow-xs">
+      <label for="postal-search" class="block text-xs font-bold uppercase text-brand-navy mb-2 tracking-wider">
+        Verifiez si votre adresse est couverte en urgence :
+      </label>
+      <div class="flex flex-col sm:flex-row gap-2">
+        <input 
+          id="postal-search" 
+          type="text" 
+          placeholder="Entrez votre code postal ou commune (ex: 7700, Luingne, 7712...)" 
+          class="flex-1 px-4 py-2.5 rounded-xl border border-brand-border text-sm focus:ring-2 focus:ring-brand-red focus:border-brand-red"
+        />
+        <button 
+          id="btn-check-postal" 
+          type="button" 
+          class="px-5 py-2.5 bg-brand-red hover:bg-brand-redHover text-white font-bold text-xs rounded-xl shadow-xs transition cursor-pointer"
+        >
+          Verifier ma zone
+        </button>
+      </div>
+      <div id="postal-result" class="hidden mt-3 p-3 rounded-xl text-xs font-medium"></div>
+    </div>
+
+    <!-- Vector Map Container -->
+    <div class="bg-brand-navy rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl relative overflow-hidden mb-12">
+      <!-- Background subtle grid -->
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FF4304_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+        <!-- SVG Map Graphic (7 cols) -->
+        <div class="lg:col-span-7 bg-brand-darknavy/90 p-4 sm:p-6 rounded-2xl border border-white/10 relative">
+          <div class="flex items-center justify-between mb-4 text-xs text-gray-300">
+            <span class="font-bold text-white uppercase tracking-wider text-[11px]">Reseau d'Urgence Grand Mouscron</span>
+            <span class="inline-flex items-center text-brand-red font-bold text-[11px]">
+              <span class="w-2 h-2 rounded-full bg-brand-red animate-ping mr-1.5"></span>
+              7 Secteurs Surveilles
+            </span>
+          </div>
+
+          <!-- Stylized Schematic Territory Map -->
+          <svg class="w-full h-auto max-h-[380px]" viewBox="0 0 700 460" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Road corridors (N58, E403, Transversales) -->
+            <!-- N58 Express Highway -->
+            <path d="M 120 320 Q 250 200 400 180 T 620 220" stroke="#FF4304" stroke-width="4" stroke-dasharray="6 4" opacity="0.8" />
+            <!-- E403 / A17 Highway -->
+            <path d="M 520 60 L 520 400" stroke="#3b82f6" stroke-width="3" stroke-dasharray="4 4" opacity="0.6" />
+            <!-- Franco-Belgian Border line -->
+            <path d="M 160 420 Q 260 360 380 340 L 460 370" stroke="#ffffff" stroke-width="2" stroke-dasharray="8 6" opacity="0.3" />
+
+            <!-- Labels on routes -->
+            <text x="210" y="220" fill="#FF4304" font-size="11" font-weight="bold">Voie Express N58</text>
+            <text x="530" y="100" fill="#93c5fd" font-size="10">Autoroute E403 (A17)</text>
+            <text x="280" y="360" fill="#9ca3af" font-size="10">Frontiere Franco-Belge</text>
+
+            <!-- Node 1: Mouscron Centre (7700) -->
+            <g class="cursor-pointer group">
+              <circle cx="280" cy="210" r="32" fill="#FF4304" fill-opacity="0.2" class="animate-pulse" />
+              <circle cx="280" cy="210" r="14" fill="#FF4304" stroke="#ffffff" stroke-width="2" />
+              <text x="280" y="248" fill="#ffffff" font-size="13" font-weight="extrabold" text-anchor="middle">Mouscron (7700)</text>
+              <text x="280" y="264" fill="#FF4304" font-size="11" font-weight="bold" text-anchor="middle">20 a 30 min | Siege</text>
+            </g>
+
+            <!-- Node 2: Luingne (7700) -->
+            <g class="cursor-pointer group">
+              <circle cx="370" cy="180" r="10" fill="#ffffff" stroke="#001621" stroke-width="2" />
+              <text x="370" y="160" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Luingne</text>
+              <text x="370" y="146" fill="#9ca3af" font-size="10" text-anchor="middle">20 a 30 min (7700)</text>
+            </g>
+
+            <!-- Node 3: Herseaux (7712) -->
+            <g class="cursor-pointer group">
+              <circle cx="390" cy="280" r="11" fill="#FF4304" stroke="#ffffff" stroke-width="2" />
+              <text x="390" y="308" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Herseaux</text>
+              <text x="390" y="322" fill="#FF4304" font-size="10" font-weight="semibold" text-anchor="middle">20 a 30 min (7712)</text>
+            </g>
+
+            <!-- Node 4: Dottignies (7711) -->
+            <g class="cursor-pointer group">
+              <circle cx="530" cy="190" r="12" fill="#ffffff" stroke="#FF4304" stroke-width="2" />
+              <text x="530" y="220" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Dottignies</text>
+              <text x="530" y="234" fill="#9ca3af" font-size="10" text-anchor="middle">25 a 35 min (7711)</text>
+            </g>
+
+            <!-- Node 5: Estaimpuis & Nechin (7730) -->
+            <g class="cursor-pointer group">
+              <circle cx="470" cy="350" r="10" fill="#ffffff" stroke="#001621" stroke-width="2" />
+              <text x="470" y="380" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Estaimpuis & Nechin</text>
+              <text x="470" y="394" fill="#9ca3af" font-size="10" text-anchor="middle">25 a 35 min (7730)</text>
+            </g>
+
+            <!-- Node 6: Tourcoing (59200) -->
+            <g class="cursor-pointer group">
+              <circle cx="210" cy="320" r="10" fill="#FF4304" stroke="#ffffff" stroke-width="2" />
+              <text x="210" y="350" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Tourcoing</text>
+              <text x="210" y="364" fill="#FF4304" font-size="10" font-weight="semibold" text-anchor="middle">20 a 30 min (59200)</text>
+            </g>
+
+            <!-- Node 7: Comines-Warneton (7780) -->
+            <g class="cursor-pointer group">
+              <circle cx="100" cy="180" r="10" fill="#ffffff" stroke="#FF4304" stroke-width="2" />
+              <text x="100" y="160" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">Comines-Warneton</text>
+              <text x="100" y="146" fill="#9ca3af" font-size="10" text-anchor="middle">25 a 35 min (7780 via N58)</text>
+            </g>
+          </svg>
+
+          <p class="text-[10px] text-gray-400 text-center mt-2">
+            Schema indicatif du corridor d'intervention express centre sur l'entite de Mouscron.
+          </p>
+        </div>
+
+        <!-- Right Side: Hub Summary & Quick Route Cards (5 cols) -->
+        <div class="lg:col-span-5 space-y-4 text-white">
+          <div class="space-y-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-red block">Rayonnement Territorial</span>
+            <h3 class="text-2xl font-black">7 Secteurs Desservis Sans Supplement</h3>
+            <p class="text-xs text-gray-300 leading-relaxed">
+              Nous appliquons une grille tarifaire forfaitaire et claire. Pas de mauvaise surprise de frais de deplacement kilometrique pour l'agglomeration mouscronnoise.
+            </p>
+          </div>
+
+          <div class="space-y-2.5 text-xs">
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+              <div>
+                <strong class="text-white block">Mouscron, Luingne, Herseaux</strong>
+                <span class="text-gray-400">Codes postaux : 7700, 7712</span>
+              </div>
+              <span class="text-brand-red font-bold">20 a 30 min</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+              <div>
+                <strong class="text-white block">Dottignies & Estaimpuis</strong>
+                <span class="text-gray-400">Codes postaux : 7711, 7730</span>
+              </div>
+              <span class="text-white font-bold">25 a 35 min</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+              <div>
+                <strong class="text-white block">Tourcoing & Zone Frontaliere</strong>
+                <span class="text-gray-400">Code postal : 59200 / Neuville</span>
+              </div>
+              <span class="text-brand-red font-bold">20 a 30 min</span>
+            </div>
+
+            <div class="p-3 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between">
+              <div>
+                <strong class="text-white block">Comines-Warneton & Ploegsteert</strong>
+                <span class="text-gray-400">Code postal : 7780 (liaison N58)</span>
+              </div>
+              <span class="text-white font-bold">25 a 35 min</span>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a 
+              href="/locations" 
+              class="w-full inline-flex items-center justify-center py-3 px-5 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-xs transition"
+            >
+              Consulter le Guide Complet des Zones
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const postalInput = document.getElementById('postal-search') as HTMLInputElement;
+  const checkBtn = document.getElementById('btn-check-postal');
+  const resultBox = document.getElementById('postal-result');
+
+  const checkZone = () => {
+    if (!postalInput || !resultBox) return;
+    const val = postalInput.value.trim().toLowerCase();
+
+    if (!val) {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200 block";
+      resultBox.textContent = "Veuillez saisir votre code postal ou commune.";
+      return;
+    }
+
+    if (val.includes('7700') || val.includes('mouscron') || val.includes('luingne') || val.includes('tuquet') || val.includes('mont-a-leux')) {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 block";
+      resultBox.textContent = "Zone prioritaire 7700 : Nos techniciens interviennent chez vous en 20 a 30 minutes garanti. Appelez le 056 98 02 44.";
+    } else if (val.includes('7712') || val.includes('herseaux')) {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 block";
+      resultBox.textContent = "Zone couverte 7712 (Herseaux) : Arrivee en 20 a 30 minutes 24h/24 et 7j/7. Appelez le 056 98 02 44.";
+    } else if (val.includes('7711') || val.includes('dottignies')) {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 block";
+      resultBox.textContent = "Zone couverte 7711 (Dottignies) : Arrivee en 25 a 35 minutes via E403/N511. Appelez le 056 98 02 44.";
+    } else if (val.includes('7730') || val.includes('estaimpuis') || val.includes('nechin') || val.includes('leers-nord') || val.includes('saint-leger')) {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 block";
+      resultBox.textContent = "Zone couverte 7730 (Estaimpuis & villages) : Arrivee en 25 a 35 minutes. Appelez le 056 98 02 44.";
+    } else if (val.includes('59200') || val.includes('tourcoing') || val.includes('neuville') || val.includes('wattrelos')) {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 block";
+      resultBox.textContent = "Zone transfrontaliere directe (Tourcoing / frontiere) : Arrivee en 20 a 30 minutes. Appelez le 056 98 02 44.";
+    } else if (val.includes('7780') || val.includes('comines') || val.includes('warneton') || val.includes('ploegsteert')) {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-emerald-50 text-emerald-800 border border-emerald-200 block";
+      resultBox.textContent = "Zone couverte 7780 (Comines-Warneton via N58) : Arrivee en 25 a 35 minutes. Appelez le 056 98 02 44.";
+    } else {
+      resultBox.className = "mt-3 p-3 rounded-xl text-xs font-medium bg-blue-50 text-blue-800 border border-blue-200 block";
+      resultBox.textContent = "Secteur limitrophe : Nous couvrons l'ensemble des communes proches de Mouscron. Contactez notre centrale au 056 98 02 44 pour confirmer le delai d'arrivee.";
+    }
+  };
+
+  if (checkBtn) {
+    checkBtn.addEventListener('click', checkZone);
+  }
+  if (postalInput) {
+    postalInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        checkZone();
+      }
+    });
+  }
+</script>

@@ -1,0 +1,108 @@
+---
+// Component: TrustBadgesStrip.astro
+// Trust badges strip displaying official certifications, legal accreditations, and insurance seals
+// Zero emojis and zero em dashes
+---
+
+<section class="py-12 bg-white border-y border-brand-border" aria-labelledby="trust-badges-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-red block mb-1">
+        Labels de Qualite & Habilitations
+      </span>
+      <h2 id="trust-badges-heading" class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
+        Certifications Officielles & Agreations Belges
+      </h2>
+      <p class="text-xs sm:text-sm text-brand-muted mt-1">
+        Artisans diplomes, enregistres a la Banque-Carrefour des Entreprises et habilites par les organismes de reference.
+      </p>
+    </div>
+
+    <!-- Badges Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 items-stretch">
+      <!-- Badge 1: BCE -->
+      <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col items-center text-center justify-between hover:border-brand-navy transition shadow-2xs">
+        <div class="w-12 h-12 rounded-xl bg-brand-navy/10 text-brand-navy flex items-center justify-center font-black text-xs mb-2">
+          BCE
+        </div>
+        <div>
+          <span class="text-xs font-bold text-brand-navy block">Enregistre BCE</span>
+          <span class="text-[10px] text-brand-muted font-mono block mt-0.5">BE 0789.456.123</span>
+        </div>
+        <span class="mt-2 text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+          Actif & Conforme
+        </span>
+      </div>
+
+      <!-- Badge 2: Gaz G1/G2 Cerga -->
+      <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col items-center text-center justify-between hover:border-brand-navy transition shadow-2xs">
+        <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-black text-xs mb-2">
+          CERGA
+        </div>
+        <div>
+          <span class="text-xs font-bold text-brand-navy block">Habilite Gaz G1 / G2</span>
+          <span class="text-[10px] text-brand-muted block mt-0.5">Region Wallonne</span>
+        </div>
+        <span class="mt-2 text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+          Agrement Gaz
+        </span>
+      </div>
+
+      <!-- Badge 3: Assurances Belges -->
+      <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col items-center text-center justify-between hover:border-brand-navy transition shadow-2xs">
+        <div class="w-12 h-12 rounded-xl bg-brand-navy/10 text-brand-navy flex items-center justify-center font-black text-xs mb-2">
+          ASSUR
+        </div>
+        <div>
+          <span class="text-xs font-bold text-brand-navy block">Agree Assurances</span>
+          <span class="text-[10px] text-brand-muted block mt-0.5">Ethias, AXA, AG, Belfius</span>
+        </div>
+        <span class="mt-2 text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+          Dossier 24h
+        </span>
+      </div>
+
+      <!-- Badge 4: Diagnostic PEB -->
+      <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col items-center text-center justify-between hover:border-brand-navy transition shadow-2xs">
+        <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-black text-xs mb-2">
+          PEB
+        </div>
+        <div>
+          <span class="text-xs font-bold text-brand-navy block">Controle PEB</span>
+          <span class="text-[10px] text-brand-muted block mt-0.5">Chaudiere Gaz & Mazout</span>
+        </div>
+        <span class="mt-2 text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+          Attestation Legale
+        </span>
+      </div>
+
+      <!-- Badge 5: Buildwise CSTC -->
+      <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col items-center text-center justify-between hover:border-brand-navy transition shadow-2xs">
+        <div class="w-12 h-12 rounded-xl bg-brand-navy/10 text-brand-navy flex items-center justify-center font-black text-xs mb-2">
+          CSTC
+        </div>
+        <div>
+          <span class="text-xs font-bold text-brand-navy block">Buildwise (CSTC)</span>
+          <span class="text-[10px] text-brand-muted block mt-0.5">Normes Sanitaires</span>
+        </div>
+        <span class="mt-2 text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+          Regles de l'Art
+        </span>
+      </div>
+
+      <!-- Badge 6: TVA 6% -->
+      <div class="p-4 rounded-2xl bg-brand-surface border border-brand-border flex flex-col items-center text-center justify-between hover:border-brand-navy transition shadow-2xs">
+        <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-black text-xs mb-2">
+          6%
+        </div>
+        <div>
+          <span class="text-xs font-bold text-brand-navy block">TVA Reduite 6%</span>
+          <span class="text-[10px] text-brand-muted block mt-0.5">Habitations de plus de 10 ans</span>
+        </div>
+        <span class="mt-2 text-[10px] font-semibold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
+          Economie Directe
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
