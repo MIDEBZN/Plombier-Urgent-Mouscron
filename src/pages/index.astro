@@ -137,66 +137,114 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Card 1: Fuites -->
-        <article class="bg-white p-7 rounded-2xl border border-brand-border shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+        <article class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-xs hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-lg mb-5">
-              F
+            <div class="h-52 overflow-hidden bg-gray-100 relative">
+              <img 
+                src="/images/service-fuite.jpg" 
+                alt="Reparation de fuite d'eau urgente a Mouscron" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy"
+                width="800"
+                height="450"
+              />
+              <span class="absolute top-3 left-3 bg-brand-navy/90 backdrop-blur-xs text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md border border-white/10">
+                Urgence Eau 24/7
+              </span>
             </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-2.5">Reparation de Fuite d'Eau</h3>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">
-              Tuyau cuivre ou multicouche perce, fuite sous evier, robinet d'arret defaillant, suintement encastre. Colmatage immediat pour limiter les degats.
-            </p>
-            <ul class="text-xs text-brand-darkText space-y-1.5 mb-6">
-              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Localisation de fuite non destructive</li>
-              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Attestation pour la SWDE si surconsommation</li>
-              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Rapport detaille assurance degat des eaux</li>
-            </ul>
+            <div class="p-6 sm:p-7">
+              <h3 class="text-xl font-bold text-brand-navy mb-2.5 group-hover:text-brand-red transition-colors">
+                Reparation de Fuite d'Eau
+              </h3>
+              <p class="text-brand-muted text-sm leading-relaxed mb-4">
+                Tuyau cuivre ou multicouche perce, fuite sous evier, robinet d'arret defaillant, suintement encastre. Colmatage immediat pour limiter les degats.
+              </p>
+              <ul class="text-xs text-brand-darkText space-y-2 mb-6">
+                <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Localisation de fuite non destructive</li>
+                <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Attestation pour la SWDE si surconsommation</li>
+                <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Rapport detaille assurance degat des eaux</li>
+              </ul>
+            </div>
           </div>
-          <a class="inline-flex items-center text-sm font-bold text-brand-red hover:underline" href="/services#fuite">
-            En savoir plus sur les fuites &rarr;
-          </a>
+          <div class="px-6 pb-6 sm:px-7 sm:pb-7">
+            <a class="inline-flex items-center text-sm font-bold text-brand-red hover:underline" href="/services#fuite">
+              En savoir plus sur les fuites &rarr;
+            </a>
+          </div>
         </article>
 
         <!-- Card 2: Debouchage -->
-        <article class="bg-white p-7 rounded-2xl border border-brand-border shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+        <article class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-xs hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-navy text-white flex items-center justify-center font-bold text-lg mb-5">
-              D
+            <div class="h-52 overflow-hidden bg-gray-100 relative">
+              <img 
+                src="/images/service-debouchage.jpg" 
+                alt="Debouchage canalisation et WC a Mouscron" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy"
+                width="800"
+                height="450"
+              />
+              <span class="absolute top-3 left-3 bg-brand-navy/90 backdrop-blur-xs text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md border border-white/10">
+                Intervention 30 Min
+              </span>
             </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-2.5">Debouchage Canalisation & WC</h3>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">
-              Toilettes qui debordent, evier qui ne s'ecoule plus, odeurs d'egout ou sterput refoulant. Intervention avec furet mecanique et hydrocureuse.
-            </p>
-            <ul class="text-xs text-brand-darkText space-y-1.5 mb-6">
-              <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Debouchage WC en moins de 45 minutes</li>
-              <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Hydrocurage haute pression pour collecteurs</li>
-              <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Inspection par camera video haute definition</li>
-            </ul>
+            <div class="p-6 sm:p-7">
+              <h3 class="text-xl font-bold text-brand-navy mb-2.5 group-hover:text-brand-navy transition-colors">
+                Debouchage Canalisation & WC
+              </h3>
+              <p class="text-brand-muted text-sm leading-relaxed mb-4">
+                Toilettes qui debordent, evier qui ne s'ecoule plus, odeurs d'egout ou sterput refoulant. Intervention avec furet mecanique et hydrocureuse.
+              </p>
+              <ul class="text-xs text-brand-darkText space-y-2 mb-6">
+                <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Debouchage WC en moins de 45 minutes</li>
+                <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Hydrocurage haute pression pour collecteurs</li>
+                <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Inspection par camera video haute definition</li>
+              </ul>
+            </div>
           </div>
-          <a class="inline-flex items-center text-sm font-bold text-brand-navy hover:underline" href="/services#debouchage">
-            En savoir plus sur le debouchage &rarr;
-          </a>
+          <div class="px-6 pb-6 sm:px-7 sm:pb-7">
+            <a class="inline-flex items-center text-sm font-bold text-brand-navy hover:underline" href="/services#debouchage">
+              En savoir plus sur le debouchage &rarr;
+            </a>
+          </div>
         </article>
 
         <!-- Card 3: Boiler -->
-        <article class="bg-white p-7 rounded-2xl border border-brand-border shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+        <article class="bg-white rounded-2xl overflow-hidden border border-brand-border shadow-xs hover:shadow-xl transition-all duration-300 group flex flex-col justify-between">
           <div>
-            <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-lg mb-5">
-              B
+            <div class="h-52 overflow-hidden bg-gray-100 relative">
+              <img 
+                src="/images/service-boiler.jpg" 
+                alt="Depannage boiler et chauffe-eau a Mouscron" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                loading="lazy"
+                width="800"
+                height="450"
+              />
+              <span class="absolute top-3 left-3 bg-brand-navy/90 backdrop-blur-xs text-white text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md border border-white/10">
+                Eau Chaude Express
+              </span>
             </div>
-            <h3 class="text-xl font-bold text-brand-navy mb-2.5">Depannage Boiler & Chauffe-Eau</h3>
-            <p class="text-brand-muted text-sm leading-relaxed mb-4">
-              Plus d'eau chaude, groupe de securite qui coule sans arret, boiler qui fait disjoncter le compteur. Reparation ou remplacement rapide.
-            </p>
-            <ul class="text-xs text-brand-darkText space-y-1.5 mb-6">
-              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Marques Bulex, Vaillant, Ariston, ACV</li>
-              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Detartrage complet pour eau calcaire de Mouscron</li>
-              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Remplacement thermostat et resistances de stock</li>
-            </ul>
+            <div class="p-6 sm:p-7">
+              <h3 class="text-xl font-bold text-brand-navy mb-2.5 group-hover:text-brand-red transition-colors">
+                Depannage Boiler & Chauffe-Eau
+              </h3>
+              <p class="text-brand-muted text-sm leading-relaxed mb-4">
+                Plus d'eau chaude, groupe de securite qui coule sans arret, boiler qui fait disjoncter le compteur. Reparation ou remplacement rapide.
+              </p>
+              <ul class="text-xs text-brand-darkText space-y-2 mb-6">
+                <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Marques Bulex, Vaillant, Ariston, ACV</li>
+                <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Detartrage complet pour eau calcaire de Mouscron</li>
+                <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Remplacement thermostat et resistances de stock</li>
+              </ul>
+            </div>
           </div>
-          <a class="inline-flex items-center text-sm font-bold text-brand-red hover:underline" href="/services#boiler">
-            En savoir plus sur les boilers &rarr;
-          </a>
+          <div class="px-6 pb-6 sm:px-7 sm:pb-7">
+            <a class="inline-flex items-center text-sm font-bold text-brand-red hover:underline" href="/services#boiler">
+              En savoir plus sur les boilers &rarr;
+            </a>
+          </div>
         </article>
       </div>
     </div>
