@@ -1,0 +1,395 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Chauffage & Chaudieres a Mouscron | Installation, Entretien & SOS"
+  description="Depannage d'urgence, entretien annuel et installation de chaudieres, boilers et radiateurs a Mouscron. Bulex, Vaillant, Viessmann, ACV. Technicien certifie."
+  canonicalPath="/services/chauffage-chaudieres"
+>
+  <!-- Breadcrumb -->
+  <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">
+    <div class="max-w-7xl mx-auto flex items-center gap-2">
+      <a href="/" class="hover:text-brand-red transition">Accueil</a>
+      <span>/</span>
+      <a href="/services" class="hover:text-brand-red transition">Services</a>
+      <span>/</span>
+      <span class="text-brand-navy font-semibold">Chauffage & Chaudieres</span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-brand-navy text-white py-14 lg:py-20 relative overflow-hidden" aria-labelledby="service-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-red/10 border border-brand-red/30 text-xs font-bold uppercase tracking-wider text-brand-red">
+            <span class="w-2 h-2 rounded-full bg-brand-red animate-pulse"></span>
+            Chauffagistes Certifies Wallonie Picarde
+          </div>
+          <h1 id="service-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Chauffage, Chaudieres & Boilers a <span class="text-brand-red">Mouscron</span>
+          </h1>
+          <p class="text-base sm:text-lg text-gray-300 max-w-2xl leading-relaxed">
+            Panne de chauffage en plein hiver, chaudiere qui se met en securite, eau sanitaire tiede ou radiateurs bruyants ? Nous assurons le depannage express sous 24h, l'entretien legal annuel avec attestation et le remplacement complet de vos equipements thermiques.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-2">
+            <a href="tel:+3256980244" class="inline-flex items-center justify-center px-7 py-4 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-base shadow-lg transition">
+              SOS Panne Chauffage : 056 98 02 44
+            </a>
+            <a href="/contact" class="inline-flex items-center justify-center px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-sm transition">
+              Reserver un Entretien Annuel
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
+            <img 
+              src="/images/service-boiler.jpg" 
+              alt="Chauffagiste inspectant la pression et les vannes d'une chaudiere a Mouscron" 
+              class="w-full h-80 object-cover" 
+              width="800" 
+              height="500" 
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: What's included (detailed list) -->
+  <section class="py-16 bg-white border-b border-brand-border" aria-labelledby="included-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-2">Prestation Thermique</span>
+        <h2 id="included-heading" class="text-3xl font-extrabold text-brand-navy">
+          Ce qui est Inclus dans Nos Services de Chauffage
+        </h2>
+        <p class="text-brand-muted text-sm sm:text-base mt-2">
+          De la reparation d'urgence au remplacement complet a condensation, nous intervenons sur l'ensemble de votre installation de chauffage central et d'eau chaude sanitaire.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface space-y-2.5">
+          <div class="w-8 h-8 rounded-lg bg-brand-navy text-white flex items-center justify-center text-xs font-bold">01</div>
+          <h3 class="font-bold text-brand-navy text-base">Depannage Urgent 24/7 de Chaudiere</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Diagnostic des codes d'erreur, remplacement de thermocouple, vanne gaz, circulateur d'eau ou vase d'expansion defectueux.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface space-y-2.5">
+          <div class="w-8 h-8 rounded-lg bg-brand-navy text-white flex items-center justify-center text-xs font-bold">02</div>
+          <h3 class="font-bold text-brand-navy text-base">Entretien Annuel Legal & Ramonage</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Nettoyage du corps de chauffe, reglage de combustion au banc electronique, ramonage de conduit et delivrance de l'attestation legale de conformite.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface space-y-2.5">
+          <div class="w-8 h-8 rounded-lg bg-brand-navy text-white flex items-center justify-center text-xs font-bold">03</div>
+          <h3 class="font-bold text-brand-navy text-base">Detartrage Complet de Boiler</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Curage chimique doux du calcaire accumule dans la cuve des chauffe-eau electriques et gaz, retablissant un rendement optimal de chauffe.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface space-y-2.5">
+          <div class="w-8 h-8 rounded-lg bg-brand-navy text-white flex items-center justify-center text-xs font-bold">04</div>
+          <h3 class="font-bold text-brand-navy text-base">Installation de Chaudiere a Condensation</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Pose et raccordement de chaudieres gaz murales a haute performance energetique (Bulex, Vaillant, Viessmann, ACV) avec reduction de consommation de 30%.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface space-y-2.5">
+          <div class="w-8 h-8 rounded-lg bg-brand-navy text-white flex items-center justify-center text-xs font-bold">05</div>
+          <h3 class="font-bold text-brand-navy text-base">Equilibrage & Purge de Radiateurs</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Elimination des poches d'air, debouage hydraulique du circuit et pose de vannes thermostatiques pour une repartition uniforme de la chaleur.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface space-y-2.5">
+          <div class="w-8 h-8 rounded-lg bg-brand-navy text-white flex items-center justify-center text-xs font-bold">06</div>
+          <h3 class="font-bold text-brand-navy text-base">Mise en Conformite & Securite Gaz</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Controle d'etancheite de l'alimentation gaz, verification des aerations et remplacement des groupes de securite sanitaire sous pression.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Common problems we solve -->
+  <section class="py-16 bg-brand-surface border-b border-brand-border" aria-labelledby="problems-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-2">Dysfonctionnements Frequents</span>
+        <h2 id="problems-heading" class="text-3xl font-extrabold text-brand-navy">
+          Pannes de Chauffage Traitees a Mouscron
+        </h2>
+        <p class="text-brand-muted text-sm sm:text-base mt-2">
+          Le calcaire eleve de l'eau mouscronnoise et l'usure mecanique provoquent des pannes thermiques classiques que nous resolvons tous les jours.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2">
+          <h3 class="font-bold text-brand-navy text-base flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+            Chaudiere Qui Fait Disjoncter ou Code Erreur F28 / F22
+          </h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Defaut d'allumage, manque de pression d'eau ou court-circuit de la resistance du chauffe-eau. Nous identifions la piece electronique ou mecanique defaillante et la remplacons par une reference constructeur.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2">
+          <h3 class="font-bold text-brand-navy text-base flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+            Eau Sanitaire Tiede ou Groupe de Securite Qui Fuit
+          </h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Le calcaire recouvre l'echangeur a plaques ou la resistance plongeante, limitant le transfert thermique. Le groupe de securite s'entartre et coule en continu vers l'egout, gaspillant des dizaines de litres.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2">
+          <h3 class="font-bold text-brand-navy text-base flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+            Radiateurs Froids en Bas ou Qui Claquent
+          </h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            La presence de boues magnetiques de corrosion dans les tuyaux empeche la bonne circulation de l'eau chaude. Un debouage mecanique et une purge d'air restaurent le rendement thermique immediatement.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-brand-border space-y-2">
+          <h3 class="font-bold text-brand-navy text-base flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-brand-red"></span>
+            Vase d'Expansion Dégonflé ou Membranne Percée
+          </h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Lorsque la chaudiere monte en temperature, la soupape de securite crache de l'eau rougeatre car la dilatation n'est plus absorbee. Remplacement du vase sur place lors du passage.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Our process (step by step) -->
+  <section class="py-16 bg-white border-b border-brand-border" aria-labelledby="process-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-2">Processus Clair</span>
+        <h2 id="process-heading" class="text-3xl font-extrabold text-brand-navy">
+          Comment Nous Intervenons sur Votre Chauffage
+        </h2>
+        <p class="text-brand-muted text-sm sm:text-base mt-2">
+          Une methodologie stricte pour garantir securite, conformite legale et rendement energetique maximal.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface relative">
+          <span class="text-3xl font-black text-brand-navy/15 absolute top-4 right-4">01</span>
+          <h3 class="font-bold text-brand-navy text-base mb-2">Diagnostic Technique</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Verification du circuit electrique, de la pression d'eau, du circuit d'arrivee gaz et de l'evacuation des fumees.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface relative">
+          <span class="text-3xl font-black text-brand-navy/15 absolute top-4 right-4">02</span>
+          <h3 class="font-bold text-brand-navy text-base mb-2">Devis de Reparation</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Tarif transparent annonce avec le detail du prix de la piece d'origine certifiee constructeur et de la main-d'oeuvre.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface relative">
+          <span class="text-3xl font-black text-brand-navy/15 absolute top-4 right-4">03</span>
+          <h3 class="font-bold text-brand-navy text-base mb-2">Intervention & Reglage</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Remplacement de la piece, nettoyage, analyse de combustion avec sonde electronique et optimisation des reglages de veille.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-brand-border bg-brand-surface relative">
+          <span class="text-3xl font-black text-brand-navy/15 absolute top-4 right-4">04</span>
+          <h3 class="font-bold text-brand-navy text-base mb-2">Attestation Legale</h3>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Delivrance de l'attestation officielle de controle periodique obligatoire exigee par les assurances et les proprietaires.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Why choose us -->
+  <section class="py-16 bg-brand-navy text-white" aria-labelledby="why-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-red block">Competence Thermique</span>
+          <h2 id="why-heading" class="text-3xl font-extrabold text-white">
+            Pourquoi Confier Votre Chauffage a Nos Experts ?
+          </h2>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Le gaz et la chauffe sous haute pression exigent des competences reconnues. Nos chauffagistes sont certifies et regulierement formes aux dernieres technologies des constructeurs europeens.
+          </p>
+          <div class="space-y-3 pt-2 text-xs">
+            <div class="p-3.5 bg-white/5 rounded-xl border border-white/10 flex items-start gap-3">
+              <span class="text-brand-red font-bold">OK</span>
+              <div>
+                <strong class="text-white block">Marques partenaires officielles</strong>
+                <span class="text-gray-300">Pieces de rechange d'origine Bulex, Vaillant, Viessmann, ACV, Junkers et Ariston.</span>
+              </div>
+            </div>
+            <div class="p-3.5 bg-white/5 rounded-xl border border-white/10 flex items-start gap-3">
+              <span class="text-brand-red font-bold">OK</span>
+              <div>
+                <strong class="text-white block">Agrément regional de controle periodique</strong>
+                <span class="text-gray-300">Rapport de combustion conforme aux normes de la Region Wallonne pour les chaudieres gaz.</span>
+              </div>
+            </div>
+            <div class="p-3.5 bg-white/5 rounded-xl border border-white/10 flex items-start gap-3">
+              <span class="text-brand-red font-bold">OK</span>
+              <div>
+                <strong class="text-white block">TVA reduite a 6%</strong>
+                <span class="text-gray-300">Sur la main-d'oeuvre et les equipements de remplacement pour les batiments de plus de 10 ans.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-white text-brand-darkText p-8 rounded-3xl shadow-xl">
+          <h3 class="text-xl font-bold text-brand-navy mb-4">Panne de Chauffage ou d'Eau Chaude ?</h3>
+          <p class="text-xs text-brand-muted mb-6 leading-relaxed">
+            Contactez notre ligne prioritaire chauffage pour l'envoi d'un technicien qualifie le jour meme a Mouscron.
+          </p>
+          <div class="space-y-3">
+            <a href="tel:+3256980244" class="w-full flex items-center justify-center py-4 bg-brand-red hover:bg-brand-redHover text-white font-bold rounded-xl text-sm transition">
+              Appeler le 056 98 02 44
+            </a>
+            <a href="/contact" class="w-full flex items-center justify-center py-3.5 bg-brand-surface hover:bg-brand-border text-brand-navy font-bold rounded-xl text-sm transition">
+              Planifier un Entretien Annuel
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Emergency availability & Service area details -->
+  <section class="py-16 bg-white border-b border-brand-border" aria-labelledby="area-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-6 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-red block">Depannage sous 24h</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">
+            Permanence Chauffage en Periode Hivernale
+          </h2>
+          <p class="text-sm text-brand-muted leading-relaxed">
+            Pendant les mois de grand froid, nous renforcons nos equipes pour intervenir en priorite aupres des foyers prives de chauffage avec enfants en bas age ou personnes vulnerables.
+          </p>
+          <div class="p-4 rounded-xl bg-brand-surface border border-brand-border text-xs text-brand-darkText space-y-1.5">
+            <p><strong>Ligne d'urgence chauffage :</strong> 056 98 02 44</p>
+            <p><strong>Intervention rapide :</strong> Sous 2h pour les pannes totales en hiver</p>
+            <p><strong>Certifications :</strong> Chauffagiste agree gaz G1 / G2</p>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 space-y-4" id="area-heading">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-navy block">Rayon d'Action</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy">
+            Entites Desservies a Mouscron
+          </h2>
+          <p class="text-sm text-brand-muted leading-relaxed">
+            Nos chauffagistes interviennent sur l'ensemble des communes et quartiers :
+          </p>
+          <div class="grid grid-cols-2 gap-2 text-xs font-semibold text-brand-darkText pt-1">
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Mouscron (7700)</span>
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Luingne (7700)</span>
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Herseaux (7712)</span>
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Dottignies (7711)</span>
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Quartier Mont-a-Leux</span>
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Quartier Le Tuquet</span>
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Quartier Risquons-Tout</span>
+            <span class="p-2.5 rounded-lg border border-brand-border bg-brand-surface">Le Nouveau Monde</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: FAQs -->
+  <section class="py-16 bg-brand-surface" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-2">Questions Frequentes</span>
+        <h2 id="faq-heading" class="text-3xl font-extrabold text-brand-navy">
+          Foire aux Questions sur le Chauffage & Chaudieres
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="p-5 rounded-xl border border-brand-border bg-white" open>
+          <summary class="font-bold text-brand-navy text-sm sm:text-base cursor-pointer list-none flex items-center justify-between">
+            <span>A quelle frequence l'entretien de ma chaudiere gaz est-il obligatoire en Wallonie ?</span>
+            <span class="text-brand-red font-bold text-lg">+</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-brand-muted leading-relaxed">
+            En Region Wallonne, le controle periodique d'une chaudiere au gaz est legalement obligatoire tous les 3 ans pour les puissances de 20 a 100 kW (tous les ans pour le mazout). Notre attestation officielle vous garantit d'etre couvert en cas de sinistre par votre compagnie d'assurance.
+          </p>
+        </details>
+
+        <details class="p-5 rounded-xl border border-brand-border bg-white">
+          <summary class="font-bold text-brand-navy text-sm sm:text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Pourquoi mon boiler s'entartre-t-il si rapidement a Mouscron ?</span>
+            <span class="text-brand-red font-bold text-lg">+</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-brand-muted leading-relaxed">
+            L'eau distribuee dans le Hainaut occidental et a Mouscron est d'une durete remarquable (souvent superieure a 35 degres francais). Des que l'eau depasse 55 degres dans votre cuve, le calcaire precipite et forme une croute isolante de plusieurs kilos qui fait surchauffer les resistances et consomme jusqu'a 40% d'electricite supplementaire.
+          </p>
+        </details>
+
+        <details class="p-5 rounded-xl border border-brand-border bg-white">
+          <summary class="font-bold text-brand-navy text-sm sm:text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Quelle pression d'eau doit afficher le manometre de ma chaudiere ?</span>
+            <span class="text-brand-red font-bold text-lg">+</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-brand-muted leading-relaxed">
+            La pression ideale a froid pour une maison a etage se situe entre 1.2 et 1.5 bar. En dessous de 1 bar, la chaudiere se met en securite manque d'eau. Au-dela de 2.5 bars, la soupape de securite s'ouvre pour evacuer le trop-plein.
+          </p>
+        </details>
+
+        <details class="p-5 rounded-xl border border-brand-border bg-white">
+          <summary class="font-bold text-brand-navy text-sm sm:text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Proposez-vous des devis gratuits pour le remplacement d'une chaudiere ?</span>
+            <span class="text-brand-red font-bold text-lg">+</span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-brand-muted leading-relaxed">
+            Oui, nous venons gratuitement evaluer la configuration de votre logement et vous proposons un devis detaille pour l'installation d'une chaudiere a condensation a haut rendement des marques Bulex, Vaillant ou Viessmann avec application du taux de TVA a 6% si votre habitation a plus de 10 ans.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-12 bg-brand-navy text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Une Panne de Chauffage ou un Boiler en Défaut ?</h2>
+      <p class="text-gray-300 text-sm max-w-xl mx-auto">Nos techniciens chauffagistes sont disponibles pour un depannage rapide a Mouscron.</p>
+      <div class="pt-2">
+        <a href="tel:+3256980244" class="inline-flex px-8 py-4 bg-brand-red hover:bg-brand-redHover font-black text-sm sm:text-base rounded-xl text-white shadow-xl transition">
+          Permanence Chauffage : 056 98 02 44
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
