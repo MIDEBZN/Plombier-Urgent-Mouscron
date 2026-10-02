@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Contact & Devis Plombier Mouscron (7700) | Ligne Directe 24/7"
+  description="Contactez votre artisan plombier a Mouscron. Permanence d'urgence 24h/24 et 7j/7 au 056 98 02 44. Formulaire de devis gratuit et contact WhatsApp direct."
+  canonicalPath="/contact"
+  schemaType="ContactPage"
+>
+  <!-- Hero Section -->
+  <section class="bg-brand-navy text-white py-14 lg:py-18 relative overflow-hidden" aria-labelledby="contact-hero-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center sm:text-left">
+      <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-3 block">Intervention Rapide</span>
+      <h1 id="contact-hero-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+        Contactez Votre Plombier a Mouscron
+      </h1>
+      <p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">
+        Une urgence de fuite, un WC bouche ou un projet sanitaire ? Joignez notre standard d'astreinte 24h/24 ou transmettez-nous votre demande par formulaire.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Grid -->
+  <section class="py-16 bg-brand-surface" aria-labelledby="contact-options-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Left: Direct Channels & Physical Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Assistance Immediate</span>
+            <h2 id="contact-options-heading" class="text-2xl sm:text-3xl font-extrabold text-brand-navy">
+              Permanence Telephonique 24/7
+            </h2>
+            <p class="text-sm text-brand-muted mt-2 leading-relaxed">
+              Pour toute situation d'urgence necessitant un deplacement sous 30 a 45 minutes, privilegiez toujours l'appel direct.
+            </p>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="p-6 bg-white rounded-2xl border border-brand-border shadow-xs space-y-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-muted block">Ligne Fixe Locale Mouscron</span>
+            <a href="tel:+3256980244" class="text-2xl font-black text-brand-red hover:underline block">
+              056 98 02 44
+            </a>
+            <p class="text-xs text-brand-muted">
+              Ligne directe ouverte 24h/24, 7j/7, dimanches et jours feries sans interruption.
+            </p>
+          </div>
+
+          <!-- Mobile & WhatsApp Card -->
+          <div class="p-6 bg-white rounded-2xl border border-brand-border shadow-xs space-y-3">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-muted block">Mobile d'Astreinte & WhatsApp</span>
+            <a href="tel:+32470123456" class="text-xl font-bold text-brand-navy hover:text-brand-red block">
+              0470 12 34 56
+            </a>
+            <p class="text-xs text-brand-muted mb-2">
+              Envoyez 2 ou 3 photos de votre fuite ou probleme sanitaire pour recevoir une premiere estimation de prix avant deplacement.
+            </p>
+            <a href="https://wa.me/32470123456?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20a%20Mouscron." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-bold transition">
+              Ouvrir la discussion WhatsApp
+            </a>
+          </div>
+
+          <!-- Address & Legal -->
+          <div class="p-6 bg-white rounded-2xl border border-brand-border shadow-xs space-y-2 text-xs text-brand-darkText">
+            <h3 class="font-bold text-brand-navy text-sm uppercase mb-1">Atelier & Siege d'Exploitation :</h3>
+            <p><strong>Plombier Urgent Mouscron</strong></p>
+            <p>Rue de Menin 45, 7700 Mouscron, Belgique</p>
+            <p class="text-brand-muted pt-1">BCE: BE 0789.456.123 | Agreation installations sanitaires et chauffage</p>
+            <p class="text-brand-muted">Zone de garde : Mouscron (7700), Luingne (7700), Herseaux (7712), Dottignies (7711)</p>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form (7 cols) -->
+        <div class="lg:col-span-7">
+          <div class="bg-white rounded-3xl border border-brand-border p-8 sm:p-10 shadow-lg">
+            <div class="mb-6">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Formulaire Express</span>
+              <h2 class="text-2xl font-bold text-brand-navy">Envoyez Votre Message ou Demande de Devis</h2>
+              <p class="text-xs sm:text-sm text-brand-muted mt-1">
+                Nous vous recontactons dans les 15 minutes pour confirmer la faisabilite et le devis.
+              </p>
+            </div>
+
+            <form id="contact-form" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-name" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Nom & Prenom *</label>
+                  <input id="contact-name" name="name" type="text" required placeholder="Jean Dupont" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                </div>
+                <div>
+                  <label for="contact-phone" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Telephone *</label>
+                  <input id="contact-phone" name="phone" type="tel" required placeholder="04XX XX XX XX" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="contact-email" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Adresse email</label>
+                  <input id="contact-email" name="email" type="email" placeholder="nom@exemple.be" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                </div>
+                <div>
+                  <label for="contact-locality" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Localite a Mouscron *</label>
+                  <input id="contact-locality" name="locality" type="text" required placeholder="Ex: Mouscron centre, Dottignies..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                </div>
+              </div>
+
+              <div>
+                <label for="contact-category" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Type d'intervention requise *</label>
+                <select id="contact-category" name="category" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
+                  <option value="" disabled selected>Selectionnez une categorie</option>
+                  <option value="fuite-urgence">Urgence fuite d'eau ou tuyau perce</option>
+                  <option value="debouchage-wc">Debouchage WC, evier ou canalisation</option>
+                  <option value="panne-boiler">Panne de chauffe-eau / boiler (plus d'eau chaude)</option>
+                  <option value="recherche-fuite">Recherche de fuite non destructive pour assurance</option>
+                  <option value="remplacement-sanitaire">Remplacement de robinet, mitigeur ou chasse d'eau</option>
+                  <option value="renovation">Projet de renovation sanitaire</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contact-urgency" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Degre d'urgence *</label>
+                <select id="contact-urgency" name="urgency" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
+                  <option value="urgent">Urgence critique : besoin d'un technicien dans l'heure</option>
+                  <option value="jour-meme">Intervention souhaitee dans la journee</option>
+                  <option value="rendez-vous">Sur rendez-vous programme</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="contact-message" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Description de votre probleme</label>
+                <textarea id="contact-message" name="message" rows="3" placeholder="Precisez l'emplacement de la fuite, la marque du chauffe-eau ou le symptome constate..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-base shadow-md transition duration-200 cursor-pointer">
+                Envoyer ma demande d'intervention
+              </button>
+
+              <div id="form-feedback" class="hidden p-3 rounded-lg bg-green-50 border border-green-200 text-green-800 text-xs text-center font-medium">
+                Votre demande a bien ete enregistree. Un technicien d'astreinte vous contacte dans quelques instants.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const feedback = document.getElementById('form-feedback');
+    if (form && feedback) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        feedback.classList.remove('hidden');
+        form.reset();
+      });
+    }
+  </script>
+</Layout>

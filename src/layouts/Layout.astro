@@ -1,0 +1,278 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  schemaType?: string;
+}
+
+const { 
+  title, 
+  description, 
+  canonicalPath = '',
+  schemaType = 'Plumber'
+} = Astro.props;
+
+const siteUrl = 'https://plombier-urgent-mouscron.be';
+const canonicalURL = new URL(canonicalPath || Astro.url.pathname, siteUrl).toString();
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": schemaType,
+  "name": "Plombier Urgent Mouscron",
+  "url": canonicalURL,
+  "telephone": "+3256980244",
+  "priceRange": "EUR",
+  "image": "https://plombier-urgent-mouscron.be/og-image.jpg",
+  "description": description,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rue de Menin 45",
+    "addressLocality": "Mouscron",
+    "postalCode": "7700",
+    "addressRegion": "Hainaut",
+    "addressCountry": "BE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 50.7444,
+    "longitude": 3.2183
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  ],
+  "areaServed": [
+    { "@type": "City", "name": "Mouscron", "postalCode": "7700" },
+    { "@type": "City", "name": "Luingne", "postalCode": "7700" },
+    { "@type": "City", "name": "Herseaux", "postalCode": "7712" },
+    { "@type": "City", "name": "Dottignies", "postalCode": "7711" }
+  ],
+  "sameAs": []
+};
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+  
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_BE" />
+  <meta property="og:site_name" content="Plombier Urgent Mouscron" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+</head>
+<body class="bg-white text-brand-darkText antialiased flex flex-col min-h-screen">
+  <!-- Top Announcement Bar -->
+  <aside class="bg-brand-navy text-white text-xs md:text-sm py-2.5 px-4 border-b border-white/10" aria-label="Informations de garde">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div class="flex items-center flex-wrap justify-center sm:justify-start gap-3">
+        <span class="inline-flex items-center text-brand-red font-bold uppercase tracking-wider text-[11px] bg-brand-red/10 px-2 py-0.5 rounded">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-red mr-1.5 pulse-dot"></span>
+          Astreinte 24h/24 et 7j/7
+        </span>
+        <span class="hidden md:inline text-gray-300">Secteur Mouscron, Luingne, Herseaux, Dottignies</span>
+        <span class="text-amber-400 font-medium">Note 4.9/5 (280+ avis verifies)</span>
+      </div>
+      <div class="flex items-center space-x-5 text-gray-300">
+        <span class="hidden lg:inline text-xs text-gray-400">Entreprise certifiee BCE BE 0789.456.123</span>
+        <a class="font-bold text-white hover:text-brand-red transition-colors flex items-center gap-1.5" href="tel:+3256980244">
+          <svg class="w-3.5 h-3.5 text-brand-red" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+          </svg>
+          056 98 02 44
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Header Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a class="flex items-center space-x-3 group" href="/" aria-label="Page d'accueil Plombier Urgent Mouscron">
+          <div class="w-11 h-11 bg-brand-navy rounded-lg flex items-center justify-center text-white shadow-md group-hover:bg-brand-red transition-colors">
+            <svg class="w-6 h-6 text-brand-red group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl sm:text-2xl font-black tracking-tight text-brand-navy block leading-none">Plombier Urgent</span>
+            <span class="text-[11px] font-bold uppercase tracking-widest text-brand-red block mt-0.5">Mouscron 7700</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-7 font-medium text-sm text-brand-darkText" aria-label="Navigation principale">
+          <a class="hover:text-brand-red transition-colors" href="/">Accueil</a>
+          <a class="hover:text-brand-red transition-colors" href="/services">Services</a>
+          <a class="hover:text-brand-red transition-colors" href="/locations">Zones d'intervention</a>
+          <a class="hover:text-brand-red transition-colors" href="/about">A propos</a>
+          <a class="hover:text-brand-red transition-colors" href="/contact">Contact</a>
+        </nav>
+
+        <!-- Header CTA Buttons -->
+        <div class="flex items-center space-x-3">
+          <a class="hidden sm:flex flex-col text-right" href="tel:+3256980244">
+            <span class="text-[11px] text-brand-muted font-medium">Intervention en 30 min</span>
+            <span class="text-sm md:text-base font-extrabold text-brand-navy leading-tight">056 98 02 44</span>
+          </a>
+          <a class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg bg-brand-red hover:bg-brand-redHover text-white font-bold text-xs sm:text-sm shadow-md transition duration-200" href="tel:+3256980244">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+            </svg>
+            Appel Express
+          </a>
+          <button id="mobile-nav-toggle" type="button" class="lg:hidden p-2 rounded-lg text-brand-darkText hover:bg-brand-surface focus:outline-hidden" aria-label="Ouvrir le menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-menu" class="hidden lg:hidden border-t border-brand-border bg-white px-4 pt-3 pb-6 space-y-2">
+      <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/">Accueil</a>
+      <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/services">Services</a>
+      <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/locations">Zones d'intervention</a>
+      <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/about">A propos</a>
+      <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/contact">Contact</a>
+      <div class="pt-3 border-t border-brand-border">
+        <a class="w-full inline-flex items-center justify-center py-3 bg-brand-navy text-white font-bold rounded-lg text-sm" href="tel:+3256980244">
+          Appeler le 056 98 02 44
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Slot -->
+  <main class="flex-grow">
+    <slot />
+  </main>
+
+  <!-- Mobile Sticky Emergency Bar -->
+  <div class="fixed bottom-0 left-0 right-0 z-40 bg-brand-navy/95 backdrop-blur-md border-t border-white/10 p-2.5 sm:hidden flex items-center gap-2 shadow-2xl">
+    <a href="tel:+3256980244" class="flex-1 bg-brand-red hover:bg-brand-redHover text-white font-extrabold py-3 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow-md">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+      </svg>
+      SOS Urgence 24/7
+    </a>
+    <a href="https://wa.me/32470123456?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20a%20Mouscron." target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow-md">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+        <path d="M12.04 2a9.9 9.9 0 00-8.48 15.06L2 22l5.09-1.52A9.94 9.94 0 1012.04 2zm5.46 12.4c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91s.82 2.22.94 2.38c.12.15 1.62 2.48 3.95 3.48.55.24.98.38 1.32.48.55.18 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.15-.43-.27zM12.04 20.18c-1.62 0-3.2-.44-4.58-1.27l-.33-.2-3.02.9.91-2.95-.21-.34a8.26 8.26 0 1115.4-4.34 8.2 8.2 0 01-8.17 8.2z"/>
+      </svg>
+      Devis WhatsApp
+    </a>
+  </div>
+
+  <!-- Authoritative Footer -->
+  <footer class="bg-brand-darknavy text-white pt-16 pb-24 sm:pb-16 border-t border-white/10" aria-label="Pied de page">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- Brand column -->
+        <div class="space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 bg-brand-red rounded-lg flex items-center justify-center text-white font-black text-lg">
+              P
+            </div>
+            <span class="text-xl font-black text-white">Plombier Urgent Mouscron</span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Service de depannage plomberie d'urgence 24h/24 et 7j/7 dans toute l'entite de Mouscron et communes limitrophes. Artisans plombiers certifies, devis annonce avant travaux.
+          </p>
+          <div class="text-xs text-gray-400 space-y-1">
+            <p>Numero d'entreprise: BE 0789.456.123</p>
+            <p>Siege local: Rue de Menin 45, 7700 Mouscron</p>
+            <p>TVA 6% applicable pour batiments de plus de 10 ans</p>
+          </div>
+        </div>
+
+        <!-- Services column -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-brand-red mb-4">Interventions d'urgence</h4>
+          <ul class="space-y-2.5 text-sm text-gray-300">
+            <li><a class="hover:text-white transition-colors" href="/services#fuite">Reparation fuite d'eau urgente</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services#debouchage">Debouchage canalisations et WC</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services#boiler">Depannage boiler et chauffe-eau</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services#camera">Inspection camera et diagnostic</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services#sanitaire">Remplacement robinetterie et WC</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services#assurance">Dossier degat des eaux assurances</a></li>
+          </ul>
+        </div>
+
+        <!-- Locations column -->
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wider text-brand-red mb-4">Zones desservies</h4>
+          <ul class="space-y-2.5 text-sm text-gray-300">
+            <li><a class="hover:text-white transition-colors" href="/locations#mouscron">Mouscron Centre (7700)</a></li>
+            <li><a class="hover:text-white transition-colors" href="/locations#luingne">Luingne (7700)</a></li>
+            <li><a class="hover:text-white transition-colors" href="/locations#herseaux">Herseaux (7712)</a></li>
+            <li><a class="hover:text-white transition-colors" href="/locations#dottignies">Dottignies (7711)</a></li>
+            <li><a class="hover:text-white transition-colors" href="/locations#quartiers">Le Tuquet et Mont-a-Leux</a></li>
+            <li><a class="hover:text-white transition-colors" href="/locations#risquons">Le Risquons-Tout et Nouveau Monde</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="space-y-4">
+          <h4 class="text-sm font-bold uppercase tracking-wider text-brand-red mb-4">Permanence telephonique</h4>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-2">
+            <span class="text-xs uppercase tracking-wider text-gray-400 block">Ligne d'urgence 24/7:</span>
+            <a class="text-xl font-extrabold text-white hover:text-brand-red transition-colors block" href="tel:+3256980244">
+              056 98 02 44
+            </a>
+            <span class="text-xs uppercase tracking-wider text-gray-400 block pt-1">Mobile d'astreinte:</span>
+            <a class="text-base font-bold text-gray-200 hover:text-brand-red transition-colors block" href="tel:+32470123456">
+              0470 12 34 56
+            </a>
+          </div>
+          <p class="text-xs text-gray-400">
+            Paiements acceptes sur place: Bancontact, virement instantane, especes. Facture conforme fournie immediatement.
+          </p>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <p>&copy; 2026 Plombier Urgent Mouscron. Tous droits reserves. Plomberie generale et depannage sanitaire.</p>
+        <div class="flex space-x-6">
+          <a class="hover:text-white transition-colors" href="/about">Mentions legales</a>
+          <a class="hover:text-white transition-colors" href="/contact">Devis gratuit</a>
+          <a class="hover:text-white transition-colors" href="/locations">Plan d'intervention</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navBtn = document.getElementById('mobile-nav-toggle');
+    const navMenu = document.getElementById('mobile-nav-menu');
+    if (navBtn && navMenu) {
+      navBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

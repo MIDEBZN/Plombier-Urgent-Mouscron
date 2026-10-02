@@ -1,0 +1,533 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Plombier Mouscron (7700) | Depannage Urgent 24/7 en 30 Min"
+  description="Plombier a Mouscron en urgence disponible 24h/24 et 7j/7. Intervention en 30 minutes pour fuite d'eau, debouchage canalisation, boiler et WC. Devis gratuit avant travaux."
+>
+  <!-- Hero Section -->
+  <section class="relative bg-brand-navy text-white overflow-hidden py-14 lg:py-20" aria-labelledby="hero-heading">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#FF4304_1px,transparent_1px)] [background-size:20px_20px]"></div>
+    <div class="absolute -right-24 -top-24 w-96 h-96 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Left Column -->
+        <div class="lg:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/15 text-xs font-semibold text-white mb-6">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-red opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-red"></span>
+            </span>
+            <span class="text-amber-400 font-bold">Note 4.9/5</span>
+            <span class="text-white/40">|</span>
+            <span class="tracking-wide uppercase text-[11px]">Artisans Plombiers Agrees Mouscron</span>
+          </div>
+
+          <h1 id="hero-heading" class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight sm:leading-none text-white mb-6">
+            Plombier a <span class="text-brand-red">Mouscron</span> : Urgence 24/7
+          </h1>
+
+          <p class="text-lg sm:text-xl text-gray-300 font-body mb-6 leading-relaxed max-w-2xl">
+            Fuite d'eau importante, WC bouche, canalisation qui refoule ou panne d'eau chaude ? Nos techniciens qualifies interviennent chez vous a Mouscron et environs en moins de 30 minutes.
+          </p>
+
+          <!-- Key Checkpoints -->
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center space-x-3 text-sm font-medium text-gray-200">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center font-bold text-xs">OK</span>
+              <span><strong>Arrivee en 30 a 45 minutes</strong> : Disponible 24h/24, 7j/7 et jours feries</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm font-medium text-gray-200">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center font-bold text-xs">OK</span>
+              <span><strong>Tarif annonce avant intervention</strong> : Devis clair et sans frais caches</span>
+            </div>
+            <div class="flex items-center space-x-3 text-sm font-medium text-gray-200">
+              <span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center font-bold text-xs">OK</span>
+              <span><strong>Agree assurances et SWDE</strong> : Rapport detaille pour degat des eaux</span>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 mb-6">
+            <a class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-brand-red hover:bg-brand-redHover text-white text-base font-bold shadow-lg shadow-brand-red/30 transition transform hover:-translate-y-0.5" href="tel:+3256980244">
+              <svg class="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+              </svg>
+              Appelez le 056 98 02 44
+            </a>
+            <a class="inline-flex items-center justify-center px-7 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white border border-white/20 text-base font-semibold backdrop-blur-sm transition" href="#devis-rapide">
+              Demander un Devis Gratuit
+            </a>
+          </div>
+
+          <p class="text-xs text-gray-400">
+            Plombiers bases a Mouscron (7700) : Luingne, Herseaux, Dottignies, Mont-a-Leux et Le Tuquet.
+          </p>
+        </div>
+
+        <!-- Hero Right Form Card -->
+        <div class="lg:col-span-5" id="devis-rapide">
+          <div class="bg-white text-brand-darkText rounded-2xl shadow-2xl border border-brand-border p-6 sm:p-8">
+            <div class="mb-5">
+              <span class="inline-block px-2.5 py-0.5 rounded text-[11px] font-extrabold uppercase tracking-wide bg-brand-red/10 text-brand-red mb-2">
+                Reponse sous 10 minutes
+              </span>
+              <h2 class="text-2xl font-bold text-brand-navy">Demande d'Intervention Rapide</h2>
+              <p class="text-brand-muted text-xs sm:text-sm mt-1">Obtenez un prix ferme ou bloquez le passage d'une equipe.</p>
+            </div>
+
+            <form class="space-y-3.5" action="/contact" method="GET">
+              <div>
+                <label for="lead-name" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Votre nom complet *</label>
+                <input id="lead-name" name="name" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" placeholder="Ex: Jean Dupont" required type="text" />
+              </div>
+              <div>
+                <label for="lead-phone" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Numero de telephone *</label>
+                <input id="lead-phone" name="phone" class="w-full px-3.5 py-2.5 rounded-lg border-2 border-brand-red/40 bg-red-50/20 focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm font-semibold transition" placeholder="04XX XX XX XX" required type="tel" />
+              </div>
+              <div>
+                <label for="lead-service" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Nature du probleme *</label>
+                <select id="lead-service" name="service" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" required>
+                  <option value="" disabled selected>Selectionnez votre panne</option>
+                  <option value="fuite">Fuite d'eau active ou tuyau perce</option>
+                  <option value="wc">WC bouche ou refoulement sanitaire</option>
+                  <option value="canalisation">Canalisation ou egout bouche</option>
+                  <option value="boiler">Chauffe-eau ou boiler en panne (eau froide)</option>
+                  <option value="recherche">Recherche de fuite non destructive</option>
+                  <option value="autre">Autre travail de plomberie sanitaire</option>
+                </select>
+              </div>
+              <div>
+                <label for="lead-city" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Commune ou quartier a Mouscron</label>
+                <input id="lead-city" name="location" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" placeholder="Ex: Mouscron centre, Luingne, Herseaux..." type="text" />
+              </div>
+              <button class="w-full py-3.5 px-4 bg-brand-red hover:bg-brand-redHover text-white font-bold rounded-xl text-base shadow-lg transition duration-150 cursor-pointer" type="submit">
+                Confirmer l'appel d'urgence
+              </button>
+            </form>
+
+            <div class="mt-4 pt-4 border-t border-brand-border text-center space-y-1.5">
+              <p class="text-xs text-brand-muted">
+                Besoin d'une reponse immediate ? Appelez le <a class="font-bold text-brand-navy hover:text-brand-red underline" href="tel:+3256980244">056 98 02 44</a>
+              </p>
+              <p class="text-[11px] text-gray-400">
+                Intervention sans frais de dossier caches. TVA 6% si batiment de plus de 10 ans.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem Triage Grid Section -->
+  <section class="py-16 bg-brand-surface border-b border-brand-border" aria-labelledby="services-overview">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">Nos Solutions Express</span>
+        <h2 id="services-overview" class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+          Pannes et Urgences Prises en Charge a Mouscron
+        </h2>
+        <p class="text-brand-muted mt-3 text-base">
+          Nos vehicules d'astreinte sont equipes de tout le materiel de debouchage, soudure et remplacement de pieces d'origine.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: Fuites -->
+        <article class="bg-white p-7 rounded-2xl border border-brand-border shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-lg mb-5">
+              F
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy mb-2.5">Reparation de Fuite d'Eau</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-4">
+              Tuyau cuivre ou multicouche perce, fuite sous evier, robinet d'arret defaillant, suintement encastre. Colmatage immediat pour limiter les degats.
+            </p>
+            <ul class="text-xs text-brand-darkText space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Localisation de fuite non destructive</li>
+              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Attestation pour la SWDE si surconsommation</li>
+              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Rapport detaille assurance degat des eaux</li>
+            </ul>
+          </div>
+          <a class="inline-flex items-center text-sm font-bold text-brand-red hover:underline" href="/services#fuite">
+            En savoir plus sur les fuites &rarr;
+          </a>
+        </article>
+
+        <!-- Card 2: Debouchage -->
+        <article class="bg-white p-7 rounded-2xl border border-brand-border shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-navy text-white flex items-center justify-center font-bold text-lg mb-5">
+              D
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy mb-2.5">Debouchage Canalisation & WC</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-4">
+              Toilettes qui debordent, evier qui ne s'ecoule plus, odeurs d'egout ou sterput refoulant. Intervention avec furet mecanique et hydrocureuse.
+            </p>
+            <ul class="text-xs text-brand-darkText space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Debouchage WC en moins de 45 minutes</li>
+              <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Hydrocurage haute pression pour collecteurs</li>
+              <li class="flex items-center gap-2"><span class="text-brand-navy font-bold">+</span> Inspection par camera video haute definition</li>
+            </ul>
+          </div>
+          <a class="inline-flex items-center text-sm font-bold text-brand-navy hover:underline" href="/services#debouchage">
+            En savoir plus sur le debouchage &rarr;
+          </a>
+        </article>
+
+        <!-- Card 3: Boiler -->
+        <article class="bg-white p-7 rounded-2xl border border-brand-border shadow-xs hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-lg mb-5">
+              B
+            </div>
+            <h3 class="text-xl font-bold text-brand-navy mb-2.5">Depannage Boiler & Chauffe-Eau</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-4">
+              Plus d'eau chaude, groupe de securite qui coule sans arret, boiler qui fait disjoncter le compteur. Reparation ou remplacement rapide.
+            </p>
+            <ul class="text-xs text-brand-darkText space-y-1.5 mb-6">
+              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Marques Bulex, Vaillant, Ariston, ACV</li>
+              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Detartrage complet pour eau calcaire de Mouscron</li>
+              <li class="flex items-center gap-2"><span class="text-brand-red font-bold">+</span> Remplacement thermostat et resistances de stock</li>
+            </ul>
+          </div>
+          <a class="inline-flex items-center text-sm font-bold text-brand-red hover:underline" href="/services#boiler">
+            En savoir plus sur les boilers &rarr;
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Authority Comparison: Us vs Brokers -->
+  <section class="py-16 bg-white" aria-labelledby="why-local-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold tracking-widest uppercase text-brand-red block">La Proximite Fait la Difference</span>
+          <h2 id="why-local-heading" class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+            Pourquoi Choisir un Vrai Plombier Local a Mouscron ?
+          </h2>
+          <p class="text-brand-muted text-base leading-relaxed">
+            De nombreuses plateformes sur internet se presentent comme des plombiers a Mouscron alors qu'elles sont basees a Bruxelles ou en France. Elles envoient des sous-traitants inconnus qui facturent des frais de deplacement abusifs.
+          </p>
+          <div class="space-y-4 pt-2">
+            <div class="p-4 rounded-xl border border-brand-border bg-brand-surface flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-red/10 text-brand-red font-bold flex items-center justify-center shrink-0">1</div>
+              <div>
+                <h3 class="font-bold text-brand-navy text-sm">Vehicules d'astreinte reels a Mouscron</h3>
+                <p class="text-xs text-brand-muted mt-0.5">Nos equipes partent de Mouscron meme, ce qui garantit un delai d'arrivee de 30 a 45 minutes sans promesse imaginaire.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-xl border border-brand-border bg-brand-surface flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-red/10 text-brand-red font-bold flex items-center justify-center shrink-0">2</div>
+              <div>
+                <h3 class="font-bold text-brand-navy text-sm">Prix fixes et devis annonce a l'avance</h3>
+                <p class="text-xs text-brand-muted mt-0.5">Vous connaissez le tarif du deplacement et du diagnostic avant que le technicien ne se mette en route.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-xl border border-brand-border bg-brand-surface flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-red/10 text-brand-red font-bold flex items-center justify-center shrink-0">3</div>
+              <div>
+                <h3 class="font-bold text-brand-navy text-sm">Facture belge legale avec TVA 6%</h3>
+                <p class="text-xs text-brand-muted mt-0.5">Taux reduit de 6% pour habitations privees de plus de 10 ans, attestation delivree pour vos remboursements d'assurance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-6 bg-brand-navy text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-red/10 rounded-full blur-2xl"></div>
+          <h3 class="text-2xl font-black mb-4">Notre Charte de Transparence</h3>
+          <p class="text-sm text-gray-300 leading-relaxed mb-6">
+            Ce que vous ne trouverez jamais sur nos factures :
+          </p>
+          <ul class="space-y-3.5 text-sm">
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center text-xs font-bold">X</span>
+              <span>Aucun supplement impromptu sans accord prealable signe</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center text-xs font-bold">X</span>
+              <span>Aucun forfait kilometre trompeur pour l'entite de Mouscron</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center text-xs font-bold">X</span>
+              <span>Aucune piece remplacee sans explication technique verifiable</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-red/20 text-brand-red flex items-center justify-center text-xs font-bold">X</span>
+              <span>Aucun numero surtaxe : ligne locale 056 directe</span>
+            </li>
+          </ul>
+
+          <div class="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+              <span class="text-xs text-gray-400 block">Numero d'appel prioritaire :</span>
+              <span class="text-2xl font-black text-white">056 98 02 44</span>
+            </div>
+            <a href="tel:+3256980244" class="px-5 py-3 rounded-xl bg-brand-red hover:bg-brand-redHover font-bold text-sm text-white transition">
+              Appeler un technicien
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Belgian Price Estimator Section -->
+  <section class="py-16 bg-brand-surface border-t border-brand-border" aria-labelledby="estimator-heading">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">Transparence Tarifaire</span>
+        <h2 id="estimator-heading" class="text-3xl font-extrabold text-brand-navy tracking-tight">
+          Grille Tarifaire Indicative a Mouscron (2026)
+        </h2>
+        <p class="text-sm text-brand-muted mt-2">
+          Tarifs donnes a titre indicatif pour interventions courantes. Devis ecrit remis sur place avant toute reparation.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-brand-border shadow-md overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm">
+            <thead class="bg-brand-navy text-white uppercase text-xs tracking-wider">
+              <tr>
+                <th class="py-4 px-6">Prestation de plomberie</th>
+                <th class="py-4 px-6">Delai d'arrivee</th>
+                <th class="py-4 px-6">Tarif indicatif HTVA</th>
+                <th class="py-4 px-6">Avec TVA 6% (+10 ans)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brand-border text-brand-darkText">
+              <tr class="hover:bg-brand-surface/60 transition">
+                <td class="py-4 px-6 font-semibold">Deplacement et diagnostic complet a Mouscron</td>
+                <td class="py-4 px-6 text-brand-muted">30 a 45 min</td>
+                <td class="py-4 px-6 font-bold text-brand-navy">65 EUR</td>
+                <td class="py-4 px-6 font-bold text-brand-red">68.90 EUR</td>
+              </tr>
+              <tr class="hover:bg-brand-surface/60 transition">
+                <td class="py-4 px-6 font-semibold">Reparation fuite simple (joint, flexible, siphon)</td>
+                <td class="py-4 px-6 text-brand-muted">Moins de 45 min</td>
+                <td class="py-4 px-6 font-bold text-brand-navy">Dès 95 EUR</td>
+                <td class="py-4 px-6 font-bold text-brand-red">Dès 100.70 EUR</td>
+              </tr>
+              <tr class="hover:bg-brand-surface/60 transition">
+                <td class="py-4 px-6 font-semibold">Debouchage d'urgence WC / Toilette</td>
+                <td class="py-4 px-6 text-brand-muted">Immediat</td>
+                <td class="py-4 px-6 font-bold text-brand-navy">Dès 110 EUR</td>
+                <td class="py-4 px-6 font-bold text-brand-red">Dès 116.60 EUR</td>
+              </tr>
+              <tr class="hover:bg-brand-surface/60 transition">
+                <td class="py-4 px-6 font-semibold">Hydrocurage haute pression canalisation / egout</td>
+                <td class="py-4 px-6 text-brand-muted">Sur rendez-vous express</td>
+                <td class="py-4 px-6 font-bold text-brand-navy">Dès 160 EUR</td>
+                <td class="py-4 px-6 font-bold text-brand-red">Dès 169.60 EUR</td>
+              </tr>
+              <tr class="hover:bg-brand-surface/60 transition">
+                <td class="py-4 px-6 font-semibold">Recherche de fuite non destructive avec camera</td>
+                <td class="py-4 px-6 text-brand-muted">Sous 24h</td>
+                <td class="py-4 px-6 font-bold text-brand-navy">Dès 280 EUR</td>
+                <td class="py-4 px-6 font-bold text-brand-red">Dès 296.80 EUR (Prise en charge assurance)</td>
+              </tr>
+              <tr class="hover:bg-brand-surface/60 transition">
+                <td class="py-4 px-6 font-semibold">Depannage ou detartrage de chauffe-eau / boiler</td>
+                <td class="py-4 px-6 text-brand-muted">Jour meme</td>
+                <td class="py-4 px-6 font-bold text-brand-navy">Dès 140 EUR</td>
+                <td class="py-4 px-6 font-bold text-brand-red">Dès 148.40 EUR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="p-4 bg-brand-surface text-xs text-brand-muted text-center border-t border-brand-border">
+          Note legale : Le taux de TVA a 6% est reserve aux logements prives de plus de 10 ans selon la legislation fiscale belge. Les interventions de nuit et de dimanche peuvent comporter une majoration annoncee lors de l'appel.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Sectors Covered Section -->
+  <section class="py-16 bg-white" aria-labelledby="sectors-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">Territoire d'Intervention</span>
+        <h2 id="sectors-heading" class="text-3xl font-extrabold text-brand-navy tracking-tight">
+          Couverture Complete du Grand Mouscron (7700, 7711, 7712)
+        </h2>
+        <p class="text-brand-muted mt-2 text-base">
+          Nos techniciens sillonnent quotidiennement l'ensemble des entites communales et quartiers historiques pour garantir des delais courts.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-sm font-semibold">
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#mouscron">
+          Mouscron Centre (7700)
+        </a>
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#luingne">
+          Luingne (7700)
+        </a>
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#herseaux">
+          Herseaux (7712)
+        </a>
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#dottignies">
+          Dottignies (7711)
+        </a>
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#mont-a-leux">
+          Le Mont-a-Leux
+        </a>
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#tuquet">
+          Le Tuquet
+        </a>
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#risquons-tout">
+          Le Risquons-Tout
+        </a>
+        <a class="p-4 rounded-xl border border-brand-border bg-brand-surface hover:border-brand-red hover:text-brand-red transition block" href="/locations#nouveau-monde">
+          Le Nouveau Monde
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Local Reviews Section -->
+  <section class="py-16 bg-brand-surface border-t border-brand-border" aria-labelledby="reviews-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">Avis Clients Verifies</span>
+        <h2 id="reviews-heading" class="text-3xl font-extrabold text-brand-navy tracking-tight">
+          Ce que Disent les Habitants de Mouscron
+        </h2>
+        <p class="text-sm text-brand-muted mt-2">Retours d'experience reels apres depannage en urgence.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
+          <div class="flex text-amber-400 gap-1 mb-3" aria-label="Note 5 etoiles sur 5">
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-sm text-brand-darkText leading-relaxed mb-4">
+            "Appeles un dimanche soir a 21h pour une fuite importante sous evier qui inondait la cuisine au Mont-a-Leux. Arrivee en 35 minutes, reparation propre et tarif conforme a ce qui avait ete annonce au telephone."
+          </p>
+          <div class="text-xs text-brand-muted font-medium">
+            <strong class="text-brand-navy block">Marc D.</strong>
+            Habitant a Mouscron (Mont-a-Leux)
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
+          <div class="flex text-amber-400 gap-1 mb-3" aria-label="Note 5 etoiles sur 5">
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-sm text-brand-darkText leading-relaxed mb-4">
+            "WC totalement bouche a Dottignies. Le plombier est venu avec son materiel de debouchage electrique, intervention rapide en 40 minutes montre en main. Facture conforme fournie tout de suite."
+          </p>
+          <div class="text-xs text-brand-muted font-medium">
+            <strong class="text-brand-navy block">Sophie V.</strong>
+            Habitante a Dottignies (7711)
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
+          <div class="flex text-amber-400 gap-1 mb-3" aria-label="Note 5 etoiles sur 5">
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            <svg class="w-4 h-4 fill-amber-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <p class="text-sm text-brand-darkText leading-relaxed mb-4">
+            "Boiler en panne en plein hiver a Luingne. Diagnostic precis et remplacement de la resistance defectueuse le lendemain matin. Tres serieux et ponctuel, je recommande sans hesiter."
+          </p>
+          <div class="text-xs text-brand-muted font-medium">
+            <strong class="text-brand-navy block">Laurent M.</strong>
+            Habitant a Luingne (7700)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-white border-t border-brand-border" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">Questions Frequentes</span>
+        <h2 id="faq-heading" class="text-3xl font-extrabold text-brand-navy tracking-tight">
+          Tout Savoir sur nos Interventions a Mouscron
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="p-5 rounded-xl border border-brand-border bg-brand-surface group" open>
+          <summary class="font-bold text-brand-navy text-base cursor-pointer list-none flex items-center justify-between">
+            <span>En combien de temps pouvez-vous intervenir chez moi a Mouscron ?</span>
+            <span class="text-brand-red font-bold text-lg group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-sm text-brand-muted leading-relaxed">
+            Pour toute urgence bloquante (fuite abondante, WC inutilisable, inondation), nous visons une arrivee sur place entre 30 et 45 minutes selon les conditions de circulation dans Mouscron et ses sections (Luingne, Herseaux, Dottignies).
+          </p>
+        </details>
+
+        <details class="p-5 rounded-xl border border-brand-border bg-brand-surface group">
+          <summary class="font-bold text-brand-navy text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Le devis est-il gratuit et obligatoire avant de commencer ?</span>
+            <span class="text-brand-red font-bold text-lg group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-sm text-brand-muted leading-relaxed">
+            Oui. Lors de votre appel, nous vous donnons une premiere fourchette claire. Sur place, apres diagnostic precis, le technicien vous presente le montant exact des travaux. Aucune reparation n'est entamee sans votre accord.
+          </p>
+        </details>
+
+        <details class="p-5 rounded-xl border border-brand-border bg-brand-surface group">
+          <summary class="font-bold text-brand-navy text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Vos factures sont-elles prises en charge par les assurances habitation belges ?</span>
+            <span class="text-brand-red font-bold text-lg group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-sm text-brand-muted leading-relaxed">
+            Parfaitement. Nous fournissons une facture detaillee conforme et, si necessaire, un rapport photographique de recherche de fuite pour votre courtier ou compagnie d'assurance (Ethias, AXA, AG Insurance, Belfius, etc.).
+          </p>
+        </details>
+
+        <details class="p-5 rounded-xl border border-brand-border bg-brand-surface group">
+          <summary class="font-bold text-brand-navy text-base cursor-pointer list-none flex items-center justify-between">
+            <span>Puis-je beneficier du taux de TVA reduit a 6% ?</span>
+            <span class="text-brand-red font-bold text-lg group-open:rotate-45 transition-transform">+</span>
+          </summary>
+          <p class="mt-3 text-sm text-brand-muted leading-relaxed">
+            Oui, si votre habitation a plus de 10 ans et est affectee a un usage prive. Nous preparons l'attestation fiscale legale pour l'application directe de la TVA a 6% sur la main-d'oeuvre et les fournitures.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Call to Action -->
+  <section class="py-14 bg-brand-navy text-white text-center relative overflow-hidden" aria-labelledby="cta-heading">
+    <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-6">
+      <h2 id="cta-heading" class="text-3xl sm:text-4xl font-extrabold text-white">
+        Une Urgence de Plomberie a Mouscron en ce Moment ?
+      </h2>
+      <p class="text-gray-300 text-base max-w-2xl mx-auto">
+        Ne laissez pas une fuite ou un bouchon s'aggraver. Contactez directement notre permanence locale.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+        <a href="tel:+3256980244" class="px-8 py-4 bg-brand-red hover:bg-brand-redHover font-black text-base rounded-xl text-white shadow-xl transition">
+          Ligne Directe : 056 98 02 44
+        </a>
+        <a href="https://wa.me/32470123456?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20a%20Mouscron." target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 font-bold text-base rounded-xl text-white transition">
+          Contact WhatsApp (Envoi Photo)
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
