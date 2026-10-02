@@ -1,0 +1,266 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const locations = [
+  {
+    name: "Mouscron Centre & Quartiers",
+    postalCode: "7700",
+    slug: "mouscron",
+    time: "20 a 30 min",
+    tag: "Siege & Atelier Principal",
+    description: "Intervention immediate dans l'hyper-centre, Grand-Place, gare SNCB, Le Tuquet, Le Mont-a-Leux, Le Risquons-Tout et Le Nouveau Monde.",
+    landmarks: "Grand-Place, Gare de Mouscron, CHM, Boulevard des Allies, N58",
+    keyService: "Fuites encastrees, debouchage WC, remplacement robinetterie, chauffe-eau"
+  },
+  {
+    name: "Luingne",
+    postalCode: "7700",
+    slug: "luingne",
+    time: "20 a 30 min",
+    tag: "Entite Communale 7700",
+    description: "Depannage express a Luingne Village, secteur de la Royere, Les Epinettes et abords de la Chaussee de Dottignies.",
+    landmarks: "Place Saint-Amand, Echangeur N58, Chaussee de Luingne, Rue de la Royere",
+    keyService: "Detartrage boiler, debouchage sterputs, pose d'adoucisseurs, fuites en cave"
+  },
+  {
+    name: "Herseaux",
+    postalCode: "7712",
+    slug: "herseaux",
+    time: "20 a 30 min",
+    tag: "Entite Communale 7712",
+    description: "Prise en charge a Herseaux-Gare, Herseaux-Place, Les Ballons et proximite de la frontiere avec Wattrelos.",
+    landmarks: "Gare d'Herseaux, Eglise Saint-Maur, Chaussee de Gand, Rue de Lannoy",
+    keyService: "Canalisations gres et plomb, hydrocurage haute pression, mecanismes Geberit"
+  },
+  {
+    name: "Dottignies",
+    postalCode: "7711",
+    slug: "dottignies",
+    time: "25 a 35 min",
+    tag: "Cite de la Main 7711",
+    description: "Couverture totale de la Place de la Main, Boulevard des Canadiens, Cite Claudel, Marais et bassins versants de l'Espierre.",
+    landmarks: "Place de la Main, Sortie 5 E403 / A17, Boulevard des Canadiens (N511)",
+    keyService: "Curage de fosses, pompage de sous-sols, canalisations longues de pavillons"
+  },
+  {
+    name: "Estaimpuis",
+    postalCode: "7730",
+    slug: "estaimpuis",
+    time: "25 a 35 min",
+    tag: "Commune Limitrophe Sud",
+    description: "Depannage d'urgence sur Nechin, Leers-Nord, Saint-Leger, Evregnies, Bailleul et Estaimbourg.",
+    landmarks: "Maison Communale, N50 Chaussee de Tournai, Canal de Roubaix, Douane de Nechin",
+    keyService: "Groupes hydrophores, assainissement autonome, debouchage de regards"
+  },
+  {
+    name: "Tourcoing & Zone Frontaliere",
+    postalCode: "59200",
+    slug: "tourcoing",
+    time: "20 a 30 min",
+    tag: "Zone Transfrontaliere Directe",
+    description: "Intervention rapide a Tourcoing Centre, Le Blanc-Seau, Le Clinquet, Neuville-en-Ferrain et Wattrelos frontiere.",
+    landmarks: "Grand-Place de Tourcoing, Gare SNCF, VRU D656 / E17, Poste frontiere Rue de Menin",
+    keyService: "Maisons 1930, debouchage canalisations sous dalle, chauffe-eau electrique"
+  },
+  {
+    name: "Comines-Warneton",
+    postalCode: "7780",
+    slug: "comines-warneton",
+    time: "25 a 35 min",
+    tag: "Vallee de la Lys via N58",
+    description: "Liaison directe par la voie rapide N58 vers Comines, Warneton, Bas-Warneton, Ploegsteert et Le Bizet.",
+    landmarks: "Voie express N58, Grand-Place de Comines, Memorial de Ploegsteert, Le Bizet",
+    keyService: "Pompes vide-cave automatiques, clapets anti-retour, debouchage d'urgence"
+  }
+];
+---
+
+<Layout 
+  title="Zones d'Intervention Plombier : Mouscron, Luingne, Herseaux, Dottignies & Alentours"
+  description="Zones d'intervention de votre plombier d'urgence a Mouscron (7700), Luingne, Herseaux, Dottignies, Estaimpuis, Tourcoing et Comines-Warneton. Arrivee en 20 a 35 min."
+  canonicalPath="/locations"
+>
+  <!-- Hero Section -->
+  <section class="bg-brand-navy text-white py-14 lg:py-20 relative overflow-hidden" aria-labelledby="locations-hub-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-3 block">Rayon d'Action Territorial</span>
+      <h1 id="locations-hub-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-6">
+        Zones d'Intervention Plomberie a Mouscron et Communes Voisines
+      </h1>
+      <p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed mb-8">
+        Base au coeur de l'agglomeration mouscronnoise, notre service de garde deploie ses camions d'intervention d'urgence 24h/24 et 7j/7 dans les 4 entites communales du Grand Mouscron ainsi que dans les communes limitrophes. Delai moyen d'arrivee sur place : 20 a 35 minutes.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="tel:+3256980244" class="px-7 py-4 bg-brand-red hover:bg-brand-redHover font-black text-sm rounded-xl text-white shadow-xl transition inline-flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
+          </svg>
+          Urgence Immédiate : 056 98 02 44
+        </a>
+        <a href="/contact" class="px-7 py-4 bg-white/10 hover:bg-white/20 border border-white/20 font-bold text-sm rounded-xl text-white transition text-center">
+          Demande de Rendez-vous en Ligne
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Summary Cards Grid -->
+  <section class="py-16 bg-white border-b border-brand-border" aria-labelledby="communes-grid-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 id="communes-grid-heading" class="text-3xl font-extrabold text-brand-navy tracking-tight">
+          Selectionnez Votre Secteur pour Connaitre les Delais et Itineraires
+        </h2>
+        <p class="text-base text-brand-muted mt-3">
+          Chaque commune beneficie d'une astreinte dediee, d'un stock de pieces adapte a son type d'habitat et d'une tarification forfaitaire sans surprise.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {locations.map((loc) => (
+          <article class="bg-brand-surface rounded-2xl border border-brand-border p-7 flex flex-col justify-between hover:shadow-lg transition-all">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 rounded-full bg-brand-navy text-white text-xs font-bold uppercase tracking-wider">
+                  {loc.postalCode}
+                </span>
+                <span class="text-xs font-black text-brand-red bg-brand-red/10 px-2.5 py-1 rounded-md">
+                  {loc.time}
+                </span>
+              </div>
+              <div>
+                <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red block mb-1">{loc.tag}</span>
+                <h3 class="text-xl font-bold text-brand-navy">
+                  <a href={`/locations/${loc.slug}`} class="hover:text-brand-red transition-colors">
+                    {loc.name}
+                  </a>
+                </h3>
+              </div>
+              <p class="text-xs text-brand-muted leading-relaxed">
+                {loc.description}
+              </p>
+              <div class="space-y-2 pt-2 border-t border-brand-border text-xs">
+                <div>
+                  <strong class="text-brand-navy block mb-0.5">Reperes routiers :</strong>
+                  <span class="text-brand-muted">{loc.landmarks}</span>
+                </div>
+                <div>
+                  <strong class="text-brand-navy block mb-0.5">Specialites locales :</strong>
+                  <span class="text-brand-muted">{loc.keyService}</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6">
+              <a 
+                href={`/locations/${loc.slug}`} 
+                class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-brand-navy hover:bg-brand-red text-white text-xs font-bold rounded-xl transition-colors shadow-xs"
+              >
+                Decouvrir la Zone {loc.name.split(' ')[0]}
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Response Times Comparison Table -->
+  <section class="py-16 bg-brand-surface" aria-labelledby="times-table-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">Engagement Horaire</span>
+        <h2 id="times-table-heading" class="text-3xl font-extrabold text-brand-navy tracking-tight">
+          Delais Moyens d'Arrivee et Disponibilite par Secteur
+        </h2>
+        <p class="text-base text-brand-muted mt-3 leading-relaxed">
+          Nos techniciens sont positionnes strategiquement au carrefour de la N58 et de la rue de Menin pour des deploiements sans encombre.
+        </p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left bg-white rounded-2xl border border-brand-border shadow-xs overflow-hidden">
+          <thead class="bg-brand-navy text-white text-xs uppercase tracking-wider">
+            <tr>
+              <th class="py-4 px-6">Commune / Secteur</th>
+              <th class="py-4 px-6">Code Postal</th>
+              <th class="py-4 px-6">Delai Moyen d'Arrivee</th>
+              <th class="py-4 px-6">Disponibilite</th>
+              <th class="py-4 px-6">Axe d'Acces Privilegie</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm divide-y divide-brand-border">
+            <tr>
+              <td class="py-4 px-6 font-bold text-brand-navy">Mouscron Centre</td>
+              <td class="py-4 px-6 text-brand-muted">7700</td>
+              <td class="py-4 px-6 font-extrabold text-brand-red">20 a 30 min</td>
+              <td class="py-4 px-6 text-brand-darkText">24h/24 et 7j/7</td>
+              <td class="py-4 px-6 text-xs text-brand-muted">Rue de Menin / Boulevard des Allies</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-bold text-brand-navy">Luingne</td>
+              <td class="py-4 px-6 text-brand-muted">7700</td>
+              <td class="py-4 px-6 font-extrabold text-brand-red">20 a 30 min</td>
+              <td class="py-4 px-6 text-brand-darkText">24h/24 et 7j/7</td>
+              <td class="py-4 px-6 text-xs text-brand-muted">Chaussee de Luingne / N58</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-bold text-brand-navy">Herseaux</td>
+              <td class="py-4 px-6 text-brand-muted">7712</td>
+              <td class="py-4 px-6 font-extrabold text-brand-red">20 a 30 min</td>
+              <td class="py-4 px-6 text-brand-darkText">24h/24 et 7j/7</td>
+              <td class="py-4 px-6 text-xs text-brand-muted">Chaussee de Gand / Rue de Lannoy</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-bold text-brand-navy">Dottignies</td>
+              <td class="py-4 px-6 text-brand-muted">7711</td>
+              <td class="py-4 px-6 font-extrabold text-brand-red">25 a 35 min</td>
+              <td class="py-4 px-6 text-brand-darkText">24h/24 et 7j/7</td>
+              <td class="py-4 px-6 text-xs text-brand-muted">E403 Sortie 5 / N511 Boulevard des Canadiens</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-bold text-brand-navy">Estaimpuis (Nechin, Leers-Nord, Saint-Leger)</td>
+              <td class="py-4 px-6 text-brand-muted">7730</td>
+              <td class="py-4 px-6 font-extrabold text-brand-red">25 a 35 min</td>
+              <td class="py-4 px-6 text-brand-darkText">24h/24 et 7j/7</td>
+              <td class="py-4 px-6 text-xs text-brand-muted">N50 Chaussee de Tournai / Axe Nechin</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-bold text-brand-navy">Tourcoing & Zone Frontaliere</td>
+              <td class="py-4 px-6 text-brand-muted">59200</td>
+              <td class="py-4 px-6 font-extrabold text-brand-red">20 a 30 min</td>
+              <td class="py-4 px-6 text-brand-darkText">24h/24 et 7j/7</td>
+              <td class="py-4 px-6 text-xs text-brand-muted">Rue de Menin / VRU D656</td>
+            </tr>
+            <tr>
+              <td class="py-4 px-6 font-bold text-brand-navy">Comines-Warneton (Ploegsteert, Le Bizet)</td>
+              <td class="py-4 px-6 text-brand-muted">7780</td>
+              <td class="py-4 px-6 font-extrabold text-brand-red">25 a 35 min</td>
+              <td class="py-4 px-6 text-brand-darkText">24h/24 et 7j/7</td>
+              <td class="py-4 px-6 text-xs text-brand-muted">Voie express N58 directe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <section class="py-16 bg-brand-navy text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-6">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+        Votre Commune se Situe dans Notre Rayon d'Action ?
+      </h2>
+      <p class="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
+        Nos plombiers sont disponibles des maintenant. Appelez notre permanence pour une intervention d'urgence ou remplissez notre formulaire.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+        <a href="tel:+3256980244" class="px-8 py-4 bg-brand-red hover:bg-brand-redHover font-black text-base rounded-xl text-white shadow-xl transition">
+          Ligne Directe 24/7 : 056 98 02 44
+        </a>
+        <a href="/contact" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 font-bold text-base rounded-xl text-white transition">
+          Demander un Devis Gratuit
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
