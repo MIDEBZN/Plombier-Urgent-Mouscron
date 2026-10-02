@@ -1,19 +1,24 @@
 ---
 import '../styles/global.css';
 import TrustGuarantees from '../components/TrustGuarantees.astro';
+import GlobalContactSection from '../components/GlobalContactSection.astro';
+import StickyCallButton from '../components/StickyCallButton.astro';
+import WhatsAppLiveChat from '../components/WhatsAppLiveChat.astro';
 
 interface Props {
   title: string;
   description: string;
   canonicalPath?: string;
   schemaType?: string;
+  hideGlobalContact?: boolean;
 }
 
 const { 
   title, 
   description, 
   canonicalPath = '',
-  schemaType = 'Plumber'
+  schemaType = 'Plumber',
+  hideGlobalContact = false
 } = Astro.props;
 
 const siteUrl = 'https://plombier-urgent-mouscron.be';
@@ -183,8 +188,17 @@ const schemaData = {
     <slot />
   </main>
 
+  <!-- Global Contact Form (Every Page) using Formsubmit.co with recipient: midebzn@gmail.com -->
+  {!hideGlobalContact && <GlobalContactSection />}
+
   <!-- Global Trust Pillars (Every Page): Insurance, 15+ Yrs Experience, Certifications, Guarantees, Response Times -->
   <TrustGuarantees />
+
+  <!-- Sticky Click-to-Call Buttons (Desktop / Tablet) -->
+  <StickyCallButton />
+
+  <!-- Live Chat Widget (WhatsApp) -->
+  <WhatsAppLiveChat />
 
   <!-- Mobile Sticky Emergency Bar -->
   <div class="fixed bottom-0 left-0 right-0 z-40 bg-brand-navy/95 backdrop-blur-md border-t border-white/10 p-2.5 sm:hidden flex items-center gap-2 shadow-2xl">

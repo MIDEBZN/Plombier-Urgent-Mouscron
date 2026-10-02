@@ -1,0 +1,131 @@
+---
+// Component: WhatsAppLiveChat.astro
+// Floating WhatsApp Live Chat Widget with popup preview card
+// Configured without emojis or em dashes
+---
+
+<div id="whatsapp-live-widget" class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 font-sans">
+  <!-- Expanded Chat Modal / Card -->
+  <div 
+    id="whatsapp-chat-box" 
+    class="hidden mb-3 w-[310px] sm:w-[350px] bg-white rounded-2xl shadow-2xl border border-brand-border overflow-hidden transition-all duration-300"
+  >
+    <!-- Card Header -->
+    <div class="bg-[#075E54] text-white p-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="relative">
+          <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-black text-sm text-white">
+            SOS
+          </div>
+          <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-[#25D366] border-2 border-[#075E54]"></span>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold leading-tight">Plombier Urgent Mouscron</h4>
+          <span class="text-[11px] text-emerald-200 block">Artisan de garde en ligne</span>
+        </div>
+      </div>
+      <button 
+        id="close-whatsapp-box" 
+        type="button" 
+        class="text-white/70 hover:text-white p-1 rounded-lg transition-colors cursor-pointer"
+        aria-label="Fermer la fenetre de chat"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Chat Body -->
+    <div class="p-4 bg-[#ECE5DD] space-y-3 max-h-72 overflow-y-auto">
+      <div class="text-[10px] text-gray-500 text-center font-medium my-1">
+        Astreinte directe 24h/24 et 7j/7
+      </div>
+
+      <!-- Inbound Agent Message Bubble -->
+      <div class="bg-white p-3 rounded-xl rounded-tl-none shadow-xs text-xs text-brand-darkText space-y-1.5 max-w-[90%]">
+        <span class="font-bold text-brand-navy block text-[11px]">Plombier de Garde Mouscron :</span>
+        <p class="leading-relaxed">
+          Bonjour ! Avez-vous une fuite d'eau, un WC bouche ou un probleme de chauffe-eau ?
+        </p>
+        <p class="text-[11px] text-brand-muted">
+          Envoyez-nous un message ou une photo de votre installation pour recevoir une premiere reponse sous 2 minutes.
+        </p>
+        <span class="text-[9px] text-gray-400 block text-right">A l'instant</span>
+      </div>
+    </div>
+
+    <!-- Chat Footer CTA -->
+    <div class="p-3 bg-white border-t border-brand-border">
+      <a 
+        href="https://wa.me/32470123456?text=Bonjour,%20j'ai%20besoin%20d'un%20depannage%20plomberie%20urgent%20a%20Mouscron." 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="w-full py-2.5 px-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-extrabold text-xs rounded-xl shadow-md flex items-center justify-center gap-2 transition duration-200"
+      >
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+          <path d="M12.04 2a9.9 9.9 0 00-8.48 15.06L2 22l5.09-1.52A9.94 9.94 0 1012.04 2zm5.46 12.4c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91s.82 2.22.94 2.38c.12.15 1.62 2.48 3.95 3.48.55.24.98.38 1.32.48.55.18 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.15-.43-.27zM12.04 20.18c-1.62 0-3.2-.44-4.58-1.27l-.33-.2-3.02.9.91-2.95-.21-.34a8.26 8.26 0 1115.4-4.34 8.2 8.2 0 01-8.17 8.2z"/>
+        </svg>
+        Demarrer la Discussion WhatsApp
+      </a>
+      <span class="text-[10px] text-gray-400 block text-center mt-1.5">
+        Ouvert 24h/24, reponse directe par un plombier
+      </span>
+    </div>
+  </div>
+
+  <!-- Floating Launcher Button -->
+  <div class="flex items-center gap-2 justify-end">
+    <!-- Optional Teaser Pill on Desktop -->
+    <div 
+      id="whatsapp-teaser" 
+      class="hidden md:flex items-center gap-2 bg-white text-brand-darkText py-2 px-3.5 rounded-full shadow-lg border border-brand-border text-xs font-semibold cursor-pointer hover:shadow-xl transition"
+    >
+      <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+      <span>Chat WhatsApp en Direct</span>
+    </div>
+
+    <!-- Main Circular Button -->
+    <button 
+      id="toggle-whatsapp-btn" 
+      type="button" 
+      class="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white shadow-2xl flex items-center justify-center transition-all duration-300 transform hover:scale-110 cursor-pointer focus:outline-hidden relative group"
+      aria-label="Discuter sur WhatsApp avec le plombier de garde"
+    >
+      <!-- Subtle Pulse Glow -->
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-40"></span>
+      <svg class="w-7 h-7 fill-current relative z-10" viewBox="0 0 24 24">
+        <path d="M12.04 2a9.9 9.9 0 00-8.48 15.06L2 22l5.09-1.52A9.94 9.94 0 1012.04 2zm5.46 12.4c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91s.82 2.22.94 2.38c.12.15 1.62 2.48 3.95 3.48.55.24.98.38 1.32.48.55.18 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.15-.43-.27zM12.04 20.18c-1.62 0-3.2-.44-4.58-1.27l-.33-.2-3.02.9.91-2.95-.21-.34a8.26 8.26 0 1115.4-4.34 8.2 8.2 0 01-8.17 8.2z"/>
+      </svg>
+      <!-- Online Badge Indicator -->
+      <span class="absolute top-0 right-0 w-3.5 h-3.5 bg-brand-red border-2 border-white rounded-full"></span>
+    </button>
+  </div>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById('toggle-whatsapp-btn');
+  const chatBox = document.getElementById('whatsapp-chat-box');
+  const closeBtn = document.getElementById('close-whatsapp-box');
+  const teaser = document.getElementById('whatsapp-teaser');
+
+  const toggleModal = () => {
+    if (chatBox) {
+      chatBox.classList.toggle('hidden');
+    }
+  };
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', toggleModal);
+  }
+  if (teaser) {
+    teaser.addEventListener('click', toggleModal);
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      if (chatBox) {
+        chatBox.classList.add('hidden');
+      }
+    });
+  }
+</script>

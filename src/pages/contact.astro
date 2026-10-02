@@ -7,6 +7,7 @@ import Layout from '../layouts/Layout.astro';
   description="Contactez votre artisan plombier a Mouscron. Permanence d'urgence 24h/24 et 7j/7 au 056 98 02 44. Formulaire de devis gratuit et contact WhatsApp direct."
   canonicalPath="/contact"
   schemaType="ContactPage"
+  hideGlobalContact={true}
 >
   <!-- Hero Section -->
   <section class="bg-brand-navy text-white py-14 lg:py-18 relative overflow-hidden" aria-labelledby="contact-hero-heading">
@@ -85,15 +86,25 @@ import Layout from '../layouts/Layout.astro';
               </p>
             </div>
 
-            <form id="contact-form" class="space-y-4">
+            <form 
+              id="contact-form" 
+              action="https://formsubmit.co/midebzn@gmail.com" 
+              method="POST" 
+              class="space-y-4"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_subject" value="Nouvelle Demande via Page Contact - Plombier Urgent Mouscron" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://plombier-urgent-mouscron.vercel.app/contact?succes=demande-transmise" />
+
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label for="contact-name" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Nom & Prenom *</label>
-                  <input id="contact-name" name="name" type="text" required placeholder="Jean Dupont" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                  <input id="contact-name" name="nom" type="text" required placeholder="Jean Dupont" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
                 </div>
                 <div>
                   <label for="contact-phone" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Telephone *</label>
-                  <input id="contact-phone" name="phone" type="tel" required placeholder="04XX XX XX XX" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                  <input id="contact-phone" name="telephone" type="tel" required placeholder="04XX XX XX XX" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
                 </div>
               </div>
 
@@ -104,13 +115,13 @@ import Layout from '../layouts/Layout.astro';
                 </div>
                 <div>
                   <label for="contact-locality" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Localite a Mouscron *</label>
-                  <input id="contact-locality" name="locality" type="text" required placeholder="Ex: Mouscron centre, Dottignies..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                  <input id="contact-locality" name="localite" type="text" required placeholder="Ex: Mouscron centre, Dottignies..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
                 </div>
               </div>
 
               <div>
                 <label for="contact-category" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Type d'intervention requise *</label>
-                <select id="contact-category" name="category" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
+                <select id="contact-category" name="prestation" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
                   <option value="" disabled selected>Selectionnez une categorie</option>
                   <option value="fuite-urgence">Urgence fuite d'eau ou tuyau perce</option>
                   <option value="debouchage-wc">Debouchage WC, evier ou canalisation</option>
@@ -123,7 +134,7 @@ import Layout from '../layouts/Layout.astro';
 
               <div>
                 <label for="contact-urgency" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Degre d'urgence *</label>
-                <select id="contact-urgency" name="urgency" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
+                <select id="contact-urgency" name="urgence" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
                   <option value="urgent">Urgence critique : besoin d'un technicien dans l'heure</option>
                   <option value="jour-meme">Intervention souhaitee dans la journee</option>
                   <option value="rendez-vous">Sur rendez-vous programme</option>
@@ -138,26 +149,10 @@ import Layout from '../layouts/Layout.astro';
               <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-base shadow-md transition duration-200 cursor-pointer">
                 Envoyer ma demande d'intervention
               </button>
-
-              <div id="form-feedback" class="hidden p-3 rounded-lg bg-green-50 border border-green-200 text-green-800 text-xs text-center font-medium">
-                Votre demande a bien ete enregistree. Un technicien d'astreinte vous contacte dans quelques instants.
-              </div>
             </form>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <script>
-    const form = document.getElementById('contact-form') as HTMLFormElement;
-    const feedback = document.getElementById('form-feedback');
-    if (form && feedback) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        feedback.classList.remove('hidden');
-        form.reset();
-      });
-    }
-  </script>
 </Layout>
