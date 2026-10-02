@@ -1,0 +1,243 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getAllArticles, type BlogArticle } from '../../data/articles';
+
+export async function getStaticPaths() {
+  const articles = getAllArticles();
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+interface Props {
+  article: BlogArticle;
+}
+
+const { article } = Astro.props;
+const allArticles = getAllArticles();
+const relatedArticles = allArticles.filter(a => a.id !== article.id).slice(0, 3);
+
+// JSON-LD Structured Data for Article & FAQPage
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": article.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+---
+
+<Layout 
+  title={article.seoTitle}
+  description={article.metaDescription}
+  canonicalPath={`/blog/${article.slug}`}
+>
+  <!-- Breadcrumb -->
+  <nav class="bg-brand-surface py-3 border-b border-brand-border" aria-label="Fil d'Ariane">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-brand-muted flex items-center space-x-2">
+      <a href="/" class="hover:text-brand-navy">Accueil</a>
+      <span>/</span>
+      <a href="/blog" class="hover:text-brand-navy">Blog & Guides Conseils</a>
+      <span>/</span>
+      <span class="text-brand-navy font-semibold truncate">{article.title}</span>
+    </div>
+  </nav>
+
+  <!-- Article Header / Hero -->
+  <header class="bg-brand-navy text-white py-12 lg:py-16 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-brand-red mb-4">
+        <span>{article.category}</span>
+        <span class="text-white/40">|</span>
+        <span class="text-gray-300">Temps de lecture : {article.readTime}</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4">
+        {article.h1}
+      </h1>
+      <p class="text-base sm:text-lg text-gray-300 leading-relaxed max-w-3xl">
+        {article.metaDescription}
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-4 text-xs text-gray-400 pt-4 border-t border-white/10">
+        <span>Publie par : <strong>Equipe Technique Plombier Urgent Mouscron</strong></span>
+        <span>Date : <strong>{article.publishedDate}</strong></span>
+        <span>Localite : <strong>Mouscron (7700), Wallonie picarde</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body -->
+  <main class="py-12 bg-white">
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- AEO Quick Answer Box for AI Engines & Featured Snippet -->
+      <section class="mb-10 p-6 rounded-2xl bg-brand-surface border-2 border-brand-red/30 shadow-xs" aria-label="Reponse immediate en bref">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">
+          Reponse rapide (AEO / Snippet)
+        </span>
+        <h2 class="text-lg font-bold text-brand-navy mb-2">
+          {article.title}
+        </h2>
+        <p class="text-sm text-brand-darkText leading-relaxed font-medium">
+          {article.aeoQuickAnswer}
+        </p>
+      </section>
+
+      <!-- Introduction (answers intent in first 100 words) -->
+      <div class="prose max-w-none text-brand-darkText text-base leading-relaxed space-y-5">
+        {article.introText.map((p) => (
+          <p>{p}</p>
+        ))}
+      </div>
+
+      <!-- Quick Emergency Call Banner -->
+      <div class="my-10 p-6 rounded-2xl bg-brand-navy text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
+        <div class="space-y-1 text-center sm:text-left">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-red">Urgence En Cours a Mouscron ?</span>
+          <h3 class="text-xl font-bold">Un technicien d'astreinte pret a demarrer</h3>
+          <p class="text-xs text-gray-300">Arrivee moyenne en 24 minutes a Mouscron, Luingne, Herseaux et Dottignies.</p>
+        </div>
+        <a href="tel:+3256980244" class="px-6 py-3.5 bg-brand-red hover:bg-brand-redHover font-black text-sm text-white rounded-xl shadow-lg transition duration-150 shrink-0">
+          Appelez le 056 98 02 44
+        </a>
+      </div>
+
+      <!-- Sections Loop -->
+      {article.sections.map((section) => (
+        <section class="mt-12 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy tracking-tight">
+            {section.heading}
+          </h2>
+          
+          {section.paragraphs.map((p) => (
+            <p class="text-brand-darkText text-base leading-relaxed">{p}</p>
+          ))}
+
+          {section.bullets && (
+            <ul class="space-y-2.5 text-sm text-brand-darkText my-4">
+              {section.bullets.map((b) => (
+                <li class="flex items-start gap-2">
+                  <span class="w-5 h-5 rounded-full bg-brand-red/10 text-brand-red font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">+</span>
+                  <span>{b}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {section.table && (
+            <div class="overflow-x-auto my-6 border border-brand-border rounded-xl">
+              <table class="w-full text-left text-xs sm:text-sm">
+                <thead class="bg-brand-navy text-white uppercase text-[11px] tracking-wider">
+                  <tr>
+                    {section.table.headers.map((h) => (
+                      <th class="py-3 px-4">{h}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-brand-border text-brand-darkText">
+                  {section.table.rows.map((row) => (
+                    <tr class="hover:bg-brand-surface">
+                      {row.map((cell, idx) => (
+                        <td class={`py-3 px-4 ${idx === 0 ? 'font-bold' : ''}`}>{cell}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {section.callout && (
+            <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed my-4">
+              <strong>Point cle AEO</strong> : {section.callout}
+            </div>
+          )}
+
+          {section.links && (
+            <div class="flex flex-wrap gap-4 pt-2">
+              {section.links.map((link) => (
+                <a href={link.url} class="inline-flex items-center text-sm font-bold text-brand-red hover:underline">
+                  {link.text} &rarr;
+                </a>
+              ))}
+            </div>
+          )}
+        </section>
+      ))}
+
+      <!-- Section: FAQ for Featured Snippets & Voice Search -->
+      <section class="mt-14 pt-8 border-t border-brand-border" aria-labelledby="faq-article-heading">
+        <div class="mb-8">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Questions Frequentes</span>
+          <h2 id="faq-article-heading" class="text-2xl sm:text-3xl font-extrabold text-brand-navy">
+            FAQ : {article.category} a Mouscron
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          {article.faqs.map((faq, index) => (
+            <details class="p-5 rounded-xl border border-brand-border bg-brand-surface group" open={index === 0}>
+              <summary class="font-bold text-brand-navy text-sm sm:text-base cursor-pointer list-none flex items-center justify-between">
+                <span>{faq.question}</span>
+                <span class="text-brand-red font-bold text-lg group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p class="mt-3 text-xs sm:text-sm text-brand-muted leading-relaxed">
+                {faq.answer}
+              </p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <!-- Section: Final Call To Action Block -->
+      <section class="mt-14 p-8 rounded-3xl bg-brand-navy text-white text-center relative overflow-hidden" aria-labelledby="cta-bottom-heading">
+        <div class="relative z-10 space-y-4 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-red block">Intervention Immediate Garanti</span>
+          <h2 id="cta-bottom-heading" class="text-2xl sm:text-3xl font-extrabold">
+            Besoin d'un Plombier d'Urgence a Mouscron ?
+          </h2>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Notre camion d'astreinte est pret a se deplacer a votre adresse. Obtenez un diagnostic et une arrivee en 20 a 30 minutes sans mauvaise surprise.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+            <a href="tel:+3256980244" class="px-8 py-4 bg-brand-red hover:bg-brand-redHover font-black text-base text-white rounded-xl shadow-xl transition">
+              Appeler le 056 98 02 44
+            </a>
+            <a href="https://wa.me/32470123456?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20a%20Mouscron." target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/20 font-bold text-base text-white rounded-xl transition">
+              WhatsApp d'Urgence
+            </a>
+          </div>
+          <p class="text-[11px] text-gray-400 pt-2">
+            Permanence 24h/24, 7j/7 et jours feries. Facture officielle et devis prealable transparent.
+          </p>
+        </div>
+      </section>
+
+      <!-- Related Guides -->
+      {relatedArticles.length > 0 && (
+        <section class="mt-16 pt-10 border-t border-brand-border">
+          <h3 class="text-xl font-bold text-brand-navy mb-6">Autres Guides Pratiques Recommandes</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedArticles.map((rel) => (
+              <a href={`/blog/${rel.slug}`} class="p-5 rounded-2xl border border-brand-border bg-brand-surface hover:border-brand-red transition block group">
+                <span class="text-[10px] font-bold text-brand-red uppercase tracking-wider block mb-1">{rel.category}</span>
+                <h4 class="font-bold text-brand-navy group-hover:text-brand-red text-sm leading-snug mb-2">{rel.title}</h4>
+                <p class="text-xs text-brand-muted line-clamp-2">{rel.metaDescription}</p>
+                <span class="inline-block mt-3 text-xs font-semibold text-brand-red">Lire le guide &rarr;</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+    </article>
+  </main>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</Layout>
