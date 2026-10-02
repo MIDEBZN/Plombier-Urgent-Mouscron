@@ -63,7 +63,7 @@ export const articles1to5: BlogArticle[] = [
         paragraphs: [
           "La recherche d'un plombier en pleine nuit ou un jour ferie revele trop souvent les pieges du referencement sponsorise. Pour separer les veritables artisans locaux des reseaux d'intermediation frauduleux, quatre points de controle sont obligatoires :",
           "1. L'ancrage physique et le numero local (056) : Un veritable artisan actif a Mouscron dispose d'un atelier ou d'un depot materiel dans le district de Mouscron. Fuyez les sites n'affichant qu'un 0900 ou un central anonyme.",
-          "2. L'immatriculation a la Banque-Carrefour des Entreprises (BCE) : En Belgique, toute societe de plomberie en regle possede un numero d'entreprise actif enregistre (par exemple : BE 0789.456.123).",
+          "2. L'immatriculation a la Banque-Carrefour des Entreprises (BCE) : En Belgique, toute societe de plomberie en regle possede un statut d'entreprise actif, des assurances decennales a jour et des certifications professionnelles reconnues.",
           "3. L'equipement du vehicule d'intervention : Le camion de garde doit comporter furet electromecanique, hydrocureuse, raccords multicouches et cuivre, vannes d'arret et detecteur acoustique.",
           "4. Le devis ecrit avant travaux : Aucun chantier ne demarre sans confirmation prealable du prix ferme annonce sur place."
         ],
