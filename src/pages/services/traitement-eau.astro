@@ -6,6 +6,7 @@ import Layout from '../../layouts/Layout.astro';
   title="Traitement de l'Eau & Adoucisseurs a Mouscron (7700)"
   description="Installation et entretien d'adoucisseurs d'eau et systemes de filtration a Mouscron. Protegez votre maison contre l'eau tres calcaire du Hainaut. Devis gratuit."
   canonicalPath="/services/traitement-eau"
+  preloadImage="/images/service-traitement.webp"
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">
@@ -46,11 +47,14 @@ import Layout from '../../layouts/Layout.astro';
         <div class="lg:col-span-5">
           <div class="rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
             <img 
-              src="/images/service-traitement.jpg" 
+              src="/images/service-traitement.webp" 
               alt="Installation d'un adoucisseur d'eau et filtre de plomberie sanitaire a Mouscron" 
               class="w-full h-80 object-cover" 
               width="800" 
               height="500" 
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>

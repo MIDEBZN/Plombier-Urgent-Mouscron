@@ -11,6 +11,7 @@ interface Props {
   canonicalPath?: string;
   schemaType?: string;
   hideGlobalContact?: boolean;
+  preloadImage?: string;
 }
 
 const { 
@@ -18,7 +19,8 @@ const {
   description, 
   canonicalPath = '',
   schemaType = 'Plumber',
-  hideGlobalContact = false
+  hideGlobalContact = false,
+  preloadImage
 } = Astro.props;
 
 const siteUrl = 'https://plombier-urgent-mouscron.be';
@@ -31,7 +33,7 @@ const schemaData = {
   "url": canonicalURL,
   "telephone": "+3256980244",
   "priceRange": "EUR",
-  "image": "https://plombier-urgent-mouscron.be/og-image.jpg",
+  "image": "https://plombier-urgent-mouscron.be/og-image.webp",
   "description": description,
   "foundingDate": "2011",
   "hasCredential": [
@@ -83,6 +85,7 @@ const schemaData = {
   <title>{title}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
+  <meta name="theme-color" content="#001621" />
   
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -90,10 +93,91 @@ const schemaData = {
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_BE" />
   <meta property="og:site_name" content="Plombier Urgent Mouscron" />
+  <meta property="og:image" content="https://plombier-urgent-mouscron.be/og-image.webp" />
 
+  <!-- Preconnect & DNS-Prefetch for Google Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  {preloadImage && (
+    <link rel="preload" as="image" href={preloadImage} type="image/webp" fetchpriority="high" />
+  )}
+
+  <!-- Critical Above-Fold CSS (Inlined for instant FCP & LCP) -->
+  <style is:inline>
+    :root {
+      --color-brand-navy: #001621;
+      --color-brand-darknavy: #00111A;
+      --color-brand-red: #FF4304;
+      --color-brand-redHover: #E03800;
+      --color-brand-surface: #F5F7FA;
+      --color-brand-border: #E4E9F0;
+      --color-brand-darkText: #172033;
+      --color-brand-muted: #5E6878;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      color: var(--color-brand-darkText);
+      background-color: #FFFFFF;
+      line-height: 1.5;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    button, a, input, select, textarea {
+      touch-action: manipulation;
+    }
+    aside[aria-label="Informations de garde"] {
+      background-color: #001621;
+      color: #FFFFFF;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    header.sticky {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid #E4E9F0;
+    }
+    #mobile-nav-menu.hidden {
+      display: none;
+    }
+    .pulse-dot {
+      animation: pulse-ring 2s infinite ease-in-out;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 0.4; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    @supports (content-visibility: auto) {
+      .cv-auto {
+        content-visibility: auto;
+        contain-intrinsic-size: 1px 700px;
+      }
+    }
+  </style>
 
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 </head>

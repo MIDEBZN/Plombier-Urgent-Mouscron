@@ -6,6 +6,7 @@ import Layout from '../../layouts/Layout.astro';
   title="Debouchage Canalisation, WC & Egout a Mouscron (7700) 24/7"
   description="Debouchage express de WC, eviers, egouts et canalisations a Mouscron. Curage haute pression et vidange de fosses septiques. Intervention d'urgence en 30 minutes."
   canonicalPath="/services/debouchage"
+  preloadImage="/images/service-debouchage.webp"
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">
@@ -46,11 +47,14 @@ import Layout from '../../layouts/Layout.astro';
         <div class="lg:col-span-5">
           <div class="rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
             <img 
-              src="/images/service-debouchage.jpg" 
+              src="/images/service-debouchage.webp" 
               alt="Plombier debouchant et reparant le mecanisme d'une cuvette de WC a Mouscron" 
               class="w-full h-80 object-cover" 
               width="800" 
               height="500" 
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>

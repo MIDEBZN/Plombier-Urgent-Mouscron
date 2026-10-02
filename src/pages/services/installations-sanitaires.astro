@@ -6,6 +6,7 @@ import Layout from '../../layouts/Layout.astro';
   title="Installations Sanitaires & Salles de Bain a Mouscron (7700)"
   description="Renovation complete de salle de bain et installation sanitaire a Mouscron. WC suspendus Geberit, douches italiennes, eviers et robinetterie Grohe. Devis gratuit."
   canonicalPath="/services/installations-sanitaires"
+  preloadImage="/images/service-sanitaire.webp"
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">
@@ -46,11 +47,14 @@ import Layout from '../../layouts/Layout.astro';
         <div class="lg:col-span-5">
           <div class="rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
             <img 
-              src="/images/service-sanitaire.jpg" 
+              src="/images/service-sanitaire.webp" 
               alt="Installation soignee d'une robinetterie et d'un ensemble de salle de bain a Mouscron" 
               class="w-full h-80 object-cover" 
               width="800" 
               height="500" 
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>

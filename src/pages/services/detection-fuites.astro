@@ -6,6 +6,7 @@ import Layout from '../../layouts/Layout.astro';
   title="Detection de Fuite d'Eau Non Destructive a Mouscron (7700)"
   description="Recherche et detection de fuite d'eau a Mouscron sans rien casser. Camera thermique, ecoute acoustique et gaz traceur. Agree assurances belges et SWDE."
   canonicalPath="/services/detection-fuites"
+  preloadImage="/images/service-detection.webp"
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">
@@ -46,11 +47,14 @@ import Layout from '../../layouts/Layout.astro';
         <div class="lg:col-span-5">
           <div class="rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
             <img 
-              src="/images/service-detection.jpg" 
+              src="/images/service-detection.webp" 
               alt="Technicien operant une camera et du materiel de diagnostic de fuite d'eau" 
               class="w-full h-80 object-cover" 
               width="800" 
               height="500" 
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>

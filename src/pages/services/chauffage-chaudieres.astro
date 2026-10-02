@@ -6,6 +6,7 @@ import Layout from '../../layouts/Layout.astro';
   title="Chauffage & Chaudieres a Mouscron | Installation, Entretien & SOS"
   description="Depannage d'urgence, entretien annuel et installation de chaudieres, boilers et radiateurs a Mouscron. Bulex, Vaillant, Viessmann, ACV. Technicien certifie."
   canonicalPath="/services/chauffage-chaudieres"
+  preloadImage="/images/service-boiler.webp"
 >
   <!-- Breadcrumb -->
   <nav class="bg-brand-surface border-b border-brand-border py-3 px-4 sm:px-6 lg:px-8 text-xs text-brand-muted" aria-label="Fil d'Ariane">
@@ -46,11 +47,14 @@ import Layout from '../../layouts/Layout.astro';
         <div class="lg:col-span-5">
           <div class="rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl bg-white/5">
             <img 
-              src="/images/service-boiler.jpg" 
+              src="/images/service-boiler.webp" 
               alt="Chauffagiste inspectant la pression et les vannes d'une chaudiere a Mouscron" 
               class="w-full h-80 object-cover" 
               width="800" 
               height="500" 
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>
