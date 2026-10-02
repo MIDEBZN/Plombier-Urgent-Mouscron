@@ -1,0 +1,302 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const blogTopics = [
+  {
+    id: 1,
+    title: "Quel plombier intervient en urgence 24h/24 a Mouscron ?",
+    slug: "/blog/quel-plombier-intervient-en-urgence-24h-24-mouscron",
+    category: "Urgence 24/7",
+    excerpt: "Comment identifier un vrai artisan de garde a Mouscron (7700), connaitre les delais reels en moins de 30 minutes et eviter les surfacturations nocturnes.",
+    readTime: "9 min",
+    status: "Publie"
+  },
+  {
+    id: 2,
+    title: "Combien coute un plombier a Mouscron en 2026 ?",
+    slug: "#topic-2",
+    category: "Tarifs & Devis",
+    excerpt: "Grille tarifaire complete : taux horaire moyen, forfait deplacement, TVA 6% pour habitations de plus de 10 ans et devis reglementaires.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 3,
+    title: "Combien coute un depannage de plomberie en urgence a Mouscron le soir ou le week-end ?",
+    slug: "#topic-3",
+    category: "Tarifs & Devis",
+    excerpt: "Majorations applicables les nuits, samedis, dimanches et jours feries : comment calculer le prix exact avant intervention.",
+    readTime: "7 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 4,
+    title: "Qui appeler pour une fuite d'eau a Mouscron ?",
+    slug: "#topic-4",
+    category: "Fuites d'eau",
+    excerpt: "Reflexes d'urgence, coupure du compteur SWDE et prise de contact avec les techniciens agrees pour colmatage immediat.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 5,
+    title: "Combien coute un debouchage de canalisation a Mouscron ?",
+    slug: "#topic-5",
+    category: "Debouchage",
+    excerpt: "Prix moyen pour furet mecanique, hydrocurage haute pression et inspection video endoscopique pour egouts et sterputs.",
+    readTime: "7 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 6,
+    title: "Qui appeler pour un WC bouche a Mouscron ?",
+    slug: "#topic-6",
+    category: "Debouchage",
+    excerpt: "Methodes professionnelles pour deboucher rapidement des toilettes qui refoulent sans endommager la porcelaine sanitaire.",
+    readTime: "6 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 7,
+    title: "Combien coute une recherche de fuite non destructive a Mouscron ?",
+    slug: "#topic-7",
+    category: "Detection fuite",
+    excerpt: "Tarifs camera thermique infrarouge, gaz traceur et ecoute acoustique. Modalites de remboursement a 100% par l'assurance.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 8,
+    title: "Comment trouver une fuite d'eau cachee sans casser les murs a Mouscron ?",
+    slug: "#topic-8",
+    category: "Detection fuite",
+    excerpt: "Technologies acoustiques et thermiques employees pour localiser au millimetre pres un tuyau encastre fuyard.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 9,
+    title: "Que faire immediatement en cas de fuite d'eau avant l'arrivee d'un plombier a Mouscron ?",
+    slug: "#topic-9",
+    category: "Urgence 24/7",
+    excerpt: "Le protocole de sauvegarde en 4 etapes : coupure d'eau, purge, disjoncteur electrique et photos pour le courtier d'assurance.",
+    readTime: "6 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 10,
+    title: "Mon boiler ne chauffe plus a Mouscron : faut-il le reparer ou le remplacer ?",
+    slug: "#topic-10",
+    category: "Chauffe-eau",
+    excerpt: "Diagnostic d'une panne de resistance ou de thermostat, impact du calcaire mouscronnois et criteres de remplacement rentable.",
+    readTime: "9 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 11,
+    title: "Combien coute le remplacement d'un boiler electrique a Mouscron ?",
+    slug: "#topic-11",
+    category: "Chauffe-eau",
+    excerpt: "Cout de pose, evacuation de l'ancien chauffe-eau, raccordement groupe de securite et marques fiables Bulex, Vaillant, Ariston.",
+    readTime: "7 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 12,
+    title: "J'ai une facture d'eau anormalement elevee a Mouscron : comment detecter une fuite et demander une reduction ?",
+    slug: "#topic-12",
+    category: "SWDE & Facture",
+    excerpt: "Procedure officielle pour solliciter un debarrevement aupres de la SWDE apres reparation certifiee par un artisan agree.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 13,
+    title: "Combien coute la renovation de la plomberie d'une salle de bain a Mouscron ?",
+    slug: "#topic-13",
+    category: "Renovation",
+    excerpt: "Estimation des travaux d'evacuation, arrivees multicouches, pose de douche a l'italienne et WC suspendu.",
+    readTime: "10 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 14,
+    title: "Pourquoi ai-je une faible pression d'eau dans ma maison a Mouscron ?",
+    slug: "#topic-14",
+    category: "Diagnostic eau",
+    excerpt: "Causes frequentes : reducteur de pression defectueux, tuyauteries galvanisees entartrees ou probleme sur le reseau public.",
+    readTime: "7 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 15,
+    title: "Qui paie une fuite d'eau a Mouscron : le locataire ou le proprietaire ?",
+    slug: "#topic-15",
+    category: "Droit locatif",
+    excerpt: "Repartition legale des frais selon le bail wallon : vetuste, joints d'usure, canalisations encastrees et assurance.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 16,
+    title: "Qui paie le debouchage d'une canalisation a Mouscron : le locataire ou le proprietaire ?",
+    slug: "#topic-16",
+    category: "Droit locatif",
+    excerpt: "Regles juridiques et jurisprudences : quand la facture incombe au locataire et quand le proprietaire doit assumer.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 17,
+    title: "L'eau est-elle calcaire a Mouscron et faut-il installer un adoucisseur ?",
+    slug: "#topic-17",
+    category: "Traitement eau",
+    excerpt: "Durete moyenne de l'eau en degres francais a Mouscron et solutions d'adoucisseurs a resine echangeuse d'ions.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 18,
+    title: "Combien coute le remplacement d'un robinet ou d'une chasse d'eau a Mouscron ?",
+    slug: "#topic-18",
+    category: "Sanitaire",
+    excerpt: "Tarifs moyens de fourniture et pose pour mitigeurs Grohe/Hansgrohe et mecanismes Geberit silencieux.",
+    readTime: "6 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 19,
+    title: "Pourquoi mes canalisations se bouchent-elles souvent a Mouscron ?",
+    slug: "#topic-19",
+    category: "Debouchage",
+    excerpt: "Analyse des problemes de contre-pente, depots de graisses, racines d'arbres et entartrage des vieux collecteurs en gres.",
+    readTime: "7 min",
+    status: "Guide a venir"
+  },
+  {
+    id: 20,
+    title: "Le CertIBEau est-il obligatoire apres des travaux de plomberie ou une renovation a Mouscron ?",
+    slug: "#topic-20",
+    category: "Legislation belge",
+    excerpt: "Tout sur la certification des installations interieures d'eau en Wallonie, obligations pour permis et controle conformite.",
+    readTime: "8 min",
+    status: "Guide a venir"
+  }
+];
+---
+
+<Layout 
+  title="Blog Plomberie Mouscron | Guides, Conseils & Tarifs Urgences"
+  description="Guides d'experts et conseils pratiques de plomberie a Mouscron. Tarifs officiels 2026, depannage urgence 24/7, debouchage et detection de fuites."
+  canonicalPath="/blog"
+>
+  <!-- Hero Section -->
+  <header class="bg-brand-navy text-white py-14 lg:py-18 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center sm:text-left">
+      <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-3 block">Conseils d'Artisans Experts</span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+        Guides Conseils & Urgences Plomberie a Mouscron
+      </h1>
+      <p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">
+        Retrouvez nos reponses d'experts aux 20 questions les plus frequentes des proprietaires et locataires du Grand Mouscron : reglementation belge, tarifs clairs et reflexes d'urgence.
+      </p>
+    </div>
+  </header>
+
+  <!-- Featured Article Banner -->
+  <section class="py-12 bg-white border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-4">Article a la Une</span>
+      <article class="p-6 sm:p-8 rounded-3xl bg-brand-surface border-2 border-brand-red/30 shadow-md flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+        <div class="space-y-3 max-w-3xl">
+          <div class="flex items-center space-x-2 text-xs">
+            <span class="px-2.5 py-0.5 rounded-full bg-brand-red text-white font-bold">Urgence 24/7</span>
+            <span class="text-brand-muted">Publie en Octobre 2026</span>
+            <span class="text-brand-muted">Temps de lecture : 9 min</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-navy hover:text-brand-red transition">
+            <a href="/blog/quel-plombier-intervient-en-urgence-24h-24-mouscron">
+              Quel plombier intervient en urgence 24h/24 a Mouscron ? Le Guide Complet
+            </a>
+          </h2>
+          <p class="text-sm text-brand-muted leading-relaxed">
+            Delais d'arrivee reels en moins de 30 minutes a Mouscron, Luingne, Herseaux et Dottignies, tarifs officiels de nuit et week-end, et reflexes indispensables avant l'arrivee de la camionnette d'astreinte.
+          </p>
+        </div>
+        <a 
+          href="/blog/quel-plombier-intervient-en-urgence-24h-24-mouscron" 
+          class="px-6 py-3.5 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-sm shadow-md transition shrink-0"
+        >
+          Lire l'Article Complet &rarr;
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Topic Hub Grid (20 Editorial Questions) -->
+  <section class="py-16 bg-brand-surface" aria-labelledby="all-topics-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Centre de Connaissances</span>
+        <h2 id="all-topics-heading" class="text-3xl font-extrabold text-brand-navy tracking-tight">
+          Les 20 Dossiers Techniques & Pratiques de la Plomberie Mouscronnoise
+        </h2>
+        <p class="text-sm text-brand-muted mt-2">
+          Des reponses precises, chiffres officiels et fiches reflexe redigees par des artisans diplomes en Belgique.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {blogTopics.map((item) => (
+          <article class="bg-white p-6 rounded-2xl border border-brand-border flex flex-col justify-between shadow-2xs hover:shadow-md transition">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between text-xs">
+                <span class="font-bold text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">{item.category}</span>
+                <span class="text-brand-muted">{item.readTime}</span>
+              </div>
+              <h3 class="text-base font-bold text-brand-navy leading-snug">
+                {item.status === 'Publie' ? (
+                  <a href={item.slug} class="hover:text-brand-red transition">
+                    {item.title}
+                  </a>
+                ) : (
+                  <span>{item.title}</span>
+                )}
+              </h3>
+              <p class="text-xs text-brand-muted leading-relaxed">
+                {item.excerpt}
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-brand-border mt-4 flex items-center justify-between text-xs">
+              {item.status === 'Publie' ? (
+                <a href={item.slug} class="font-bold text-brand-red hover:underline flex items-center gap-1">
+                  <span>Consulter le guide</span>
+                  <span>&rarr;</span>
+                </a>
+              ) : (
+                <span class="text-gray-400 font-medium">Bientot disponible</span>
+              )}
+              <span class="font-mono text-gray-400 text-[10px]">#{item.id}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Support Banner -->
+  <section class="py-14 bg-brand-navy text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 space-y-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Une Panne Imprevue a Mouscron ?</h2>
+      <p class="text-sm text-gray-300">
+        Nos plombiers sont disponibles immediatement 24h/24 et 7j/7 pour un depannage urgent.
+      </p>
+      <div class="pt-2">
+        <a href="tel:+3256980244" class="inline-flex items-center px-8 py-4 bg-brand-red hover:bg-brand-redHover font-black text-base rounded-xl text-white shadow-xl transition">
+          Ligne Directe 24/7 : 056 98 02 44
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
