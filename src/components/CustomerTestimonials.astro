@@ -1,270 +1,192 @@
 ---
 // Component: CustomerTestimonials.astro
-// Reviews and rating badges from Google, Trustpilot, and verified local customers
-// Zero emojis and zero em dashes
+// Authentic service standards, transparent intervention workflow, and customer feedback commitments
+// Fully compliant: zero fabricated reviews, zero invented ratings, zero fake badges
 ---
 
-<section class="py-16 bg-white border-t border-brand-border" aria-labelledby="testimonials-heading">
+<section class="py-16 bg-white border-t border-brand-border" aria-labelledby="service-commitments-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="text-center max-w-3xl mx-auto mb-12">
       <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-2 block">
-        Retours d'Experience Verifies
+        Qualité & Rigueur d'Intervention
       </span>
-      <h2 id="testimonials-heading" class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-        Avis de Nos Clients a Mouscron et Environs
+      <h2 id="service-commitments-heading" class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
+        Ce Que Vous Pouvez Attendre de Notre Service
       </h2>
       <p class="text-sm sm:text-base text-brand-muted mt-3 leading-relaxed">
-        La satisfaction et la fidelite de nos clients reposent sur 3 principes innegociables : le respect strict des horaires annonces, un devis transparent valide avant travaux et un chantier rendu propre.
+        En situation d'urgence, la confiance repose sur des engagements clairs : une écoute immédiate, un diagnostic objectif de votre panne, un devis transparent validé avant d'agir et un logement respecté.
       </p>
     </div>
 
-    <!-- Review Badges Strip -->
+    <!-- 3 Core Service Principles -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-14">
-      <!-- Google Reviews Badge -->
-      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-between shadow-2xs">
-        <div class="space-y-1">
-          <div class="flex items-center space-x-2">
-            <span class="font-extrabold text-brand-navy text-lg">Google Avis</span>
-            <span class="text-xs text-brand-muted font-medium">(280+ avis)</span>
-          </div>
-          <div class="flex items-center space-x-1 text-amber-400">
-            <!-- 5 SVG Stars -->
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          </div>
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border space-y-3 shadow-2xs">
+        <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-red flex items-center justify-center font-black">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
         </div>
-        <div class="text-right">
-          <span class="text-2xl font-black text-brand-navy block">4.9 / 5</span>
-          <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">Note d'Excellence</span>
-        </div>
+        <h3 class="font-bold text-brand-navy text-base">Devis Clair Avant Travaux</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">
+          Le coût du déplacement et de la réparation vous est présenté avant tout geste technique. Vous conservez la totale maîtrise de votre décision.
+        </p>
       </div>
 
-      <!-- Trustpilot Badge -->
-      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-between shadow-2xs">
-        <div class="space-y-1">
-          <div class="flex items-center space-x-2">
-            <span class="font-extrabold text-brand-navy text-lg">Trustpilot</span>
-            <span class="text-xs text-brand-muted font-medium">(Score 4.8)</span>
-          </div>
-          <div class="flex items-center space-x-1 text-[#00b67a]">
-            <!-- 5 Star Blocks with pure SVG -->
-            <span class="w-4 h-4 bg-[#00b67a] rounded-xs flex items-center justify-center">
-              <svg class="w-2.5 h-2.5 fill-white" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </span>
-            <span class="w-4 h-4 bg-[#00b67a] rounded-xs flex items-center justify-center">
-              <svg class="w-2.5 h-2.5 fill-white" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </span>
-            <span class="w-4 h-4 bg-[#00b67a] rounded-xs flex items-center justify-center">
-              <svg class="w-2.5 h-2.5 fill-white" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </span>
-            <span class="w-4 h-4 bg-[#00b67a] rounded-xs flex items-center justify-center">
-              <svg class="w-2.5 h-2.5 fill-white" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </span>
-            <span class="w-4 h-4 bg-[#00b67a] rounded-xs flex items-center justify-center">
-              <svg class="w-2.5 h-2.5 fill-white" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </span>
-          </div>
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border space-y-3 shadow-2xs">
+        <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-navy flex items-center justify-center font-black">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+          </svg>
         </div>
-        <div class="text-right">
-          <span class="text-2xl font-black text-brand-navy block">98%</span>
-          <span class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">Recommandent</span>
-        </div>
+        <h3 class="font-bold text-brand-navy text-base">Contrôle d'Étanchéité</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">
+          Chaque réparation de tuyauterie, remplacement de joint ou débouchage fait l'objet d'une vérification d'écoulement et d'étanchéité avant départ.
+        </p>
       </div>
 
-      <!-- PagesDorees / Belgian Quality Badge -->
-      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border flex items-center justify-between shadow-2xs">
-        <div class="space-y-1">
-          <div class="flex items-center space-x-2">
-            <span class="font-extrabold text-brand-navy text-lg">Avis Verifies Belges</span>
-          </div>
-          <p class="text-[11px] text-brand-muted">Retours 100% certifies avec facture</p>
+      <div class="p-6 rounded-2xl bg-brand-surface border border-brand-border space-y-3 shadow-2xs">
+        <div class="w-10 h-10 rounded-xl bg-brand-navy/5 text-brand-red flex items-center justify-center font-black">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
         </div>
-        <div class="text-right">
-          <span class="text-2xl font-black text-brand-red block">15+ Ans</span>
-          <span class="text-[10px] font-bold text-brand-navy bg-brand-surface px-2 py-0.5 rounded-full border border-brand-border">Artisan Local</span>
-        </div>
+        <h3 class="font-bold text-brand-navy text-base">Facture Détaillée Conforme</h3>
+        <p class="text-xs text-brand-muted leading-relaxed">
+          Une facture claire détaillant la main-d'œuvre, les pièces fournies et le taux de TVA applicable vous est remise pour vos dossiers et démarches d'assurance.
+        </p>
       </div>
     </div>
 
-    <!-- Customer Reviews Grid (6 authentic local stories) -->
+    <!-- Typical Emergency Case Studies in Mouscron -->
+    <div class="max-w-2xl mb-6">
+      <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">
+        Situations Fréquentes
+      </span>
+      <h3 class="text-xl sm:text-2xl font-bold text-brand-navy">
+        Exemples de Pannes Prises en Charge à Mouscron et Environs
+      </h3>
+      <p class="text-xs sm:text-sm text-brand-muted mt-1">
+        Voici les interventions les plus fréquemment réalisées pour nos clients dans l'entité mouscronnoise.
+      </p>
+    </div>
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Review 1: Mouscron Tuquet -->
-      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs hover:shadow-md transition">
+      <!-- Case 1: Mouscron Centre -->
+      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs">
         <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <span class="text-[10px] font-bold text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">Urgence Fuite</span>
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-navy">Mouscron Centre (7700)</span>
+            <span class="text-brand-red font-semibold">Fuite d'eau urgente</span>
           </div>
-          <p class="text-xs text-brand-muted leading-relaxed italic">
-            "Tuyau d'alimentation perce derriere le meuble de cuisine un dimanche soir a 21h30. Le plombier etait chez moi au Tuquet en 25 minutes chrono. Reparation immediate au multicouche serti, et le rapport pour mon assurance Ethias etait dans ma boite mail des le lendemain matin."
+          <h4 class="font-bold text-brand-navy text-sm">Tuyau d'alimentation percé sous évier</h4>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Coupure d'eau d'urgence guidée par téléphone avant arrivée du technicien. Dépose du flexible défectueux, mise en place d'un raccord laiton et remplacement du robinet d'arrêt avec contrôle sous pression.
           </p>
         </div>
-        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
-          <div>
-            <strong class="text-brand-navy block">Marc V.</strong>
-            <span class="text-brand-muted text-[11px]">Mouscron (Le Tuquet, 7700)</span>
-          </div>
-          <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            Client Verifie
-          </span>
+        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-[11px] text-brand-muted">
+          <span>Temps d'intervention : ~45 min</span>
+          <span class="text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full">Problème résolu</span>
         </div>
       </article>
 
-      <!-- Review 2: Luingne -->
-      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs hover:shadow-md transition">
+      <!-- Case 2: Herseaux -->
+      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs">
         <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <span class="text-[10px] font-bold text-brand-navy bg-brand-navy/10 px-2 py-0.5 rounded">Debouchage</span>
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-navy">Herseaux (7712)</span>
+            <span class="text-brand-navy font-semibold">Débouchage sanitaire</span>
           </div>
-          <p class="text-xs text-brand-muted leading-relaxed italic">
-            "WC et sterput de buanderie totalement bouches a Luingne. Le technicien a utilise un furet mecanique puis l'hydrocureuse. Aucun produit toxique employe, ecoulement retabli en 35 minutes et le sol a ete parfaitement nettoye."
+          <h4 class="font-bold text-brand-navy text-sm">WC suspendu complètement refoulant</h4>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Intervention mécanique au furet professionnel à tambour pour désobstruer le coude de raccordement sans endommager la céramique ni le mécanisme de chasse d'eau. Test d'évacuation validé.
           </p>
         </div>
-        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
-          <div>
-            <strong class="text-brand-navy block">Isabelle D.</strong>
-            <span class="text-brand-muted text-[11px]">Luingne (La Royere, 7700)</span>
-          </div>
-          <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            Client Verifie
-          </span>
+        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-[11px] text-brand-muted">
+          <span>Débouchage sans chimie agressive</span>
+          <span class="text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full">Écoulement rétabli</span>
         </div>
       </article>
 
-      <!-- Review 3: Herseaux -->
-      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs hover:shadow-md transition">
+      <!-- Case 3: Luingne -->
+      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs">
         <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <span class="text-[10px] font-bold text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">Chauffe-Eau</span>
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-navy">Luingne (7700)</span>
+            <span class="text-brand-red font-semibold">Production d'eau chaude</span>
           </div>
-          <p class="text-xs text-brand-muted leading-relaxed italic">
-            "Mon vieux boiler electrique a disjoncte en plein mois de janvier. Ils avaient la piece de rechange en stock dans leur vehicule. Detartrage de la cuve et changement de resistance effectues le matin meme. TVA 6% appliquee sur la facture."
+          <h4 class="font-bold text-brand-navy text-sm">Groupe de sécurité boiler en écoulement continu</h4>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Diagnostic de la pression du réseau, détartrage de la soupape et pose d'un groupe de sécurité neuf avec garde d'eau normalisée. Contrôle de la montée en température.
           </p>
         </div>
-        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
-          <div>
-            <strong class="text-brand-navy block">Philippe G.</strong>
-            <span class="text-brand-muted text-[11px]">Herseaux-Gare (7712)</span>
-          </div>
-          <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            Client Verifie
-          </span>
+        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-[11px] text-brand-muted">
+          <span>Pièce certifiée d'origine</span>
+          <span class="text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full">Pression sécurisée</span>
         </div>
       </article>
 
-      <!-- Review 4: Dottignies -->
-      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs hover:shadow-md transition">
+      <!-- Case 4: Dottignies -->
+      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs">
         <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <span class="text-[10px] font-bold text-brand-navy bg-brand-navy/10 px-2 py-0.5 rounded">Fuite Compteur</span>
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-navy">Dottignies (7711)</span>
+            <span class="text-brand-navy font-semibold">Assainissement pavillonnaire</span>
           </div>
-          <p class="text-xs text-brand-muted leading-relaxed italic">
-            "Vanne d'arret apres compteur SWDE bloquee et suintement important. L'artisan est arrive en moins d'une demi-heure a Dottignies. Remplacement propre, controle de pression et attestation remise pour la SWDE. Impeccable."
+          <h4 class="font-bold text-brand-navy text-sm">Refoulement au sterput de garage</h4>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Inspection de la chambre de visite extérieure, hydrocurage de la conduite d'évacuation encombrée par des racines et amas de lessive, remise en service de l'écoulement gravitaire.
           </p>
         </div>
-        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
-          <div>
-            <strong class="text-brand-navy block">Sophie & Laurent B.</strong>
-            <span class="text-brand-muted text-[11px]">Dottignies (Place de la Main, 7711)</span>
-          </div>
-          <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            Client Verifie
-          </span>
+        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-[11px] text-brand-muted">
+          <span>Nettoyage complet du regard</span>
+          <span class="text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full">Curage validé</span>
         </div>
       </article>
 
-      <!-- Review 5: Estaimpuis -->
-      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs hover:shadow-md transition">
+      <!-- Case 5: Estaimpuis -->
+      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs">
         <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <span class="text-[10px] font-bold text-brand-red bg-brand-red/10 px-2 py-0.5 rounded">Adoucisseur</span>
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-navy">Estaimpuis (7730)</span>
+            <span class="text-brand-red font-semibold">Recherche de fuite</span>
           </div>
-          <p class="text-xs text-brand-muted leading-relaxed italic">
-            "Installation d'un adoucisseur d'eau BWT a Nechin. Notre eau etait a 40 degres de calcaire. Chantier termine en demi-journee, reglage parfait a 8 degres, explications tres claires et tarif fidele au devis."
+          <h4 class="font-bold text-brand-navy text-sm">Tache d'humidité inexpliquée sur mur mitoyen</h4>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Diagnostic non destructif combinant caméra d'inspection thermique et écoute acoustique sur la conduite encastrée. Localisation du point de suintement sans démolition préalable du plâtre.
           </p>
         </div>
-        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
-          <div>
-            <strong class="text-brand-navy block">Bernard M.</strong>
-            <span class="text-brand-muted text-[11px]">Estaimpuis (Nechin, 7730)</span>
-          </div>
-          <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            Client Verifie
-          </span>
+        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-[11px] text-brand-muted">
+          <span>Rapport photo pour assurance</span>
+          <span class="text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full">Fuite localisée</span>
         </div>
       </article>
 
-      <!-- Review 6: Tourcoing -->
-      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs hover:shadow-md transition">
+      <!-- Case 6: Comines-Warneton -->
+      <article class="bg-brand-surface p-6 rounded-2xl border border-brand-border flex flex-col justify-between space-y-4 shadow-2xs">
         <div class="space-y-3">
-          <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-1 text-amber-400">
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-              <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-            </div>
-            <span class="text-[10px] font-bold text-brand-navy bg-brand-navy/10 px-2 py-0.5 rounded">Maison 1930</span>
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold text-brand-navy">Comines-Warneton (7780)</span>
+            <span class="text-brand-navy font-semibold">Robinetterie sanitaire</span>
           </div>
-          <p class="text-xs text-brand-muted leading-relaxed italic">
-            "Maison type 1930 a Tourcoing pres de la frontiere. Siphon de baignoire casse et evacuation bouchée. Les depanneurs francais etaient injoignables le samedi. Ce plombier de Mouscron est arrive en 20 minutes avec tout le materiel."
+          <h4 class="font-bold text-brand-navy text-sm">Mitigeur de douche bloqué et goutte-à-goutte continu</h4>
+          <p class="text-xs text-brand-muted leading-relaxed">
+            Remplacement de la cartouche céramique entartrée par une cartouche d'origine et changement des clapets anti-retour pour restaurer un réglage précis de la température.
           </p>
         </div>
-        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-xs">
-          <div>
-            <strong class="text-brand-navy block">Clara T.</strong>
-            <span class="text-brand-muted text-[11px]">Tourcoing (Blanc-Seau, 59200)</span>
-          </div>
-          <span class="text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
-            <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-            Client Verifie
-          </span>
+        <div class="pt-3 border-t border-brand-border flex items-center justify-between text-[11px] text-brand-muted">
+          <span>Économie d'eau restaurée</span>
+          <span class="text-emerald-700 font-semibold bg-emerald-100 px-2 py-0.5 rounded-full">Fonctionnement optimal</span>
         </div>
       </article>
+    </div>
+
+    <!-- Transparent Feedback Callout -->
+    <div class="mt-12 p-6 rounded-2xl bg-brand-surface border border-brand-border text-center max-w-2xl mx-auto space-y-2">
+      <h4 class="font-bold text-brand-navy text-sm">Votre Avis et Votre Retour d'Expérience</h4>
+      <p class="text-xs text-brand-muted leading-relaxed">
+        Vous avez fait appel à notre service de plomberie d'urgence à Mouscron ? Nous attachons une grande importance à la satisfaction de chaque client. N'hésitez pas à nous faire part de vos remarques après chaque intervention.
+      </p>
     </div>
   </div>
 </section>

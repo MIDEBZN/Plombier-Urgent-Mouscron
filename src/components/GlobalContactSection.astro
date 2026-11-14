@@ -1,6 +1,6 @@
 ---
 // Component: GlobalContactSection.astro
-// Universal contact & quote form placed on every page.
+// Universal contact & quote form placed on pages.
 // Integrates https://formsubmit.co/ with recipient: midebzn@gmail.com
 ---
 
@@ -14,10 +14,10 @@
             Devis Gratuit & Intervention 24/7
           </span>
           <h2 id="global-contact-heading" class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight">
-            Demandez un Devis ou un Depannage Immediat
+            Demandez un Devis ou un Dépannage
           </h2>
           <p class="text-sm text-brand-muted mt-3 leading-relaxed">
-            Remplissez ce formulaire pour recevoir un devis gratuit ou une confirmation d'intervention sous 15 minutes. Pour une urgence absolue (fuite majeure, refoulement d'egout), appelez directement notre ligne d'astreinte.
+            Remplissez ce formulaire pour recevoir un devis gratuit ou une confirmation de prise en charge. Pour une urgence bloquante (fuite importante, inondation, refoulement d'égout), contactez directement notre ligne d'astreinte téléphonique.
           </p>
         </div>
 
@@ -27,33 +27,34 @@
             <span class="text-xs font-extrabold text-brand-red uppercase tracking-wider">Ligne d'Urgence Locale</span>
             <span class="inline-flex items-center text-[11px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 mr-1.5 animate-pulse"></span>
-              Disponible maintenant
+              Disponible 24h/24 & 7j/7
             </span>
           </div>
-          <a href="tel:+32465470070" class="text-2xl sm:text-3xl font-black text-brand-navy hover:text-brand-red transition-colors block">
+          <a href="tel:+32465470070" class="text-2xl sm:text-3xl font-black text-brand-navy hover:text-brand-red transition-colors block" aria-label="Appeler l'astreinte au 0465 47 00 70">
             0465 47 00 70
           </a>
           <p class="text-xs text-brand-muted">
-            Arrivee garantie en 20 a 30 minutes a Mouscron, Luingne et Herseaux. Devis ecrit annonce avant tout geste technique.
+            Déplacement d'urgence à Mouscron, Luingne, Herseaux, Dottignies et entités voisines. Devis présenté avant toute réparation.
           </p>
         </div>
 
         <!-- WhatsApp Quick Link -->
         <div class="p-6 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20 space-y-2">
           <div class="flex items-center justify-between">
-            <span class="text-xs font-bold uppercase text-[#128C7E] tracking-wider">Devis Photo Instantane</span>
-            <span class="text-[11px] font-semibold text-gray-600">Reponse en moins de 2 min</span>
+            <span class="text-xs font-bold uppercase text-[#128C7E] tracking-wider">Échange Photo WhatsApp</span>
+            <span class="text-[11px] font-semibold text-gray-600">Assistance rapide</span>
           </div>
           <p class="text-xs text-brand-darkText">
-            Envoyez une photo de votre fuite, vanne ou installation directement a notre technicien de garde via WhatsApp.
+            Envoyez une photo de votre fuite, vanne ou équipement sanitaire à notre permanence technique pour un premier avis.
           </p>
           <a 
-            href="https://wa.me/32465470070?text=Bonjour,%20j'ai%20besoin%20d'un%20depannage%20plomberie%20urgent%20a%20Mouscron." 
+            href="https://wa.me/32465470070?text=Bonjour,%20j'ai%20besoin%20d'un%20d%C3%A9pannage%20plomberie%20urgent%20%C3%A0%20Mouscron." 
             target="_blank" 
             rel="noopener noreferrer"
             class="inline-flex items-center gap-2 text-xs font-bold text-[#075E54] hover:underline pt-1"
+            aria-label="Ouvrir une discussion WhatsApp avec Plombier Urgent Mouscron"
           >
-            <svg class="w-4 h-4 fill-current text-[#25D366]" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 fill-current text-[#25D366]" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12.04 2a9.9 9.9 0 00-8.48 15.06L2 22l5.09-1.52A9.94 9.94 0 1012.04 2zm5.46 12.4c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91s.82 2.22.94 2.38c.12.15 1.62 2.48 3.95 3.48.55.24.98.38 1.32.48.55.18 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.15-.43-.27zM12.04 20.18c-1.62 0-3.2-.44-4.58-1.27l-.33-.2-3.02.9.91-2.95-.21-.34a8.26 8.26 0 1115.4-4.34 8.2 8.2 0 01-8.17 8.2z"/>
             </svg>
             Ouvrir WhatsApp (0465 47 00 70)
@@ -63,12 +64,12 @@
         <!-- Trust Mini Badges -->
         <div class="grid grid-cols-2 gap-3 text-xs">
           <div class="p-3 rounded-xl bg-brand-surface border border-brand-border">
-            <strong class="text-brand-navy block mb-0.5">TVA Reduite 6%</strong>
-            <span class="text-brand-muted">Logements de plus de 10 ans</span>
+            <strong class="text-brand-navy block mb-0.5">TVA à 6% ou 21%</strong>
+            <span class="text-brand-muted">Selon conditions fiscales belges</span>
           </div>
           <div class="p-3 rounded-xl bg-brand-surface border border-brand-border">
-            <strong class="text-brand-navy block mb-0.5">Assurances Belges</strong>
-            <span class="text-brand-muted">Agree Ethias, AXA, AG</span>
+            <strong class="text-brand-navy block mb-0.5">Dossier Assurance</strong>
+            <span class="text-brand-muted">Facture & rapport détaillés</span>
           </div>
         </div>
       </div>
@@ -78,13 +79,13 @@
         <div class="bg-brand-surface rounded-3xl border border-brand-border p-7 sm:p-9 shadow-md">
           <div class="mb-6">
             <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">
-              Formulaire Securise
+              Formulaire de Contact
             </span>
             <h3 class="text-2xl font-bold text-brand-navy">
               Transmettez Votre Demande d'Intervention
             </h3>
-            <p class="text-xs text-brand-muted mt-1">
-              Les donnees sont transmises directement a notre equipe d'astreinte.
+            <p class="text-xs text-brand-muted mt-1 leading-relaxed">
+              Vos informations sont directement transmises à notre permanence pour vous recontacter et planifier le dépannage.
             </p>
           </div>
 
@@ -103,26 +104,28 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label for="form-name" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">
-                  Nom et Prenom *
+                  Nom et Prénom *
                 </label>
                 <input 
                   id="form-name" 
                   name="nom_client" 
                   type="text" 
                   required 
-                  placeholder="Jean Dupont" 
+                  aria-required="true"
+                  placeholder="Ex : Jean Dupont" 
                   class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border bg-white focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" 
                 />
               </div>
               <div>
                 <label for="form-phone" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">
-                  Numero de Telephone *
+                  Numéro de Téléphone *
                 </label>
                 <input 
                   id="form-phone" 
                   name="telephone" 
                   type="tel" 
                   required 
+                  aria-required="true"
                   placeholder="04XX XX XX XX ou 056 XX XX XX" 
                   class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border bg-white focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" 
                 />
@@ -145,23 +148,23 @@
               </div>
               <div>
                 <label for="form-commune" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">
-                  Commune / Code Postal *
+                  Commune / Localité *
                 </label>
                 <select 
                   id="form-commune" 
                   name="commune_secteur" 
                   required 
+                  aria-required="true"
                   class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border bg-white focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition"
                 >
-                  <option value="" disabled selected>Selectionnez votre commune</option>
+                  <option value="" disabled selected>Sélectionnez votre commune</option>
                   <option value="Mouscron 7700">Mouscron Centre (7700)</option>
                   <option value="Luingne 7700">Luingne (7700)</option>
                   <option value="Herseaux 7712">Herseaux (7712)</option>
                   <option value="Dottignies 7711">Dottignies (7711)</option>
-                  <option value="Estaimpuis Nechin 7730">Estaimpuis / Nechin (7730)</option>
-                  <option value="Tourcoing 59200">Tourcoing & Zone Frontaliere (59200)</option>
+                  <option value="Estaimpuis Nechin 7730">Estaimpuis / Néchin (7730)</option>
                   <option value="Comines Warneton 7780">Comines-Warneton (7780)</option>
-                  <option value="Autre commune">Autre localite limitrophe</option>
+                  <option value="Autre commune voisine">Autre commune limitrophe (Belgique)</option>
                 </select>
               </div>
             </div>
@@ -176,32 +179,34 @@
                   id="form-service" 
                   name="prestation" 
                   required 
+                  aria-required="true"
                   class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border bg-white focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition"
                 >
                   <option value="" disabled selected>Choisissez le service</option>
-                  <option value="Depannage Urgence Fuite">Depannage d'urgence fuite d'eau</option>
-                  <option value="Debouchage WC Canalisations">Debouchage WC, evier ou canalisation</option>
-                  <option value="Detection de Fuite Sans Casse">Detection de fuite non destructive</option>
-                  <option value="Chauffage Chaudiere Boiler">Chauffage, chaudiere ou chauffe-eau</option>
-                  <option value="Installation Sanitaire">Installation ou renovation sanitaire</option>
+                  <option value="Depannage Urgence Fuite">Dépannage d'urgence fuite d'eau</option>
+                  <option value="Debouchage WC Canalisations">Débouchage WC, évier ou canalisation</option>
+                  <option value="Detection de Fuite Sans Casse">Détection de fuite non destructive</option>
+                  <option value="Chauffage Chaudiere Boiler">Chauffage, chaudière ou chauffe-eau</option>
+                  <option value="Installation Sanitaire">Installation ou rénovation sanitaire</option>
                   <option value="Traitement de Eau Adoucisseur">Traitement de l'eau et adoucisseur</option>
-                  <option value="Autre demande">Autre probleme de plomberie</option>
+                  <option value="Autre demande">Autre problème de plomberie</option>
                 </select>
               </div>
               <div>
                 <label for="form-urgency" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">
-                  Degre d'Urgence *
+                  Degré d'Urgence *
                 </label>
                 <select 
                   id="form-urgency" 
                   name="delai_souhaite" 
                   required 
+                  aria-required="true"
                   class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border bg-white focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition"
                 >
-                  <option value="Urgence immediate 30 min">Urgence immediate (dans les 20 a 30 min)</option>
-                  <option value="Dans la journee">Intervention souhaitee aujourd'hui</option>
+                  <option value="Urgence immediate">Urgence immédiate (fuite active, inondation, WC inutilisable)</option>
+                  <option value="Dans la journee">Intervention souhaitée aujourd'hui</option>
                   <option value="Dans les 48h">Dans les 48 heures</option>
-                  <option value="Rendez-vous programme">Rendez-vous a convenir</option>
+                  <option value="Rendez-vous programme">Rendez-vous programmé à convenir</option>
                 </select>
               </div>
             </div>
@@ -209,13 +214,13 @@
             <!-- Message Area -->
             <div>
               <label for="form-message" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">
-                Description de Votre Probleme
+                Description de Votre Problème
               </label>
               <textarea 
                 id="form-message" 
                 name="description_probleme" 
                 rows="3" 
-                placeholder="Indiquez l'emplacement de la fuite, la marque de votre chaudiere ou tout detail utile pour notre technicien..." 
+                placeholder="Précisez l'emplacement de la fuite, les symptômes observés ou tout détail utile..." 
                 class="w-full px-3.5 py-2.5 rounded-xl border border-brand-border bg-white focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition"
               ></textarea>
             </div>
@@ -225,14 +230,14 @@
               type="submit" 
               class="w-full py-4 px-6 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-extrabold text-base shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer flex items-center justify-center gap-2"
             >
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
               </svg>
               Envoyer Ma Demande d'Intervention
             </button>
 
-            <p class="text-[11px] text-gray-500 text-center pt-1">
-              Vos informations restent strictement confidentielles et ne sont utilisees que pour traiter votre depannage.
+            <p class="text-[11px] text-gray-500 text-center pt-1 leading-relaxed">
+              Vos informations sont traitées de manière confidentielle afin de répondre à votre demande de dépannage.
             </p>
           </form>
         </div>

@@ -38,8 +38,8 @@ export const articles1to5: BlogArticle[] = [
     id: 1,
     slug: "quel-plombier-intervient-en-urgence-24h-24-mouscron",
     title: "Quel plombier intervient en urgence 24h/24 a Mouscron ?",
-    seoTitle: "Plombier Urgence 24h/24 Mouscron : Depannage en 30 Min",
-    metaDescription: "Fuite d'eau ou WC bouche a Mouscron ? Plombier d'urgence disponible 24h/24 et 7j/7. Arrivee en 30 min. Appelez le 0465 47 00 70 pour devis gratuit et clair.",
+    seoTitle: "Plombier Urgence 24h/24 Mouscron : Dépannage Rapide",
+    metaDescription: "Fuite d'eau ou WC bouché à Mouscron ? Plombier d'urgence disponible 24h/24 et 7j/7. Départ rapide. Appelez le 0465 47 00 70 pour devis gratuit et clair.",
     h1: "Quel Plombier Intervient en Urgence 24h/24 a Mouscron ? Le Guide Complet",
     category: "Urgence 24/7",
     readTime: "9 min",
@@ -52,10 +52,10 @@ export const articles1to5: BlogArticle[] = [
       "prix intervention plombier urgence mouscron",
       "artisan plombier agree assurance mouscron"
     ],
-    aeoQuickAnswer: "En cas d'urgence de plomberie a Mouscron (7700), l'artisan local Plombier Urgent Mouscron intervient 24h/24 et 7j/7 en moins de 30 minutes. Qu'il s'agisse d'une rupture de canalisation, d'un WC debordant ou d'une panne d'eau chaude, une permanence d'astreinte est joignable immediatement au 0465 47 00 70 avec tarif confirme avant deplacement.",
+    aeoQuickAnswer: "En cas d'urgence de plomberie à Mouscron (7700), l'artisan local Plombier Urgent Mouscron intervient 24h/24 et 7j/7 avec un départ rapide. Qu'il s'agisse d'une rupture de canalisation, d'un WC débordant ou d'une panne d'eau chaude, une permanence d'astreinte est joignable immédiatement au 0465 47 00 70 avec tarif confirmé avant déplacement.",
     introText: [
       "Une canalisation rompue qui inonde votre salon au milieu de la nuit, un sterput qui deborde un dimanche matin ou un boiler qui cesse brutalement de fonctionner en plein hiver : les sinistres sanitaires ne respectent jamais les horaires de bureau. Face a une montee d'eau ou a un refoulement d'eaux usees, chaque minute d'hesitation peut transformer un simple joint defaillant en un degat des eaux de plusieurs milliers d'euros.",
-      "Pourtant, dans la panique d'une recherche sur internet, de nombreux habitants du Grand Mouscron se heurtent a des plateformes opaques, des boites postales bruxelloises ou des numeros surtaxes envoyant des sous-traitants sans agreation officielle. Comment identifier un veritable artisan plombier mouscronnois capable de franchir le seuil de votre porte en 30 minutes chrono ? Voici l'analyse detaillee pour resoudre votre urgence en toute serenite."
+      "Pourtant, dans la panique d'une recherche sur internet, de nombreux habitants du Grand Mouscron se heurtent a des plateformes opaques, des boites postales bruxelloises ou des numeros surtaxes envoyant des sous-traitants sans ancrage local. Comment identifier un véritable artisan plombier mouscronnois capable d'intervenir au plus vite selon le trafic ? Voici l'analyse détaillée pour résoudre votre urgence en toute sérénité."
     ],
     sections: [
       {
@@ -75,15 +75,15 @@ export const articles1to5: BlogArticle[] = [
           "En plomberie d'urgence, la proximite geographique reelle est determinante. Nos camionnettes d'astreinte patrouillent en continu pres des axes majeurs (N58, Boulevard des Allies, Chaussee de Lille et acces E403) :"
         ],
         table: {
-          headers: ["Quartier ou Commune", "Code Postal", "Delai moyen constate", "Itineraire d'acces"],
+          headers: ["Quartier ou Commune", "Code Postal", "Modalité de déplacement", "Itinéraire d'accès"],
           rows: [
-            ["Mouscron Centre & Tuquet", "7700", "15 a 25 minutes", "Rue de Menin, Chaussee de Lille"],
-            ["Le Mont-a-Leux & Frontiere", "7700", "20 a 30 minutes", "Chaussee de Gand, Frontiere"],
-            ["Luingne Village", "7700", "20 a 30 minutes", "Chaussee de Luingne, N58"],
-            ["Herseaux (Gare & Place)", "7712", "20 a 30 minutes", "Rue du Dragon, Chaussee d'Estaimpuis"],
-            ["Dottignies Centre", "7711", "25 a 35 minutes", "N511, Autoroute E403 / A17"],
-            ["Estaimpuis & Nechin", "7730", "25 a 35 minutes", "Contournement N58 Sud"],
-            ["Tourcoing / Wattrelos (Frontiere)", "59200", "20 a 30 minutes", "Poste de douane Risquons-Tout"]
+            ["Mouscron Centre & Tuquet", "7700", "Départ rapide", "Rue de Menin, Chaussée de Lille"],
+            ["Le Mont-à-Leux", "7700", "Départ rapide", "Chaussée de Gand"],
+            ["Luingne Village", "7700", "Départ rapide", "Chaussée de Luingne, N58"],
+            ["Herseaux (Gare & Place)", "7712", "Départ rapide", "Rue du Dragon, Chaussée d'Estaimpuis"],
+            ["Dottignies Centre", "7711", "Départ rapide", "N511, Autoroute E403 / A17"],
+            ["Estaimpuis & Néchin", "7730", "Départ rapide", "Contournement N58 Sud"],
+            ["Comines-Warneton", "7780", "Départ rapide via N58", "Voie expresse N58"]
           ]
         }
       },
@@ -104,7 +104,7 @@ export const articles1to5: BlogArticle[] = [
       {
         heading: "4. Les reflexes immediats avant l'arrivee du plombier",
         paragraphs: [
-          "Pendant les 20 a 30 minutes d'acheminement du technicien, appliquez immediatement ces actions :",
+          "Pendant l'acheminement du technicien, appliquez immédiatement ces actions :",
           "1. Coupez l'arrivee generale d'eau pres du compteur SWDE (dans la cave ou le garage).",
           "2. Ouvrez le robinet situe le plus bas dans votre maison pour purger la pression residuelle.",
           "3. Coupez l'electricite sur le tableau general si l'eau approche des prises ou appareils.",
@@ -119,7 +119,7 @@ export const articles1to5: BlogArticle[] = [
     faqs: [
       {
         question: "Quel plombier appeler en pleine nuit a Mouscron pour une fuite d'eau ?",
-        answer: "Pour une fuite nocturne a Mouscron (7700), contactez l'artisan Plombier Urgent Mouscron au 0465 47 00 70. L'astreinte nocturne fonctionne 7j/7 avec un temps d'arrivee de 20 a 30 minutes sur Mouscron, Luingne, Herseaux et Dottignies."
+        answer: "Pour une fuite nocturne à Mouscron (7700), contactez l'artisan Plombier Urgent Mouscron au 0465 47 00 70. L'astreinte nocturne fonctionne 7j/7 avec un départ rapide vers Mouscron, Luingne, Herseaux et Dottignies."
       },
       {
         question: "Combien coute une intervention de plomberie le week-end a Mouscron ?",
@@ -305,7 +305,7 @@ export const articles1to5: BlogArticle[] = [
     slug: "qui-appeler-pour-une-fuite-d-eau-a-mouscron",
     title: "Qui appeler pour une fuite d'eau a Mouscron ?",
     seoTitle: "Qui Appeler Fuite d'Eau Mouscron : Plombier Agree 24/7",
-    metaDescription: "Fuite d'eau urgente a Mouscron (7700) ? Qui contacter jour et nuit ? Artisans plombiers certifies, arrivee en 30 min. Appelez le 0465 47 00 70.",
+    metaDescription: "Fuite d'eau urgente à Mouscron (7700) ? Qui contacter jour et nuit ? Artisans plombiers, départ rapide. Appelez le 0465 47 00 70.",
     h1: "Qui Appeler pour une Fuite d'Eau a Mouscron ? Les Numeros et Bons Reflexes",
     category: "Fuites d'eau",
     readTime: "8 min",
@@ -318,7 +318,7 @@ export const articles1to5: BlogArticle[] = [
       "fuite apres compteur qui appeler mouscron",
       "depannage fuite eau luingne herseaux"
     ],
-    aeoQuickAnswer: "Pour une fuite d'eau situee apres votre compteur a Mouscron, appelez Plombier Urgent Mouscron au 0465 47 00 70 pour une intervention d'urgence en 20 a 30 minutes. Si la fuite se situe avant le compteur sur la voie publique, contactez le service de garde de la SWDE au 087 87 87 87.",
+    aeoQuickAnswer: "Pour une fuite d'eau située après votre compteur à Mouscron, appelez Plombier Urgent Mouscron au 0465 47 00 70 pour une intervention d'urgence avec départ rapide. Si la fuite se situe avant le compteur sur la voie publique, contactez le service de garde de la SWDE au 087 87 87 87.",
     introText: [
       "L'eau qui coule abondamment le long d'une plinthe, un plafond qui s'imbibe au rez-de-chaussee ou un tuyau qui siffle bruyamment : face a une fuite d'eau a Mouscron, la premiere difficulte consiste a savoir a quelle porte frapper. Faut-il appeler la SWDE, les pompiers de la zone de secours Wallonie Picarde ou un artisan plombier independant ?",
       "La reponse depend principalement de l'emplacement de la fuite par rapport a votre compteur d'eau et de la gravite immediate du sinistre. Voici le protocole exact a suivre pour agir sans perte de temps et preserver votre habitation."
@@ -350,7 +350,7 @@ export const articles1to5: BlogArticle[] = [
         heading: "3. La demarche de reparation immediate avec Plombier Urgent Mouscron",
         paragraphs: [
           "Des reception de votre appel au 0465 47 00 70, un technicien d'astreinte est oriente vers votre domicile a Mouscron, Luingne, Herseaux ou Dottignies :",
-          "1. Arrivee en 20 a 30 minutes avec camionnette atelier tout equipee.",
+          "1. Départ rapide avec véhicule atelier tout équipé.",
           "2. Localisation immediate de la fuite et mise sous vanne temporaire.",
           "3. Etablissement d'un devis ecrit clair et chiffree.",
           "4. Reparation definitive par sertissage, brasure ou remplacement de vanne.",
@@ -387,7 +387,7 @@ export const articles1to5: BlogArticle[] = [
     slug: "combien-coute-un-debouchage-de-canalisation-a-mouscron",
     title: "Combien coute un debouchage de canalisation a Mouscron ?",
     seoTitle: "Prix Debouchage Canalisation Mouscron : Tarifs WC & Egout",
-    metaDescription: "Tarifs debouchage de canalisation a Mouscron (7700) : WC, evier, egout et inspection camera. Devis fixe au 0465 47 00 70. Intervention 30 min.",
+    metaDescription: "Tarifs débouchage de canalisation à Mouscron (7700) : WC, évier, égout et inspection caméra. Devis clair au 0465 47 00 70. Déplacement rapide.",
     h1: "Combien Coute un Debouchage de Canalisation a Mouscron ? Tarifs 2026",
     category: "Debouchage",
     readTime: "7 min",
@@ -435,7 +435,7 @@ export const articles1to5: BlogArticle[] = [
       {
         heading: "3. La garantie d'ecoulement parfait a Mouscron et environs",
         paragraphs: [
-          "Nos techniciens interviennent dans les 30 minutes a Mouscron (7700), Luingne, Herseaux, Dottignies et Estaimpuis. Chaque intervention se termine par un test de debit dynamique pour valider l'evacuation totale de l'eau avant depart."
+          "Nos techniciens interviennent rapidement à Mouscron (7700), Luingne, Herseaux, Dottignies et Estaimpuis. Chaque intervention se termine par un test de débit dynamique pour valider l'évacuation totale de l'eau avant départ."
         ],
         links: [
           { text: "Consultez notre service de debouchage a Mouscron", url: "/services/debouchage" },

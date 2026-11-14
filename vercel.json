@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/locations/tourcoing",
+      "destination": "/locations",
+      "permanent": true
+    },
+    {
+      "source": "/locations/tourcoing/",
+      "destination": "/locations",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/images/(.*)",

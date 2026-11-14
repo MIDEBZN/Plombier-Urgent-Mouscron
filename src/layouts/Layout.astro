@@ -27,7 +27,9 @@ const {
 } = Astro.props;
 
 const siteUrl = 'https://www.plombierurgentmouscron.be';
-const canonicalURL = new URL(canonicalPath || Astro.url.pathname, siteUrl).toString();
+const rawPath = canonicalPath || Astro.url.pathname;
+const cleanPath = rawPath === '/' ? '' : rawPath.replace(/\/$/, '');
+const canonicalURL = `${siteUrl}${cleanPath}`;
 
 // ── Main Organization / Plumber schema ──────────────────────────────
 const schemaData = {
@@ -35,31 +37,23 @@ const schemaData = {
   "@type": schemaType,
   "@id": `${siteUrl}/#organization`,
   "name": "Plombier Urgent Mouscron",
-  "alternateName": "Vensol Plombier Urgent Mouscron",
   "url": siteUrl,
   "logo": `${siteUrl}/images/logo-square.webp`,
   "telephone": "+32465470070",
   "email": "contact@plombierurgentmouscron.be",
   "priceRange": "€€",
   "image": `${siteUrl}/og-image.webp`,
-  "description": "Plombier professionnel a Mouscron disponible 24h/24 et 7j/7. Intervention d'urgence en 30 minutes pour fuites, debouchage, chauffage et installations sanitaires.",
-  "foundingDate": "2011",
+  "description": "Service de plomberie d'urgence à Mouscron disponible 24h/24 et 7j/7 pour le dépannage de fuites d'eau, le débouchage de canalisations, la réparation de chauffe-eau et les installations sanitaires.",
   "currenciesAccepted": "EUR",
   "paymentAccepted": "Cash, Carte bancaire, Virement",
-  "hasCredential": [
-    "Habilitation Gaz G1 et G2 Region Wallonne Cerga",
-    "Certification Diagnostic Periodique PEB et Chauffage",
-    "Certification Securite sur Chantier VCA",
-    "Affiliation Buildwise CSTC Centre Scientifique et Technique de la Construction"
-  ],
   "knowsAbout": [
-    "Plomberie",
-    "Debouchage canalisation",
-    "Detection de fuite",
-    "Chauffage et chaudieres",
+    "Plomberie sanitaire",
+    "Débouchage de canalisation",
+    "Détection de fuite non destructive",
+    "Chauffage et chaudières",
     "Installations sanitaires",
-    "Traitement de l'eau",
-    "Depannage urgence plomberie"
+    "Traitement de l'eau et adoucisseurs",
+    "Dépannage d'urgence plomberie"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -89,97 +83,85 @@ const schemaData = {
     { "@type": "City", "name": "Herseaux", "postalCode": "7712" },
     { "@type": "City", "name": "Dottignies", "postalCode": "7711" },
     { "@type": "City", "name": "Estaimpuis", "postalCode": "7730" },
-    { "@type": "City", "name": "Tourcoing", "postalCode": "59200" },
     { "@type": "City", "name": "Comines-Warneton", "postalCode": "7780" }
   ],
   // ── Service Catalog ──────────────────────────────────────────────
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
-    "name": "Services de Plomberie a Mouscron",
+    "name": "Services de Plomberie à Mouscron",
     "itemListElement": [
       {
         "@type": "OfferCatalog",
-        "name": "Depannage d'Urgence",
-        "description": "Intervention d'urgence plomberie 24/7 en 30 minutes : fuite majeure, inondation, tuyau eclate, vanne bloquee",
+        "name": "Dépannage d'Urgence",
+        "description": "Intervention rapide de plomberie d'urgence 24/7 : fuite majeure, inondation, tuyau percé, vanne bloquée",
         "url": `${siteUrl}/services/depannage-urgence`,
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparation fuite d'eau urgente" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intervention inondation" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparation tuyau eclate" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement vanne bloquee" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Réparation fuite d'eau urgente" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Intervention inondation et sécurisation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Réparation tuyau percé ou éclaté" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement vanne bloquée" } }
         ]
       },
       {
         "@type": "OfferCatalog",
-        "name": "Debouchage Canalisations",
-        "description": "Debouchage professionnel de canalisations, WC, evier, egouts et colonnes d'evacuation",
+        "name": "Débouchage de Canalisations",
+        "description": "Débouchage mécanique et hydrocurage de canalisations, WC, éviers, siphons et réseaux d'évacuation",
         "url": `${siteUrl}/services/debouchage`,
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Debouchage WC" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Debouchage evier et lavabo" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Debouchage egout" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inspection camera canalisation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Débouchage WC et toilettes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Débouchage évier, douche et lavabo" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Débouchage égout et chambre de visite" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Inspection caméra vidéo canalisation" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curage haute pression" } }
         ]
       },
       {
         "@type": "OfferCatalog",
-        "name": "Detection de Fuites",
-        "description": "Detection de fuite d'eau non destructive par camera thermique, gaz traceur et acoustique",
+        "name": "Détection de Fuites",
+        "description": "Recherche de fuite non destructive par caméra thermique, corrélation acoustique et gaz traceur",
         "url": `${siteUrl}/services/detection-fuites`,
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detection camera thermique" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detection gaz traceur" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Detection acoustique" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recherche fuite encastree" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Détection fuite caméra thermique" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Localisation acoustique de fuite" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Recherche fuite gaz traceur" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rapport technique pour assurance dégât des eaux" } }
         ]
       },
       {
         "@type": "OfferCatalog",
-        "name": "Chauffage et Chaudieres",
-        "description": "Installation, entretien et reparation de chaudieres, boilers et systemes de chauffage",
+        "name": "Chauffage et Chaudières",
+        "description": "Dépannage, entretien et remplacement de chaudières, boilers et chauffe-eau",
         "url": `${siteUrl}/services/chauffage-chaudieres`,
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation chaudiere gaz" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien annuel chaudiere" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement boiler" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Depannage chauffage central" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dépannage chaudière en panne" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement et détartrage boiler" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Purge et désembouage radiateurs" } }
         ]
       },
       {
         "@type": "OfferCatalog",
         "name": "Installations Sanitaires",
-        "description": "Installation et renovation de salles de bain, douches, WC, robinetterie et tuyauterie",
+        "description": "Pose, remplacement et rénovation de sanitaires, robinetteries, WC suspendus et tuyauteries",
         "url": `${siteUrl}/services/installations-sanitaires`,
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renovation salle de bain complete" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation douche italienne" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement robinetterie" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation WC suspendu" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Remplacement robinetterie et mitigeurs" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pose WC suspendu et classique" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rénovation tuyauterie et raccordements" } }
         ]
       },
       {
         "@type": "OfferCatalog",
         "name": "Traitement de l'Eau",
-        "description": "Installation d'adoucisseurs, filtres anti-calcaire et systemes de traitement de l'eau",
+        "description": "Installation et maintenance d'adoucisseurs d'eau et systèmes de filtration anti-calcaire",
         "url": `${siteUrl}/services/traitement-eau`,
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Installation adoucisseur d'eau" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Filtre anti-calcaire" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Analyse qualite de l'eau" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien adoucisseur" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entretien et réglage adoucisseur" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Protection anti-calcaire du réseau sanitaire" } }
         ]
       }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "127",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
-  "sameAs": []
+  }
 };
 
 // ── WebSite schema (for sitelinks search box) ───────────────────────
@@ -203,7 +185,7 @@ const breadcrumbSchema = breadcrumbs ? {
     "@type": "ListItem",
     "position": index + 1,
     "name": crumb.name,
-    "item": crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url}`
+    "item": crumb.url.startsWith('http') ? crumb.url : `${siteUrl}${crumb.url === '/' ? '' : crumb.url.replace(/\/$/, '')}`
   }))
 } : null;
 ---
@@ -332,12 +314,12 @@ const breadcrumbSchema = breadcrumbs ? {
           <span class="w-1.5 h-1.5 rounded-full bg-brand-red mr-1.5 pulse-dot"></span>
           Astreinte 24h/24 et 7j/7
         </span>
-        <span class="hidden md:inline text-gray-300">15+ Ans d'Experience | Certifie Gaz G1/G2, PEB & VCA</span>
-        <span class="text-amber-400 font-medium">Agree Toutes Assurances | Arrivee en 20-30 min</span>
+        <span class="hidden md:inline text-gray-300">Artisans Plombiers Qualifiés | Dépannage Rapide</span>
+        <span class="text-amber-400 font-medium">Devis Clair Avant Travaux | Mouscron & Communes Voisines</span>
       </div>
       <div class="flex items-center space-x-5 text-gray-300">
-        <span class="hidden lg:inline text-xs text-gray-400">Entreprise certifiee & agreee</span>
-        <a class="font-bold text-white hover:text-brand-red transition-colors flex items-center gap-1.5" href="tel:+32465470070">
+        <span class="hidden lg:inline text-xs text-gray-400">Permanence d'urgence locale</span>
+        <a class="font-bold text-white hover:text-brand-red transition-colors flex items-center gap-1.5" href="tel:+32465470070" aria-label="Appeler notre permanence téléphonique au 0465 47 00 70">
           <svg class="w-3.5 h-3.5 text-brand-red" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
             <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
           </svg>
@@ -351,7 +333,7 @@ const breadcrumbSchema = breadcrumbs ? {
   <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
-        <!-- Logo (Square at the left corner) -->
+        <!-- Logo -->
         <a class="flex items-center shrink-0 group py-1" href="/" aria-label="Page d'accueil Plombier Urgent Mouscron">
           <div class="w-14 h-14 sm:w-16 sm:h-16 aspect-square rounded-xl overflow-hidden shadow-md border border-brand-border group-hover:border-brand-red transition-all duration-200 shrink-0 bg-[#031926] flex items-center justify-center p-1">
             <img 
@@ -372,17 +354,17 @@ const breadcrumbSchema = breadcrumbs ? {
           <a class="hover:text-brand-red transition-colors" href="/services">Services</a>
           <a class="hover:text-brand-red transition-colors" href="/locations">Zones d'intervention</a>
           <a class="hover:text-brand-red transition-colors" href="/blog">Guides & Blog</a>
-          <a class="hover:text-brand-red transition-colors" href="/about">A propos</a>
+          <a class="hover:text-brand-red transition-colors" href="/about">À propos</a>
           <a class="hover:text-brand-red transition-colors" href="/contact">Contact</a>
         </nav>
 
         <!-- Header CTA Buttons -->
         <div class="flex items-center space-x-3">
-          <a class="hidden sm:flex flex-col text-right" href="tel:+32465470070">
-            <span class="text-[11px] text-brand-muted font-medium">Intervention en 30 min</span>
+          <a class="hidden sm:flex flex-col text-right" href="tel:+32465470070" aria-label="Appeler notre équipe d'astreinte au 0465 47 00 70">
+            <span class="text-[11px] text-brand-muted font-medium">Déplacement rapide 24/7</span>
             <span class="text-sm md:text-base font-extrabold text-brand-navy leading-tight">0465 47 00 70</span>
           </a>
-          <a class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg bg-brand-red hover:bg-brand-redHover text-white font-bold text-xs sm:text-sm shadow-md transition duration-200" href="tel:+32465470070">
+          <a class="inline-flex items-center justify-center px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg bg-brand-red hover:bg-brand-redHover text-white font-bold text-xs sm:text-sm shadow-md transition duration-200" href="tel:+32465470070" aria-label="Appel d'urgence immédiat">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
             </svg>
@@ -403,10 +385,10 @@ const breadcrumbSchema = breadcrumbs ? {
       <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/services">Services</a>
       <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/locations">Zones d'intervention</a>
       <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/blog">Guides & Blog</a>
-      <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/about">A propos</a>
+      <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/about">À propos</a>
       <a class="block py-2 text-base font-semibold text-brand-darkText hover:text-brand-red" href="/contact">Contact</a>
       <div class="pt-3 border-t border-brand-border">
-        <a class="w-full inline-flex items-center justify-center py-3 bg-brand-navy text-white font-bold rounded-lg text-sm" href="tel:+32465470070">
+        <a class="w-full inline-flex items-center justify-center py-3 bg-brand-navy text-white font-bold rounded-lg text-sm" href="tel:+32465470070" aria-label="Appeler le 0465 47 00 70">
           Appeler le 0465 47 00 70
         </a>
       </div>
@@ -418,13 +400,13 @@ const breadcrumbSchema = breadcrumbs ? {
     <slot />
   </main>
 
-  <!-- Global Contact Form (Every Page) using Formsubmit.co with recipient: midebzn@gmail.com -->
+  <!-- Global Contact Form (placed on pages unless hidden) -->
   {!hideGlobalContact && <GlobalContactSection />}
 
-  <!-- Global Google Maps Location & Territory (Every Page) -->
+  <!-- Global Google Maps Location -->
   <GoogleMapEmbed />
 
-  <!-- Global Trust Pillars (Every Page): Insurance, 15+ Yrs Experience, Certifications, Guarantees, Response Times -->
+  <!-- Global Trust Pillars -->
   <TrustGuarantees />
 
   <!-- Sticky Click-to-Call Buttons (Desktop / Tablet) -->
@@ -435,14 +417,14 @@ const breadcrumbSchema = breadcrumbs ? {
 
   <!-- Mobile Sticky Emergency Bar -->
   <div class="fixed bottom-0 left-0 right-0 z-40 bg-brand-navy/95 backdrop-blur-md border-t border-white/10 p-2.5 sm:hidden flex items-center gap-2 shadow-2xl">
-    <a href="tel:+32465470070" class="flex-1 bg-brand-red hover:bg-brand-redHover text-white font-extrabold py-3 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow-md">
-      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+    <a href="tel:+32465470070" class="flex-1 bg-brand-red hover:bg-brand-redHover text-white font-extrabold py-3 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow-md" aria-label="SOS Urgence Téléphone 0465 47 00 70">
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"></path>
       </svg>
       SOS Urgence 24/7
     </a>
-    <a href="https://wa.me/32465470070?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20a%20Mouscron." target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow-md">
-      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+    <a href="https://wa.me/32465470070?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20%C3%A0%20Mouscron." target="_blank" rel="noopener noreferrer" class="flex-1 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold py-3 px-3 rounded-lg text-xs flex items-center justify-center gap-1.5 shadow-md" aria-label="Contacter par WhatsApp">
+      <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12.04 2a9.9 9.9 0 00-8.48 15.06L2 22l5.09-1.52A9.94 9.94 0 1012.04 2zm5.46 12.4c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91s.82 2.22.94 2.38c.12.15 1.62 2.48 3.95 3.48.55.24.98.38 1.32.48.55.18 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.15-.43-.27zM12.04 20.18c-1.62 0-3.2-.44-4.58-1.27l-.33-.2-3.02.9.91-2.95-.21-.34a8.26 8.26 0 1115.4-4.34 8.2 8.2 0 01-8.17 8.2z"/>
       </svg>
       Devis WhatsApp
@@ -470,11 +452,13 @@ const breadcrumbSchema = breadcrumbs ? {
             <span class="text-xl font-black text-white">Plombier Urgent Mouscron</span>
           </div>
           <p class="text-sm text-gray-300 leading-relaxed">
-            Plus de 15 ans d'experience a Mouscron et communes voisines. Depannage plomberie d'urgence 24h/24 et 7j/7 en 20 a 30 minutes. Artisans certifies Gaz G1/G2, PEB et VCA, agreation toutes assurances belges et devis ferme annonce avant travaux.
+            Artisans plombiers qualifiés à Mouscron et communes voisines. Dépannage plomberie d'urgence 24h/24 et 7j/7 avec déplacement rapide sur appel. Devis clair annoncé avant travaux et facture détaillée conforme pour vos démarches d'assurance.
           </p>
           <div class="text-xs text-gray-400 space-y-1.5">
-            <p>Siege local : <a href="https://maps.app.goo.gl/4C3AtbpBCvHqD56n7" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white underline transition-colors">Rue de la Royenne 45, 7700 Mouscron</a></p>
-            <p>TVA 6% applicable pour batiments de plus de 10 ans</p>
+            <p>Atelier & permanence : <a href="https://maps.app.goo.gl/4C3AtbpBCvHqD56n7" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white underline transition-colors">Rue de la Royenne 45, 7700 Mouscron</a></p>
+            <p class="text-gray-400 text-[11px] leading-relaxed">
+              Taux de TVA à 6% ou 21% selon les dispositions légales belges en vigueur (logement privé d'au moins 10 ans et nature des travaux).
+            </p>
           </div>
         </div>
 
@@ -482,10 +466,10 @@ const breadcrumbSchema = breadcrumbs ? {
         <div>
           <h4 class="text-sm font-bold uppercase tracking-wider text-brand-red mb-4">Interventions d'urgence</h4>
           <ul class="space-y-2.5 text-sm text-gray-300">
-            <li><a class="hover:text-white transition-colors" href="/services/depannage-urgence">Depannage d'urgence 24/7</a></li>
-            <li><a class="hover:text-white transition-colors" href="/services/debouchage">Debouchage canalisations & WC</a></li>
-            <li><a class="hover:text-white transition-colors" href="/services/detection-fuites">Detection de fuites sans casse</a></li>
-            <li><a class="hover:text-white transition-colors" href="/services/chauffage-chaudieres">Chauffage & chaudieres</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services/depannage-urgence">Dépannage d'urgence 24/7</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services/debouchage">Débouchage canalisations & WC</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services/detection-fuites">Détection de fuites sans casse</a></li>
+            <li><a class="hover:text-white transition-colors" href="/services/chauffage-chaudieres">Chauffage & chaudières</a></li>
             <li><a class="hover:text-white transition-colors" href="/services/installations-sanitaires">Installations sanitaires</a></li>
             <li><a class="hover:text-white transition-colors" href="/services/traitement-eau">Traitement de l'eau & adoucisseurs</a></li>
           </ul>
@@ -499,8 +483,7 @@ const breadcrumbSchema = breadcrumbs ? {
             <li><a class="hover:text-white transition-colors" href="/locations/luingne">Luingne (7700)</a></li>
             <li><a class="hover:text-white transition-colors" href="/locations/herseaux">Herseaux (7712)</a></li>
             <li><a class="hover:text-white transition-colors" href="/locations/dottignies">Dottignies (7711)</a></li>
-            <li><a class="hover:text-white transition-colors" href="/locations/estaimpuis">Estaimpuis & Nechin (7730)</a></li>
-            <li><a class="hover:text-white transition-colors" href="/locations/tourcoing">Tourcoing & Frontiere (59200)</a></li>
+            <li><a class="hover:text-white transition-colors" href="/locations/estaimpuis">Estaimpuis & Néchin (7730)</a></li>
             <li><a class="hover:text-white transition-colors" href="/locations/comines-warneton">Comines-Warneton (7780)</a></li>
           </ul>
         </div>
@@ -511,10 +494,10 @@ const breadcrumbSchema = breadcrumbs ? {
           <div class="p-4 rounded-xl bg-white/5 border border-white/10 space-y-3">
             <div>
               <span class="text-xs uppercase tracking-wider text-gray-400 block">Ligne d'urgence 24h/24 & 7j/7 :</span>
-              <a class="text-2xl font-black text-white hover:text-brand-red transition-colors block" href="tel:+32465470070">
+              <a class="text-2xl font-black text-white hover:text-brand-red transition-colors block" href="tel:+32465470070" aria-label="Composer le 0465 47 00 70">
                 0465 47 00 70
               </a>
-              <span class="text-xs text-brand-red font-semibold block pt-0.5">Arrivee en 20 a 30 minutes</span>
+              <span class="text-xs text-brand-red font-semibold block pt-0.5">Déplacement rapide d'urgence sur appel</span>
             </div>
 
             <div class="pt-2 border-t border-white/10">
@@ -532,18 +515,18 @@ const breadcrumbSchema = breadcrumbs ? {
             </div>
           </div>
           <p class="text-xs text-gray-400">
-            Paiements acceptes sur place: Bancontact, virement instantane, especes. Facture conforme fournie immediatement.
+            Paiements acceptés sur place : Bancontact, virement instantané, espèces. Facture détaillée remise après intervention.
           </p>
         </div>
       </div>
 
       <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-        <p>&copy; 2026 Plombier Urgent Mouscron. Tous droits reserves. Plomberie generale et depannage sanitaire.</p>
+        <p>&copy; 2026 Plombier Urgent Mouscron. Tous droits réservés. Plomberie générale et dépannage sanitaire en Belgique.</p>
         <div class="flex flex-wrap gap-x-6 gap-y-2">
           <a class="hover:text-white transition-colors" href="/blog">Guides & Blog</a>
-          <a class="hover:text-white transition-colors" href="/about">Mentions legales</a>
+          <a class="hover:text-white transition-colors" href="/about#mentions-legales">Mentions légales</a>
           <a class="hover:text-white transition-colors" href="/contact">Devis gratuit</a>
-          <a class="hover:text-white transition-colors" href="/locations">Plan d'intervention</a>
+          <a class="hover:text-white transition-colors" href="/locations">Zones d'intervention</a>
         </div>
       </div>
     </div>

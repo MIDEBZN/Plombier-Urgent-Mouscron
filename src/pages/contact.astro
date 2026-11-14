@@ -4,7 +4,7 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout 
   title="Contact & Devis Plombier Mouscron (7700) | Ligne Directe 24/7"
-  description="Contactez votre artisan plombier a Mouscron. Permanence d'urgence 24h/24 et 7j/7 au 0465 47 00 70. Formulaire de devis gratuit et contact WhatsApp direct."
+  description="Contactez votre artisan plombier à Mouscron. Permanence d'urgence 24h/24 et 7j/7 au 0465 47 00 70. Formulaire de devis gratuit et contact WhatsApp direct."
   canonicalPath="/contact"
   schemaType="ContactPage"
   hideGlobalContact={true}
@@ -18,10 +18,10 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center sm:text-left">
       <span class="text-xs font-bold tracking-widest uppercase text-brand-red mb-3 block">Intervention Rapide</span>
       <h1 id="contact-hero-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
-        Contactez Votre Plombier a Mouscron
+        Contactez Votre Plombier à Mouscron
       </h1>
       <p class="text-base sm:text-lg text-gray-300 max-w-3xl leading-relaxed">
-        Une urgence de fuite, un WC bouche ou un projet sanitaire ? Joignez notre standard d'astreinte 24h/24 ou transmettez-nous votre demande par formulaire.
+        Une urgence de fuite, un WC bouché ou un projet sanitaire ? Joignez notre standard d'astreinte 24h/24 ou transmettez-nous votre demande par formulaire.
       </p>
     </div>
   </section>
@@ -29,16 +29,25 @@ import Layout from '../layouts/Layout.astro';
   <!-- Contact Grid -->
   <section class="py-16 bg-brand-surface" aria-labelledby="contact-options-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Optional Success Banner if redirected from form -->
+      <div id="contact-success-banner" class="hidden mb-8 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm font-medium flex items-center gap-3">
+        <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span>Votre demande d'intervention a bien été transmise. Notre équipe d'astreinte vous recontacte rapidement au numéro indiqué.</span>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <!-- Left: Direct Channels & Physical Info (5 cols) -->
         <div class="lg:col-span-5 space-y-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Assistance Immediate</span>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Assistance Immédiate</span>
             <h2 id="contact-options-heading" class="text-2xl sm:text-3xl font-extrabold text-brand-navy">
-              Permanence Telephonique 24/7
+              Permanence Téléphonique 24/7
             </h2>
             <p class="text-sm text-brand-muted mt-2 leading-relaxed">
-              Pour toute situation d'urgence necessitant un deplacement sous 30 a 45 minutes, privilegiez toujours l'appel direct.
+              Pour toute situation d'urgence nécessitant un déplacement immédiat pour stopper un sinistre, privilégiez toujours l'appel direct.
             </p>
           </div>
 
@@ -46,18 +55,18 @@ import Layout from '../layouts/Layout.astro';
           <div class="p-6 bg-white rounded-2xl border border-brand-border shadow-xs space-y-4">
             <div>
               <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Permanence & Urgence 24h/24</span>
-              <a href="tel:+32465470070" class="text-3xl font-black text-brand-navy hover:text-brand-red transition-colors block">
+              <a href="tel:+32465470070" class="text-3xl font-black text-brand-navy hover:text-brand-red transition-colors block" aria-label="Appeler l'astreinte au 0465 47 00 70">
                 0465 47 00 70
               </a>
               <p class="text-xs text-brand-muted mt-1">
-                Ligne directe ouverte 24h/24, 7j/7, dimanches et jours feries sans interruption. Arrivee en 20 a 30 minutes.
+                Ligne directe ouverte 24h/24, 7j/7, dimanches et jours fériés sans interruption. Déplacement rapide sur appel.
               </p>
             </div>
 
             <div class="pt-3 border-t border-brand-border">
               <span class="text-xs font-semibold text-brand-darkText block mb-2">Devis rapide & transmission de photos :</span>
-              <a href="https://wa.me/32465470070?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20a%20Mouscron." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-bold transition shadow-xs">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <a href="https://wa.me/32465470070?text=Bonjour,%20j'ai%20une%20urgence%20plomberie%20%C3%A0%20Mouscron." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-white text-xs font-bold transition shadow-xs" aria-label="Ouvrir une discussion WhatsApp">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12.04 2a9.9 9.9 0 00-8.48 15.06L2 22l5.09-1.52A9.94 9.94 0 1012.04 2zm5.46 12.4c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.12-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.15-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.27.35-.4.12-.13.15-.23.23-.38.08-.15.04-.29-.02-.4-.06-.12-.52-1.25-.71-1.71-.19-.45-.38-.39-.52-.4h-.44c-.15 0-.4.06-.61.29-.21.23-.8.78-.8 1.91s.82 2.22.94 2.38c.12.15 1.62 2.48 3.95 3.48.55.24.98.38 1.32.48.55.18 1.05.15 1.45.09.44-.07 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.05-.1-.2-.15-.43-.27zM12.04 20.18c-1.62 0-3.2-.44-4.58-1.27l-.33-.2-3.02.9.91-2.95-.21-.34a8.26 8.26 0 1115.4-4.34 8.2 8.2 0 01-8.17 8.2z"/>
                 </svg>
                 Ouvrir la discussion WhatsApp (0465 47 00 70)
@@ -65,25 +74,24 @@ import Layout from '../layouts/Layout.astro';
             </div>
           </div>
 
-          <!-- Address & Legal -->
+          <!-- Address & Details -->
           <div class="p-6 bg-white rounded-2xl border border-brand-border shadow-xs space-y-2 text-xs text-brand-darkText">
-            <h3 class="font-bold text-brand-navy text-sm uppercase mb-1">Atelier & Siege d'Exploitation :</h3>
-            <p><strong>Plombier Urgent Mouscron</strong> (15+ ans d'experience)</p>
+            <h3 class="font-bold text-brand-navy text-sm uppercase mb-1">Atelier & Dépôt d'Astreinte :</h3>
+            <p><strong>Plombier Urgent Mouscron</strong></p>
             <p>
               <a href="https://maps.app.goo.gl/4C3AtbpBCvHqD56n7" target="_blank" rel="noopener noreferrer" class="text-brand-navy hover:text-brand-red underline font-semibold transition-colors">
                 Rue de la Royenne 45, 7700 Mouscron, Belgique
               </a>
             </p>
             <p>
-              Email direct : 
+              Courriel direct : 
               <a href="mailto:contact@plombierurgentmouscron.be" class="text-brand-navy hover:text-brand-red underline font-semibold transition-colors">
                 contact@plombierurgentmouscron.be
               </a>
             </p>
-            <p class="text-brand-muted pt-1">Artisan agree et certifie Gaz G1/G2, PEB Cerga, VCA & Buildwise</p>
-            <p class="text-brand-muted">Assurance : RC Pro & Decennale agreee Ethias, AXA, AG Insurance, Belfius</p>
-            <p class="text-brand-muted">Garantie : Devis ferme respecte, 2 ans pieces/MO, arrivee en 20 a 30 min</p>
-            <p class="text-brand-muted">Zone de garde 24/7 : Mouscron, Luingne, Herseaux, Dottignies, Estaimpuis, Tourcoing, Comines</p>
+            <p class="text-brand-muted pt-1">Assurance : Responsabilité Civile Professionnelle active</p>
+            <p class="text-brand-muted">Garantie : Devis préalable transparent & garanties légales belges</p>
+            <p class="text-brand-muted">Zone de garde 24/7 : Mouscron, Luingne, Herseaux, Dottignies, Estaimpuis, Comines-Warneton</p>
           </div>
         </div>
 
@@ -91,10 +99,10 @@ import Layout from '../layouts/Layout.astro';
         <div class="lg:col-span-7">
           <div class="bg-white rounded-3xl border border-brand-border p-8 sm:p-10 shadow-lg">
             <div class="mb-6">
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Formulaire Express</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-red block mb-1">Formulaire de Contact</span>
               <h2 class="text-2xl font-bold text-brand-navy">Envoyez Votre Message ou Demande de Devis</h2>
-              <p class="text-xs sm:text-sm text-brand-muted mt-1">
-                Nous vous recontactons dans les 15 minutes pour confirmer la faisabilite et le devis.
+              <p class="text-xs sm:text-sm text-brand-muted mt-1 leading-relaxed">
+                Remplissez vos coordonnées pour être recontacté et obtenir un chiffrage de votre intervention.
               </p>
             </div>
 
@@ -111,12 +119,12 @@ import Layout from '../layouts/Layout.astro';
 
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label for="contact-name" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Nom & Prenom *</label>
-                  <input id="contact-name" name="nom" type="text" required placeholder="Jean Dupont" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                  <label for="contact-name" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Nom & Prénom *</label>
+                  <input id="contact-name" name="nom" type="text" required aria-required="true" placeholder="Ex : Jean Dupont" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
                 </div>
                 <div>
-                  <label for="contact-phone" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Telephone *</label>
-                  <input id="contact-phone" name="telephone" type="tel" required placeholder="04XX XX XX XX" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                  <label for="contact-phone" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Téléphone *</label>
+                  <input id="contact-phone" name="telephone" type="tel" required aria-required="true" placeholder="04XX XX XX XX" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
                 </div>
               </div>
 
@@ -126,45 +134,60 @@ import Layout from '../layouts/Layout.astro';
                   <input id="contact-email" name="email" type="email" placeholder="nom@exemple.be" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
                 </div>
                 <div>
-                  <label for="contact-locality" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Localite a Mouscron *</label>
-                  <input id="contact-locality" name="localite" type="text" required placeholder="Ex: Mouscron centre, Dottignies..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
+                  <label for="contact-locality" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Localité à Mouscron ou environs *</label>
+                  <input id="contact-locality" name="localite" type="text" required aria-required="true" placeholder="Ex : Mouscron centre, Luingne, Herseaux, Dottignies..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition" />
                 </div>
               </div>
 
               <div>
                 <label for="contact-category" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Type d'intervention requise *</label>
-                <select id="contact-category" name="prestation" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
-                  <option value="" disabled selected>Selectionnez une categorie</option>
-                  <option value="fuite-urgence">Urgence fuite d'eau ou tuyau perce</option>
-                  <option value="debouchage-wc">Debouchage WC, evier ou canalisation</option>
+                <select id="contact-category" name="prestation" required aria-required="true" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
+                  <option value="" disabled selected>Sélectionnez une catégorie</option>
+                  <option value="fuite-urgence">Urgence fuite d'eau ou tuyau percé</option>
+                  <option value="debouchage-wc">Débouchage WC, évier ou canalisation</option>
                   <option value="panne-boiler">Panne de chauffe-eau / boiler (plus d'eau chaude)</option>
                   <option value="recherche-fuite">Recherche de fuite non destructive pour assurance</option>
                   <option value="remplacement-sanitaire">Remplacement de robinet, mitigeur ou chasse d'eau</option>
-                  <option value="renovation">Projet de renovation sanitaire</option>
+                  <option value="renovation">Projet de rénovation sanitaire</option>
                 </select>
               </div>
 
               <div>
-                <label for="contact-urgency" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Degre d'urgence *</label>
-                <select id="contact-urgency" name="urgence" required class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
-                  <option value="urgent">Urgence critique : besoin d'un technicien dans l'heure</option>
-                  <option value="jour-meme">Intervention souhaitee dans la journee</option>
-                  <option value="rendez-vous">Sur rendez-vous programme</option>
+                <label for="contact-urgency" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Degré d'urgence *</label>
+                <select id="contact-urgency" name="urgence" required aria-required="true" class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition">
+                  <option value="urgent">Urgence immédiate : besoin d'un dépannage rapide</option>
+                  <option value="jour-meme">Intervention souhaitée dans la journée</option>
+                  <option value="rendez-vous">Sur rendez-vous programmé</option>
                 </select>
               </div>
 
               <div>
-                <label for="contact-message" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Description de votre probleme</label>
-                <textarea id="contact-message" name="message" rows="3" placeholder="Precisez l'emplacement de la fuite, la marque du chauffe-eau ou le symptome constate..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition"></textarea>
+                <label for="contact-message" class="block text-xs font-bold uppercase text-brand-darkText mb-1 tracking-wider">Description de votre problème</label>
+                <textarea id="contact-message" name="message" rows="3" placeholder="Précisez l'emplacement de la fuite, la marque du matériel ou les symptômes observés..." class="w-full px-3.5 py-2.5 rounded-lg border border-brand-border focus:ring-2 focus:ring-brand-red focus:border-brand-red text-sm transition"></textarea>
               </div>
 
               <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-brand-red hover:bg-brand-redHover text-white font-bold text-base shadow-md transition duration-200 cursor-pointer">
                 Envoyer ma demande d'intervention
               </button>
+
+              <p class="text-[11px] text-gray-500 text-center pt-1 leading-relaxed">
+                Vos informations restent strictement confidentielles et ne sont utilisées que pour répondre à votre demande.
+              </p>
             </form>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+    // Show success message if redirected with query param
+    if (window.location.search.includes('succes=demande-transmise')) {
+      const banner = document.getElementById('contact-success-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
 </Layout>

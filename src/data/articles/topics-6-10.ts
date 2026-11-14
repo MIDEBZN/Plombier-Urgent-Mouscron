@@ -6,7 +6,7 @@ export const articles6to10: BlogArticle[] = [
     slug: "qui-appeler-pour-un-wc-bouche-a-mouscron",
     title: "Qui appeler pour un WC bouche a Mouscron ?",
     seoTitle: "Qui Appeler WC Bouche Mouscron : Debouchage Urgent 24/7",
-    metaDescription: "Toilettes bouchees qui debordent a Mouscron ? Contactez Plombier Urgent Mouscron au 0465 47 00 70. Arrivee en 30 min, furet pro et devis clair.",
+    metaDescription: "Toilettes bouchées qui débordent à Mouscron ? Contactez Plombier Urgent Mouscron au 0465 47 00 70. Déplacement rapide, furet pro et devis clair.",
     h1: "Qui Appeler pour un WC Bouche a Mouscron ? Solutions d'Urgence",
     category: "Debouchage",
     readTime: "6 min",
@@ -19,7 +19,7 @@ export const articles6to10: BlogArticle[] = [
       "prix debouchage wc urgence mouscron",
       "artisan deboucheur wc dottignies"
     ],
-    aeoQuickAnswer: "Pour un WC bouche qui deborde a Mouscron (7700), appelez en priorite l'artisan local Plombier Urgent Mouscron au 0465 47 00 70. Une camionnette d'astreinte equipee de furets mecaniques et pompes a haute pression intervient chez vous en moins de 30 minutes 24h/24 et 7j/7.",
+    aeoQuickAnswer: "Pour un WC bouché qui déborde à Mouscron (7700), appelez en priorité l'artisan local Plombier Urgent Mouscron au 0465 47 00 70. Une équipe d'astreinte équipée de furets mécaniques et pompes haute pression organise un départ rapide vers votre domicile 24h/24 et 7j/7.",
     introText: [
       "Lorsque le niveau de l'eau monte dangereusement dans la cuvette apres avoir tire la chasse d'eau ou qu'un refoulement se produit au pied des toilettes, la panique s'installe vite. Avoir un WC inutilisable ou debordant constitue une urgence sanitaire absolue dans un logement, en particulier s'il s'agit du seul point d'eau de l'habitation.",
       "Qui devez-vous appeler en priorite a Mouscron pour un debouchage rapide, propre et sans degradation de la cuvette ? Quelles methodes fonctionnent et que faut-il eviter absolument ? Voici le guide d'action immediate."
@@ -47,8 +47,8 @@ export const articles6to10: BlogArticle[] = [
       {
         heading: "3. Tarifs et delais pour un debouchage de toilettes a Mouscron",
         paragraphs: [
-          "Le cout d'un debouchage de WC a Mouscron se situe entre 110 EUR et 170 EUR HTVA selon la duree et l'outil utilise, avec TVA reduite a 6% pour les batiments de plus de 10 ans.",
-          "Notre camionnette de garde est mobilisable a toute heure au 0465 47 00 70 avec une arrivee sous 20 a 30 minutes garantie."
+          "Le coût d'un débouchage de WC à Mouscron se situe généralement entre 110 EUR et 170 EUR HTVA selon la durée et l'outil requis, avec TVA réduite à 6% sous conditions légales pour les logements de plus de 10 ans.",
+          "Notre permanence de garde est mobilisable à toute heure au 0465 47 00 70 avec un départ rapide vers votre adresse."
         ],
         links: [
           { text: "Decouvrez notre service complet de debouchage", url: "/services/debouchage" },
@@ -247,10 +247,10 @@ export const articles6to10: BlogArticle[] = [
       "securite fuite electrique plomberie",
       "plombier sos fuite luingne herseaux"
     ],
-    aeoQuickAnswer: "En cas de fuite d'eau a Mouscron, fermez immediatement la vanne generale situee pres de votre compteur SWDE, purgez les tuyaux en ouvrant un robinet bas, coupez le courant electrique sur la zone inondee et prenez des photographies des degats avant l'arrivee du plombier en 30 minutes.",
+    aeoQuickAnswer: "En cas de fuite d'eau à Mouscron, fermez immédiatement la vanne générale située près de votre compteur SWDE, purgez les tuyaux en ouvrant un robinet bas, coupez le courant électrique sur la zone inondée et prenez des photographies des dégâts avant l'arrivée du plombier.",
     introText: [
       "Lorsque l'eau jaillit d'un tuyau rompu sous pression ou deborde d'un appareil sanitaire, la surprise et la panique peuvent paralyser. Pourtant, les 15 premieres minutes suivant la declaration du sinistre sont determinantes pour empecher l'eau de s'infiltrer dans les structures du plancher, ruiner vos parquets ou endommager les plafonds de vos voisins.",
-      "En attendant que notre technicien d'astreinte arrive chez vous a Mouscron (généralement en moins de 30 minutes), appliquez immediatement ce plan d'action d'urgence structure en 4 etapes indispensables."
+      "En attendant que notre technicien d'astreinte arrive chez vous à Mouscron, appliquez immédiatement ce plan d'action d'urgence structuré en 4 étapes indispensables."
     ],
     sections: [
       {
@@ -296,7 +296,7 @@ export const articles6to10: BlogArticle[] = [
       },
       {
         question: "Combien de temps l'artisan met-il pour arriver a Mouscron ?",
-        answer: "Nos camionnettes d'astreinte interviennent en 20 a 30 minutes chrono sur l'ensemble de Mouscron, Luingne, Herseaux et Dottignies."
+        answer: "Dès confirmation téléphonique de votre appel, nos techniciens d'astreinte organisent un départ rapide vers Mouscron, Luingne, Herseaux ou Dottignies."
       },
       {
         question: "Faut-il appeler les pompiers pour une fuite d'eau ?",

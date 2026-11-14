@@ -7,20 +7,10 @@ Allow: /
 # Sitemap location
 Sitemap: https://www.plombierurgentmouscron.be/sitemap-index.xml
 
-# Crawl-delay (respectful for small servers)
-Crawl-delay: 2
-
-# Block dev/admin paths
-Disallow: /_astro/
-Disallow: /api/
-
-# Googlebot – no crawl-delay needed (Google ignores it)
+# Googlebot
 User-agent: Googlebot
 Allow: /
-Sitemap: https://www.plombierurgentmouscron.be/sitemap-index.xml
 
 # Bingbot
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 5
-Sitemap: https://www.plombierurgentmouscron.be/sitemap-index.xml
